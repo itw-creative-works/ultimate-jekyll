@@ -1,0 +1,80 @@
+<h1 id="basic-firebase-user-skeleton">Basic Firebase User Skeleton</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">person</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Ian</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">lastName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Wieds</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">birthday</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">timestamp</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+      <span class="na">timestampUNIX</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">verifications</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">email</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nx">activity</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">created</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">timestamp</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2019-04-29T01:57:47Z</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">timestampUNIX</span><span class="p">:</span> <span class="mi">1556503067000</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">lastActivity</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">timestamp</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2019-04-29T01:57:47Z</span><span class="dl">'</span><span class="p">,</span>
+      <span class="nx">timestampUNIX</span><span class="p">:</span> <span class="mi">1556503067000</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="nx">auth</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">uid</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="nx">email</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">roles</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">admin</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">developer</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">betaTester</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">plan</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">id</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// intro | basic | advanced... (intro is default value)</span>
+    <span class="nx">expires</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">timestamp</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2111-01-01T00:00:00Z</span><span class="dl">'</span><span class="p">,</span>
+      <span class="nx">timestampUNIX</span><span class="p">:</span> <span class="mi">1556503067000</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">enterprise</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">limits</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+        <span class="c1">// accounts: 0,</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">payment</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">method</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span> <span class="c1">// paypal | stripe | chargebee, etc</span>
+      <span class="nx">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1">// Data from payment processor like</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+  <span class="p">},</span>
+  <span class="nx">affiliate</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">code</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="nx">referrals</span><span class="p">:</span> <span class="p">{</span>
+      <span class="c1">// TIMESTAMPS for referrals as KEYS</span>
+    <span class="p">},</span>
+    <span class="nx">referredBy</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="nx">prizeRedemptions</span><span class="p">:</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">api</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">privateKey</span><span class="p">:</span> <span class="dl">'</span><span class="s1">api_1908-ea7ad440-bfa8-11e9-b4c3-f32ee92844a3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// publicKey: '', // Not stored here. Should be firebase email or firebase UID</span>
+    <span class="nx">lastActivity</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">timestamp</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2019-04-29T01:57:47Z</span><span class="dl">'</span><span class="p">,</span>
+      <span class="nx">timestampUNIX</span><span class="p">:</span> <span class="mi">1556503067000</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="nx">view</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">key</span><span class="p">:</span> <span class="dl">'</span><span class="s1">,</span><span class="dl">'</span> <span class="c1">// if they have this, they can view the doc temporarily without being logged in</span>
+    <span class="nx">expires</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">timestamp</span><span class="p">:</span> <span class="dl">'</span><span class="s1">2111-01-01T00:00:00Z</span><span class="dl">'</span><span class="p">,</span>
+      <span class="nx">timestampUNIX</span><span class="p">:</span> <span class="mi">1556503067000</span><span class="p">,</span>
+    <span class="p">},</span>    
+  <span class="p">},</span>
+  <span class="c1">// temp: false,</span>
+<span class="p">}</span>
+</code></pre></div></div>

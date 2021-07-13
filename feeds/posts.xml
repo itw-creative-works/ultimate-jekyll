@@ -1,0 +1,197 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="https://template.itwcreativeworks.com/feeds/posts.xml" rel="self" type="application/atom+xml" />
+  <link href="https://template.itwcreativeworks.com" rel="alternate" type="text/html" />
+  <updated>2021-07-13T16:37:33+00:00</updated>
+  <id>https://template.itwcreativeworks.com</id>
+  <title type="html">Ultimate Jekyll</title>
+  <subtitle>
+    Default description.
+  </subtitle>
+
+  
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-7/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-07T00:00:00+00:00</published>
+      <updated>2019-01-07T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-7/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-7/">
+        <h2 id="title-inside-post-7">Title inside post 7</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-6/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-06T00:00:00+00:00</published>
+      <updated>2019-01-06T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-6/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-6/">
+        <h2 id="title-inside-post-6">Title inside post 6</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-5/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-05T00:00:00+00:00</published>
+      <updated>2019-01-05T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-5/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-5/">
+        <h2 id="title-inside-post-5">Title inside post 5</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-4/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-04T00:00:00+00:00</published>
+      <updated>2019-01-04T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-4/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-4/">
+        <h2 id="title-inside-post-4">Title inside post 4</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-3/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-03T00:00:00+00:00</published>
+      <updated>2019-01-03T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-3/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-3/">
+        <h2 id="title-inside-post-3">Title inside post 3</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-2/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-02T00:00:00+00:00</published>
+      <updated>2019-01-02T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-2/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-2/">
+        <h2 id="title-inside-post-2">Title inside post 2</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+    <entry>
+      <title type="html"></title>
+      <link href="https://template.itwcreativeworks.com/blog/example-post-1/" rel="alternate" type="text/html" title="" />
+      <published>2019-01-01T00:00:00+00:00</published>
+      <updated>2019-01-01T00:00:00+00:00</updated>
+      <id>
+        https://template.itwcreativeworks.com/blog/example-post-1/
+      </id>
+      <icon>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</icon>
+      <logo>https://template.itwcreativeworks.com/blog/posts//teaser.jpg</logo>
+      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-1/">
+        <h2 id="title-inside-post-1">Title inside post 1</h2>
+<p>This is a wonderful paragrah inside a post!</p>
+
+      </content>
+      <author>
+        <name>Ultimate Jekyll</name>
+      </author>
+      <category term="" />
+      <summary type="html">
+        
+      </summary>
+    </entry>
+
+  
+
+</feed>

@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><!-- Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" >
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=5">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="canonical" href="https://template.itwcreativeworks.com/admin/dashboard/"><!-- Manifest.json -->
+<link rel="manifest" href="https://template.itwcreativeworks.com/manifest.json">
+
+<!-- Title --><title>Dashboard</title>
+<meta name="twitter:title" content="Dashboard" />
+<meta property="og:title" content="Dashboard" />
+
+<!-- Description --><meta name="description" content="Manage your app via this helpful dashboard.">
+<meta name="twitter:description" content="Manage your app via this helpful dashboard." />
+<meta property="og:description" content="Manage your app via this helpful dashboard." />
+
+<!-- Image --><meta name="twitter:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+<meta property="og:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+
+<!-- OG: Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:widgets:theme" content="light">
+
+<!-- OG: Facebook / Open Graph -->
+<meta property="og:url" content="https://template.itwcreativeworks.com/admin/dashboard/" />
+<meta property="og:type" content="article" />
+
+<!-- Main Feed -->
+<link href="https://template.itwcreativeworks.com/feed.xml" type="application/atom+xml" rel="alternate" title="Ultimate Jekyll Feed">
+
+
+<!-- Configuration -->
+<script type="text/javascript">
+  
+
+  var Configuration = {
+    page: {
+      code: '',
+      type: 'general',
+      breadcrumb: '',
+      settings:  { libraries: { cookieconsent: { enabled: false }, tawk: { enabled: false }, sentry: { enabled: false } }, auth: { state: 'required', sends: { required: '/admin/signin/', prohibited: '/admin/dashboard/' } } } 
+    },
+    global: {
+      version: '1.0.0',
+      url: 'https://template.itwcreativeworks.com',
+      cacheBreaker: '1626194253',
+      settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'ultimate-jekyll.firebaseapp.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: '' } }, cookieconsent: { enabled: true, config: {} }, tawk: { enabled: true, config: { chatId: '5df1636b43be710e1d21af38', widgetId: '', prechatColor: '' } }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website' } } } } ,
+      brand: {
+        name: 'Ultimate Jekyll'
+      },
+      contact: {
+        emailSupport: 'support@example.com',
+        emailBusiness: 'hello@example.com'
+      }
+    }
+  };
+</script>
+
+<!-- Redirect --><!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png?cb=1626194253">
+<link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico?cb=1626194253">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml?cb=1626194253">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS - Defaults-->
+<style type="text/css" media="screen">
+  
+  
+  /*! defaults.css v1.0.0 | MIT License | ITW Creative Works */
+@font-face {
+  font-display: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+  
+
+  .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
+.cc-link,.cc-revoke:hover{text-decoration:underline}.cc-revoke,.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
+.cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-ms-flex:1 0 auto;flex:1 0 auto}.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-floating .cc-compliance>.cc-btn{-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
+@media print{.cc-revoke,.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window.cc-top{top:0}.cc-window.cc-bottom{bottom:0}.cc-window.cc-banner,.cc-window.cc-floating,.cc-window.cc-left,.cc-window.cc-right{left:0;right:0}.cc-window.cc-banner{-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner .cc-compliance{-ms-flex:1 1 auto;flex:1 1 auto}.cc-window.cc-floating{max-width:none}.cc-window .cc-message{margin-bottom:1em}.cc-window.cc-banner{-ms-flex-align:unset;align-items:unset}.cc-window.cc-banner .cc-message{margin-right:0}}
+.cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
+.cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
+
+</style>
+
+<!-- CSS - Social Share Kit Style -->
+
+
+<!-- App - Head Content (pre-bundle) -->
+  <!-- App Head Content (pre-bundle) -->
+
+
+<!-- CSS - Bundle-->
+ <link rel="stylesheet" href="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/dashkit/css/libs.bundle.css"> <link rel="stylesheet" href="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/dashkit/css/theme.bundle.css" id="stylesheetLight"> <!-- <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/fonts/feather/feather.css" id="stylesheetLight"> --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.css"> <style media="screen"> .CodeMirror { border-radius: 5px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); height: auto; min-height: 90px; } </style> 
+
+
+<!-- HTML5 Shiv -->
+  <!--[if lt IE 9]>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+<!-- Initialize Manager -->
+<script type="text/javascript">
+  // Performance
+  try {
+    window.performance.mark('manager_start');
+  } catch (e) {}
+
+  function Manager$() {
+    this.properties = {};
+  };
+
+  Manager$.prototype.ready = function(fn, options) {
+    options = options || {};
+
+    setTimeout(function () {
+      Manager.auth().ready(fn, options);
+    }, options.interval || 100);
+  }
+
+  Manager$.prototype.auth = function() {
+    return {
+      ready: function (fn, options) {
+        options = options || {};
+
+        setTimeout(function () {
+          Manager.auth().ready(fn, options);
+        }, options.interval || 100);
+
+      }
+    }
+  }
+
+  // Initialize globals
+  var Manager = new Manager$();
+  // var firebase;
+  var Libraries = {
+    // app: undefined,
+    // lazysizes: undefined,
+    // cookieconsent: undefined,
+  };
+
+</script>
+
+<!-- Master - Styles -->
+<style media="screen">
+  /* Alert box */
+  .master-alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    bottom:0;
+    left:0;
+    position:fixed;
+    z-index:9999;
+    width: 100%;
+  }
+
+  .master-alert a {
+    color: white;
+    text-decoration: underline;
+  }
+  .master-alert a:hover {
+    color: black;
+  }
+
+  .master-alert-close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .master-alert-close:hover {
+    color: black;
+  }
+
+  .master-alert-outdated {
+    display: none;
+  }
+
+  /* Chat box opener */
+  #prechat-btn {
+    position: fixed;
+    background: #237AFC;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+    transition: background 0.5s;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px;
+  }
+
+  #prechat-btn svg {
+    padding-top: 25%;
+    color: #fff;
+    width: 50%;
+    opacity: 1.0;
+    pointer-events: none;
+  }
+  #prechat-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    #prechat-btn {
+      bottom: 15px;
+    }
+  }
+</style>
+
+<!-- Style - IE 8 and Below Only -->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1626194253">
+<![endif]-->
+
+
+<!-- App - Head Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</head>
+
+  <body class=" ">
+    
+
+    <!-- CONTENT START -->
+    <div class="main-content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        <!-- Header -->
+<div class="header mt-md-5">
+  <div class="header-body">
+    <div class="row align-items-center">
+      <div class="col">
+
+        <!-- Pretitle -->
+        <h6 class="header-pretitle">
+          Overview
+        </h6>
+
+        <!-- Title -->
+        <h1 class="header-title">
+          Dashboard
+        </h1>
+
+      </div>
+    </div> <!-- / .row -->
+  </div>
+</div>
+
+<!-- CARDS -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" id="stats-error" hidden>
+
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+
+      <!-- Card -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h6 class="card-title text-uppercase text-muted mb-2">
+              Total Users
+              </h6>
+
+              <!-- Heading -->
+              <span class="h2 mb-0 stats-value" id="stats-users-total">
+                <div class="spinner-border text-primary spinner-border-sm" role="status">
+
+                </div>
+              </span>
+
+            </div>
+            <div class="col-auto">
+              <span class="h2 fe fe-user text-muted mb-0"></span>
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-3 col-xs-6">
+
+      <!-- Card -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h6 class="card-title text-uppercase text-muted mb-2">
+                Online Users
+              </h6>
+
+              <!-- Heading -->
+              <span class="h2 mb-0 stats-value" id="stats-users-online">
+                <div class="spinner-border text-primary spinner-border-sm" role="status">
+
+                </div>
+              </span>
+
+            </div>
+            <div class="col-auto">
+              <span class="h2 fe fe-globe text-muted mb-0"></span>
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-3 col-xs-6">
+
+      <!-- Card -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+
+
+              <!-- Title -->
+              <h6 class="card-title text-uppercase text-muted mb-2">
+                Notifications
+              </h6>
+
+              <!-- Heading -->
+              <span class="h2 mb-0 stats-value" id="stats-notification-subscribers">
+                <div class="spinner-border text-primary spinner-border-sm" role="status">
+
+                </div>
+              </span>
+
+            </div>
+            <div class="col-auto">
+              <span class="h2 fe fe-bell text-muted mb-0"></span>
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-3 col-xs-6">
+
+      <!-- Card -->
+      <div class="card">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h6 class="card-title text-uppercase text-muted mb-2">
+                Coming soon
+              </h6>
+
+              <!-- Heading -->
+              <span class="h2 mb-0 stats-value">
+                ...
+              </span>
+
+            </div>
+            <div class="col-auto">
+              <span class="h2 fe fe-help-circle text-muted mb-0"></span>
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- / .row -->
+  <div class="row">
+    <div class="col-12 col-xl-8">
+
+      <!-- Orders -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h4 class="card-header-title">
+                Orders
+              </h4>
+
+            </div>
+            <div class="col-auto mr-n3">
+
+              <!-- Caption -->
+              <span class="text-muted">
+                Show affiliate:
+              </span>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Switch -->
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
+                <label class="custom-control-label" for="cardToggle"></label>
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+        <div class="card-body">
+
+          <!-- Chart -->
+          <div class="chart">
+            <canvas id="ordersChart" class="chart-canvas"></canvas>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-12 col-xl-4">
+
+      <!-- Devices -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h4 class="card-header-title">
+                Devices
+              </h4>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Tabs -->
+              <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                  <a href="#" class="nav-link active" data-toggle="tab">
+                    All
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                  <a href="#" class="nav-link" data-toggle="tab">
+                    Direct
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+        <div class="card-body">
+
+          <!-- Chart -->
+          <div class="chart chart-appended">
+            <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
+          </div>
+
+          <!-- Legend -->
+          <div id="devicesChartLegend" class="chart-legend"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- / .row -->
+  <div class="row">
+    <div class="col-12 col-xl-4">
+
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h4 class="card-header-title">
+                Projects
+              </h4>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Link -->
+              <a href="#!" class="small">View all</a>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+        <div class="card-body">
+
+          <div class="row align-items-center">
+            <div class="col-auto">
+
+              <!-- Avatar -->
+              <a href="project-overview.html" class="avatar avatar-4by3">
+                <img src="/assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+              </a>
+
+            </div>
+            <div class="col ml-n2">
+
+              <!-- Title -->
+              <h4 class="card-title mb-1">
+                <a href="project-overview.html">Homepage Redesign</a>
+              </h4>
+
+              <!-- Time -->
+              <p class="card-text small text-muted">
+                <time datetime="2018-05-24">Updated 5hr ago</time>
+              </p>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-more-vertical"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="#!" class="dropdown-item">
+                    Action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Another action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Something else here
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <!-- Divider -->
+          <hr>
+
+          <div class="row align-items-center">
+            <div class="col-auto">
+
+              <!-- Avatar -->
+              <a href="project-overview.html" class="avatar avatar-4by3">
+                <img src="/assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
+              </a>
+
+            </div>
+            <div class="col ml-n2">
+
+              <!-- Title -->
+              <h4 class="card-title mb-1">
+                <a href="project-overview.html">Travels & Time</a>
+              </h4>
+
+              <!-- Time -->
+              <p class="card-text small text-muted">
+                <time datetime="2018-05-24">Updated 3hr ago</time>
+              </p>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-more-vertical"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="#!" class="dropdown-item">
+                    Action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Another action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Something else here
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <!-- Divider -->
+          <hr>
+
+          <div class="row align-items-center">
+            <div class="col-auto">
+
+              <!-- Avatar -->
+              <a href="project-overview.html" class="avatar avatar-4by3">
+                <img src="/assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
+              </a>
+
+            </div>
+            <div class="col ml-n2">
+
+              <!-- Title -->
+              <h4 class="card-title mb-1">
+                <a href="project-overview.html">Safari Exploration</a>
+              </h4>
+
+              <!-- Time -->
+              <p class="card-text small text-muted">
+                <time datetime="2018-05-24">Updated 10hr ago</time>
+              </p>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-more-vertical"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="#!" class="dropdown-item">
+                    Action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Another action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Something else here
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <!-- Divider -->
+          <hr>
+
+          <div class="row align-items-center">
+            <div class="col-auto">
+
+              <!-- Avatar -->
+              <a href="project-overview.html" class="avatar avatar-4by3">
+                <img src="/assets/img/avatars/projects/project-5.jpg" alt="..." class="avatar-img rounded">
+              </a>
+
+            </div>
+            <div class="col ml-n2">
+
+              <!-- Title -->
+              <h4 class="card-title mb-1">
+                <a href="project-overview.html">Personal Site</a>
+              </h4>
+
+              <!-- Time -->
+              <p class="card-text small text-muted">
+                <time datetime="2018-05-24">Updated 4hr ago</time>
+              </p>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-more-vertical"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="#!" class="dropdown-item">
+                    Action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Another action
+                  </a>
+                  <a href="#!" class="dropdown-item">
+                    Something else here
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div> <!-- / .card-body -->
+      </div> <!-- / .card -->
+
+    </div>
+    <div class="col-12 col-xl-8">
+
+      <!-- Performance -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h4 class="card-header-title">
+                Performance
+              </h4>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Nav -->
+              <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'>
+                  <a class="nav-link active" href="#" data-toggle="tab">
+                    All
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'>
+                  <a class="nav-link" href="#" data-toggle="tab">
+                    Direct
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[2,12,35,25,36,25,34,16,4,14,15,37]}]}}'>
+                  <a class="nav-link" href="#" data-toggle="tab">
+                    Organic
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+        <div class="card-body">
+
+          <!-- Chart -->
+          <div class="chart">
+            <canvas id="performanceChart" class="chart-canvas"></canvas>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-xl-7">
+
+      <!-- Goals -->
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+
+              <!-- Title -->
+              <h4 class="card-header-title">
+                Goals
+              </h4>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Button -->
+              <a href="#!" class="btn btn-sm btn-white">
+                Export
+              </a>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+        <div class="table-responsive mb-0" data-toggle="lists" data-options='{"valueNames": ["goal-project", "goal-status", "goal-progress", "goal-date"]}'>
+          <table class="table table-sm table-nowrap card-table">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-muted sort" data-sort="goal-project">
+                    Goal
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-muted sort" data-sort="goal-status">
+                    Status
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-muted sort" data-sort="goal-progress">
+                    Progress
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-muted sort" data-sort="goal-date">
+                    Due date
+                  </a>
+                </th>
+                <th class="text-right">
+                  Team
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              <tr>
+                <td class="goal-project">
+                  Update the API
+                </td>
+                <td class="goal-status">
+                  <span class="text-warning">●</span> In progress
+                </td>
+                <td class="goal-progress">
+                  55%
+                </td>
+                <td class="goal-date">
+                  <time datetime="2018-10-24">07/24/18</time>
+                </td>
+                <td class="text-right">
+                  <div class="avatar-group">
+                    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
+                      <img src="/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="/assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="/assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                      <img src="/assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="goal-project">
+                  Release v1.2-Beta
+                </td>
+                <td class="goal-status">
+                  <span class="text-warning">●</span> In progress
+                </td>
+                <td class="goal-progress">
+                  25%
+                </td>
+                <td class="goal-date">
+                  <time datetime="2018-10-24">08/26/18</time>
+                </td>
+                <td class="text-right">
+                  <div class="avatar-group justify-content-end">
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
+                      <img src="/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="/assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="/assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="goal-project">
+                  GDPR Compliance
+                </td>
+                <td class="goal-status">
+                  <span class="text-success">●</span> Completed
+                </td>
+                <td class="goal-progress">
+                  100%
+                </td>
+                <td class="goal-date">
+                  <time datetime="2018-10-24">06/19/18</time>
+                </td>
+                <td class="text-right">
+                  <div class="avatar-group justify-content-end">
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
+                      <img src="/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="/assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="/assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="goal-project">
+                  v1.2 Documentation
+                </td>
+                <td class="goal-status">
+                  <span class="text-danger">●</span> Cancelled
+                </td>
+                <td class="goal-progress">
+                  0%
+                </td>
+                <td class="goal-date">
+                  <time datetime="2018-10-24">06/25/18</time>
+                </td>
+                <td class="text-right">
+                  <div class="avatar-group justify-content-end">
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
+                      <img src="/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="/assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="fe fe-more-vertical"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="goal-project">
+                  Plan design offsite
+                </td>
+                <td class="goal-status">
+                  <span class="text-success">●</span> Completed
+                </td>
+                <td class="goal-progress">
+                  100%
+                </td>
+                <td class="goal-date">
+                  <time datetime="2018-10-24">06/30/18</time>
+                </td>
+                <td class="text-right">
+                  <div class="avatar-group justify-content-end">
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
+                      <img src="/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                      <img src="/assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                      <img src="/assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                    <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                      <img src="/assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                    </a>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#!" class="dropdown-item">
+                        Action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Another action
+                      </a>
+                      <a href="#!" class="dropdown-item">
+                        Something else here
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-12 col-xl-5">
+
+      <!-- Card -->
+      <div class="card">
+        <div class="card-body text-center">
+          <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+
+              <!-- Image -->
+              <img src="/assets/img/illustrations/happiness.svg" alt="..." class="img-fluid mt-n5 mb-4" style="max-width: 272px;">
+
+              <!-- Title -->
+              <h2 class="mb-2">
+                We released 2008 new versions of our theme for glory.
+              </h2>
+
+              <!-- Content -->
+              <p class="text-muted">
+                This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.
+              </p>
+
+              <!-- Button -->
+              <a href="#!" class="btn btn-primary lift">
+                Try it for free
+              </a>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- / .row -->
+</div>
+
+<script type="text/javascript">
+
+  Manager.auth().ready(function(user) {
+    var serverDev = 'http://localhost:5001/' + Manager.properties.options.libraries.firebase_app.config.projectId + '/us-central1/bm_getStats';
+    var serverProd = 'https://us-central1-' + Manager.properties.options.libraries.firebase_app.config.projectId + '.cloudfunctions.net/bm_getStats';
+
+    // https://stackoverflow.com/a/2901298/7305269
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    if (user && user.uid) {
+      user.getIdToken(false)
+        .then(function(token) {
+          fetch(serverProd, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              authenticationToken: token,
+            }),
+            timeout: 20000,
+          })
+          .then(function (res) {
+            if (res.status >= 200 && res.status < 300) {
+              res.json()
+              .then(function (data) {
+                console.log('Success', data);
+                Manager.dom().select('#stats-users-total').setInnerHTML(numberWithCommas(data.users.total));
+                Manager.dom().select('#stats-users-online').setInnerHTML(numberWithCommas(data.users.online));
+                Manager.dom().select('#stats-notification-subscribers').setInnerHTML(numberWithCommas(data.subscriptions.total));
+              })
+            } else {
+              return res.text()
+              .then(function (data) {
+                throw new Error(data || res.statusText || 'Unknown error.')
+              })
+            }
+          })
+          .catch(function (e) {
+            Manager.dom().select('#stats-error').setInnerHTML(e).show();
+          });
+
+        })
+        .catch(function(e) {
+          Manager.dom().select('#stats-error').setInnerHTML(e).show();
+        });
+    }
+  });
+
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- CONTENT END -->
+    <!-- Master - Alert Box -->
+<div class="master-alert master-alert-outdated">
+  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome/" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+
+<!-- Master - Chat Opener -->
+<a href="#" onclick="return false;" id="prechat-btn" style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="#ffffff" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/>
+  </svg>
+</a>
+
+<!-- Performance -->
+<script type="text/javascript">
+  try {
+    window.performance.mark('manager_preBundle');
+  } catch (e) {}
+</script>
+
+<!-- App - Foot Content (pre-bundle) -->
+  <!-- App Foot Content (pre-bundle) -->
+
+
+<!-- Script - Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/json5@2.1.1/dist/index.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/matchbrackets.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/closebrackets.min.js" charset="utf-8"></script> <script type="text/javascript" src="/assets/js/master.js?cb=1626194253" async defer></script> 
+
+
+<!-- Script - Google Analytics Tracking Script -->
+
+
+<!-- Script - Facebook Pixel Tracking Script -->
+
+
+<!-- Script - Social Share Kit Script -->
+
+
+<!-- Script - Google Adsense -->
+  <script data-ad-client="ca-pub-7372939085773564" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<!-- Schema - Breadcrumbs -->
+  <div class="hidden" hidden>
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/" title="Return home">
+        <span itemprop="name">Home</span>
+      </a><meta itemprop="position" content="1" />
+    </li>
+                <li  itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/admin/" title="Visit ">
+                      <span itemprop="name"></span>
+                      <meta itemprop="position" content="2" />
+                    </a>
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/admin/dashboard/" title="Visit ">
+                      <span itemprop="name">Dashboard</span>
+                      <meta itemprop="position" content="3" />
+                    </a>
+                </li></ol>
+  </div>
+
+
+<!-- Schema - Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "name": "Ultimate Jekyll",
+    "description": "Default description.",
+    "logo": "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png",
+    "url": "https://template.itwcreativeworks.com",
+    "sameAs": ["https://www.linkedin.com/company/","https://www.youtube.com/channel/","https://twitter.com/","https://www.instagram.com//","https://.tumblr.com/","https://www.facebook.com//",""
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressCountry": "United States"
+    }
+  }
+  </script>
+
+
+<!-- Schema - Sitelinks -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://template.itwcreativeworks.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://template.itwcreativeworks.com/search/cse?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+
+<!-- App - Foot Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</body>
+</html>

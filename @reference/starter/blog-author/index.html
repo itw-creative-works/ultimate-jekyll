@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><!-- Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" >
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=5">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="canonical" href="https://template.itwcreativeworks.com/@reference/starter/blog-author/"><!-- Manifest.json -->
+<link rel="manifest" href="https://template.itwcreativeworks.com/manifest.json">
+
+<!-- Title --><title>Default title</title>
+<meta name="twitter:title" content="Default title" />
+<meta property="og:title" content="Default title" />
+
+<!-- Description --><meta name="description" content="Default description">
+<meta name="twitter:description" content="Default description" />
+<meta property="og:description" content="Default description" />
+
+<!-- Image --><meta name="twitter:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+<meta property="og:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+
+<!-- OG: Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:widgets:theme" content="light">
+
+<!-- OG: Facebook / Open Graph -->
+<meta property="og:url" content="https://template.itwcreativeworks.com/@reference/starter/blog-author/" />
+<meta property="og:type" content="article" />
+
+<!-- Main Feed -->
+<link href="https://template.itwcreativeworks.com/feed.xml" type="application/atom+xml" rel="alternate" title="Ultimate Jekyll Feed">
+
+
+<!-- Configuration -->
+<script type="text/javascript">
+  
+
+  var Configuration = {
+    page: {
+      code: '',
+      type: 'general',
+      breadcrumb: '',
+      settings: {}
+    },
+    global: {
+      version: '1.0.0',
+      url: 'https://template.itwcreativeworks.com',
+      cacheBreaker: '1626194253',
+      settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'ultimate-jekyll.firebaseapp.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: '' } }, cookieconsent: { enabled: true, config: {} }, tawk: { enabled: true, config: { chatId: '5df1636b43be710e1d21af38', widgetId: '', prechatColor: '' } }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website' } } } } ,
+      brand: {
+        name: 'Ultimate Jekyll'
+      },
+      contact: {
+        emailSupport: 'support@example.com',
+        emailBusiness: 'hello@example.com'
+      }
+    }
+  };
+</script>
+
+<!-- Redirect --><!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png?cb=1626194253">
+<link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico?cb=1626194253">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml?cb=1626194253">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS - Defaults-->
+<style type="text/css" media="screen">
+  
+  
+  /*! defaults.css v1.0.0 | MIT License | ITW Creative Works */
+@font-face {
+  font-display: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+  
+
+  .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
+.cc-link,.cc-revoke:hover{text-decoration:underline}.cc-revoke,.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
+.cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-ms-flex:1 0 auto;flex:1 0 auto}.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-floating .cc-compliance>.cc-btn{-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
+@media print{.cc-revoke,.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window.cc-top{top:0}.cc-window.cc-bottom{bottom:0}.cc-window.cc-banner,.cc-window.cc-floating,.cc-window.cc-left,.cc-window.cc-right{left:0;right:0}.cc-window.cc-banner{-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner .cc-compliance{-ms-flex:1 1 auto;flex:1 1 auto}.cc-window.cc-floating{max-width:none}.cc-window .cc-message{margin-bottom:1em}.cc-window.cc-banner{-ms-flex-align:unset;align-items:unset}.cc-window.cc-banner .cc-message{margin-right:0}}
+.cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
+.cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
+
+</style>
+
+<!-- CSS - Social Share Kit Style -->
+
+
+<!-- App - Head Content (pre-bundle) -->
+  <!-- App Head Content (pre-bundle) -->
+
+
+<!-- CSS - Bundle-->
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css?cb=1626194253">
+
+
+<!-- HTML5 Shiv -->
+  <!--[if lt IE 9]>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+<!-- Initialize Manager -->
+<script type="text/javascript">
+  // Performance
+  try {
+    window.performance.mark('manager_start');
+  } catch (e) {}
+
+  function Manager$() {
+    this.properties = {};
+  };
+
+  Manager$.prototype.ready = function(fn, options) {
+    options = options || {};
+
+    setTimeout(function () {
+      Manager.auth().ready(fn, options);
+    }, options.interval || 100);
+  }
+
+  Manager$.prototype.auth = function() {
+    return {
+      ready: function (fn, options) {
+        options = options || {};
+
+        setTimeout(function () {
+          Manager.auth().ready(fn, options);
+        }, options.interval || 100);
+
+      }
+    }
+  }
+
+  // Initialize globals
+  var Manager = new Manager$();
+  // var firebase;
+  var Libraries = {
+    // app: undefined,
+    // lazysizes: undefined,
+    // cookieconsent: undefined,
+  };
+
+</script>
+
+<!-- Master - Styles -->
+<style media="screen">
+  /* Alert box */
+  .master-alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    bottom:0;
+    left:0;
+    position:fixed;
+    z-index:9999;
+    width: 100%;
+  }
+
+  .master-alert a {
+    color: white;
+    text-decoration: underline;
+  }
+  .master-alert a:hover {
+    color: black;
+  }
+
+  .master-alert-close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .master-alert-close:hover {
+    color: black;
+  }
+
+  .master-alert-outdated {
+    display: none;
+  }
+
+  /* Chat box opener */
+  #prechat-btn {
+    position: fixed;
+    background: #237AFC;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+    transition: background 0.5s;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px;
+  }
+
+  #prechat-btn svg {
+    padding-top: 25%;
+    color: #fff;
+    width: 50%;
+    opacity: 1.0;
+    pointer-events: none;
+  }
+  #prechat-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    #prechat-btn {
+      bottom: 15px;
+    }
+  }
+</style>
+
+<!-- Style - IE 8 and Below Only -->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1626194253">
+<![endif]-->
+
+
+<!-- App - Head Content -->
+  <!-- App Head Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</head>
+
+  <body class=" "><!-- App Header Content -->
+
+    <!-- CONTENT START -->
+    <!-- CONTENT START -->
+<article class="" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="">
+    
+<picture>
+<!--[if IE 9]><video style="display: none"><![endif]--><source
+					data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-320px.webp"
+					media="(max-width: 320px)"
+					type="image/webp"
+				>
+				<source
+					data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-640px.webp"
+					media="(max-width: 640px)"
+					type="image/webp"
+				>
+				<source
+					data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-1024px.webp"
+					media="(max-width: 1024px)"
+					type="image/webp"
+				>
+				<source
+					data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser.webp"
+					type="image/webp"
+				><source
+				data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-320px.jpg"
+				media="(max-width: 320px)"
+			>
+			<source
+				data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-640px.jpg"
+				media="(max-width: 640px)"
+			>
+			<source
+				data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser-1024px.jpg"
+				media="(max-width: 1024px)"
+			>
+			<source
+				data-srcset="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser.jpg"
+				media="(min-width: 1025px)"
+			><!--[if IE 9]></video><![endif]-->
+  <img
+  	src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+  	data-src="https://template.itwcreativeworks.com/assets/images/blog/posts/post-/teaser.jpg"
+  	class="lazyload "
+  	alt=""
+		style=""
+		width=""
+		height=""
+    
+  >
+
+</picture>
+<h1 class="" itemprop="name headline"></h1>
+    <p class="">
+      <time class="" datetime="" itemprop="datePublished">
+      </time></p>
+  </header>
+
+  <div class="" itemprop="articleBody">
+    <div class="form-signin text-center">
+  <form class="auth-signin-form auth-signup-form" onsubmit="return false;">
+    <h1 class="h3 mb-3 font-weight-normal">.auth() Library</h1>
+
+    <div class="auth-signedin-false-element" hidden>
+      <div class="mb-3">
+        Not signed in
+      </div>
+
+
+      <div class="accordion card" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#auth-providers-panel" aria-expanded="true" aria-controls="auth-providers-panel">
+                Sign in / Sign up using third-party providers
+              </button>
+            </h2>
+          </div>
+
+          <div id="auth-providers-panel" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="google.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/google.svg" class="lazyload" alt="Google Logo" width="24em">
+                    Sign in with Google
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="facebook.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/facebook.svg" class="lazyload" alt="Facebook Logo" width="24em">
+                    Sign in with Facebook
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="twitter.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/twitter.svg" class="lazyload" alt="Twitter Logo" width="24em">
+                    Sign in with Twitter
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="github.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/github.svg" class="lazyload" alt="GitHub Logo" width="24em">
+                    Sign in with GitHub
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="microsoft.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/microsoft.svg" class="lazyload" alt="Microsoft Logo" width="24em">
+                    Sign in with Microsoft
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="yahoo.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/yahoo-y.svg" class="lazyload" alt="Yahoo Logo" width="24em">
+                    Sign in with Yahoo
+                  </a>
+                </div>
+                <div class="col-12 mb-1">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="apple.com">
+                    <img src="https://cdn.itwcreativeworks.com/assets/general/images/brands/color/apple.svg" class="lazyload" alt="Apple Logo" width="24em">
+                    Sign in with Apple
+                  </a>
+                </div>
+                <div class="col-12">
+                  <a class="btn btn-sm btn-light transition-3d-hover btn-block auth-signin-provider-btn" data-provider="noexist.com">
+                    Sign in with a non-existant service
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="my-3 text-center text-muted">
+        <small>— or —</small>
+      </div>
+
+      <div class="form-group">
+        <label for="email-input" class="sr-only">Email</label>
+        <input type="email" id="email-input" class="form-control auth-email-input" placeholder="Email" required autofocus autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password-input" class="sr-only">Password</label>
+        <input type="password" id="password-input" class="form-control auth-password-input" placeholder="Password" required autofocus autocomplete="current-password">
+      </div>
+
+      <div class="form-group">
+        <label for="password-confirm-input" class="sr-only">Password Confirm</label>
+        <input type="password" id="password-confirm-input" class="form-control auth-password-confirm-input" placeholder="Password confirm" required autofocus autocomplete="new-password">
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input auth-terms-input" id="auth-terms-input" required>
+        <label class="form-check-label" for="auth-terms-input">I agree to the Terms and Conditions</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input auth-newsletter-input" id="auth-newsletter-input">
+        <label class="form-check-label" for="auth-newsletter-input">Sign up for our newsletter</label>
+      </div>
+
+      <div class="alert alert-danger auth-error-message-element" hidden>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block auth-signin-email-btn" type="submit" name="button">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block auth-signup-email-btn" type="submit" name="button">Sign up</button>
+      <button class="btn btn-lg btn-primary btn-block auth-forgot-email-btn" type="submit" name="button">Forgot</button>
+    </div>
+
+    <div class="auth-signedin-true-element" hidden>
+      <div class="">
+        Signed in
+      </div>
+
+      <div class="card mb-3" style="">
+        <div class="card-body">
+          <div class="mb-3">
+            Email: <span class="auth-email-element">...</span> <br>
+            UserId: <span class="auth-uid-element">...</span> <br>
+            <div class="text-left">
+              <pre id="resolve-account-result">(resolve account)</pre>
+            </div>
+          </div>
+          <button id="resolve-account" class="btn btn-lg btn-primary btn-block">Resolve Account</button>
+          <button class="btn btn-lg btn-primary btn-block auth-signout-all-btn" type="button" name="button">Sign out</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+  <form class="" onsubmit="return false;">
+    <div class="">
+      <h1 class="h3 my-3 font-weight-normal">.notifications() Library</h1>
+      <h5 class="my-3">Subscribing</h5>
+      <button class="btn btn-lg btn-primary btn-block" id="subscribe-check" type="button" name="button">.isSubscribed()</button>
+
+      <button class="btn btn-lg btn-primary btn-block" id="subscribe-real" type="button" name="button">.subscribe()</button>
+      <button class="btn btn-lg btn-primary btn-block" id="subscribe-fake" type="button" name="button">Subscribe fake</button>
+      <h5 class="my-3">Sending</h5>
+      <div class="form-group">
+        <label for="notification-address" class="sr-only">Address</label>
+        <input type="url" id="notification-address" class="form-control" placeholder="">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" id="send" type="button" name="button">Send</button>
+
+      <div class="card my-3" style="">
+        <div class="card-body">
+          <pre id="result" class="text-left">
+            waiting...
+          </pre>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</div>
+
+<!-- Exploring the library -->
+<script type="text/javascript">
+  Manager.ready(function() {
+
+    // Inner event listener
+    Manager.auth().ready(function() {
+      console.log('.auth().ready()');
+      console.log('.isAuthenticated():', Manager.auth().isAuthenticated());
+      console.log('.getUser(): ', Manager.auth().getUser());
+      firebase.auth().onAuthStateChanged(function(user) {
+        console.log('.onAuthStateChanged():', user);
+      })
+
+      if (Manager.properties.meta.environment === 'development') {
+        Manager.dom().select('#notification-address').setValue('http://localhost:5001/' + Manager.properties.options.libraries.firebase_app.config.projectId + '/us-central1/bm_sendNotification');
+      } else {
+        Manager.dom().select('#notification-address').setValue('https://us-central1-' + Manager.properties.options.libraries.firebase_app.config.projectId + '.cloudfunctions.net/bm_sendNotification');
+      }
+    });
+
+    function display(message) {
+      Manager.log(message);
+      Manager.dom().select('#result').setInnerHTML(message);
+    }
+
+    Manager.dom().select('body').on('click', function(event) {
+      if (event.target.matches('#subscribe-fake')) {
+        var tempID = Math.floor(Math.random() * 10000) + 1;
+        firebase.firestore().doc('notifications/subscriptions/all/' + tempID)
+          .set(
+          {
+            meta: {
+              dateSubscribed: {
+                timestamp: '',
+                timestampUNIX: new Date().getTime(),
+              },
+            },
+            token: tempID.toString(),
+            linked: {
+              user: {
+                timestampLastLinked: '',
+                data: {
+                  meta: {
+                    uid: ''
+                  }
+                }
+              }
+            },
+            tags: ['general']
+          }
+          )
+          .then(function(data) {
+            display('Successfully set fake subscription!', data)
+          })
+          .catch(function(e) {
+            display('Failed to set Firestore doc: ' + JSON.stringify(e, undefined, 2))
+          });
+      } else if (event.target.matches('#subscribe-real')) {
+        Manager.notifications().subscribe()
+          .then(function(response) {
+            display('Success. Was subscribe performed? = ' + JSON.stringify(response, undefined, 2))
+          })
+          .catch(function(e) {
+            display('Failed to subscribe: ' + JSON.stringify(e, undefined, 2))
+          })
+
+        } else if (event.target.matches('#subscribe-check')) {
+          // Manager.notifications().checkSubscription()
+          //   .then(function(response) {
+          //     Manager.dom().select('#result').setInnerHTML('Subscription status = ' + JSON.stringify(response, undefined, 2))
+          //   })
+          //   .catch(function(e) {
+          //     Manager.dom().select('#result').setInnerHTML('Failed to check subscription status: ' + JSON.stringify(e, undefined, 2))
+          //   })
+          Manager.notifications().isSubscribed()
+            .then(function(response) {
+              display('isSubscribed = ' + JSON.stringify(response, undefined, 2))
+            })
+            .catch(function(e) {
+              display('Failed to check subscription status: ' + JSON.stringify(e, undefined, 2))
+            })
+
+        } else if (event.target.matches('#send')) {
+          if (!firebase.auth().currentUser) {
+            return Manager.dom().select('#result').setInnerHTML('There is no active user.'); // Set setInnerHTML
+          }
+          firebase.auth().currentUser.getIdToken(true)
+          .then(function(token) {
+            fetch(Manager.dom().select('#notification-address').getValue(), {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                authenticationToken: token,
+                payload: {
+                  icon: 'https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png',
+                  click_action: 'https://template.itwcreativeworks.com',
+                  title: 'Test title',
+                  body: 'Test body'
+                }
+              }),
+            })
+            .then(function (res) { // This function runs only on success
+              if (res.status >= 200 && res.status < 300) {
+                res.json()
+                .then(function (data) {
+                  console.log('Success', data);
+                  Manager.dom().select('#result').setInnerHTML(JSON.stringify(data, undefined, 2)); // Set setInnerHTML
+                })
+              } else {
+                return res.text()
+                .then(function (data) {
+                  throw new Error(data || res.statusText || 'Unknown error.')
+                })
+              }
+            })
+            .catch(function (e) { // This function runs only on error
+              console.log('Fail', e);
+              Manager.dom().select('#result').setInnerHTML(e); // Set setInnerHTML
+            })
+            .finally(function () { // This function runs regardless of a success or error
+              console.log('Always');
+            });
+
+          })
+
+        } else if (event.target.matches('#resolve-account')) {
+          console.log('--- Exploring the .account() API ---');
+          var user = firebase.auth().currentUser;
+          var accountResultEl = Manager.dom().select('#resolve-account-result');
+          accountResultEl.setInnerHTML('Waiting...');
+
+          if (!user) {
+            accountResultEl.setInnerHTML('No user :(');
+          } else {
+            firebase.firestore().doc('users/' + user.uid)
+            .get()
+            .then(function (doc) {
+              Manager.account().import()
+              .then(function (Account) {
+                var account = new Account();
+                account.resolve(doc.data(), {})
+                .then(function (properties) {
+                  console.log('.account().resolve()', properties);
+                  accountResultEl.setInnerHTML(JSON.stringify(properties, null, 2));
+                })
+              })
+              .catch(function (e) {
+                accountResultEl.setInnerHTML(e);
+              })
+            })
+            .catch(function (e) {
+              accountResultEl.setInnerHTML(e);
+            })
+          }
+        }
+
+    })
+  });
+
+</script>
+
+
+  </div></article>
+
+    <!-- CONTENT END --><!-- App Footer Content --><!-- Master - Alert Box -->
+<div class="master-alert master-alert-outdated">
+  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome/" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+
+<!-- Master - Chat Opener -->
+<a href="#" onclick="return false;" id="prechat-btn" style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="#ffffff" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/>
+  </svg>
+</a>
+
+<!-- Performance -->
+<script type="text/javascript">
+  try {
+    window.performance.mark('manager_preBundle');
+  } catch (e) {}
+</script>
+
+<!-- App - Foot Content (pre-bundle) -->
+  <!-- App Foot Content (pre-bundle) -->
+
+
+<!-- Script - Bundle -->
+  <script type="text/javascript" src="/assets/js/main.js?cb=1626194253" async></script>
+
+
+<!-- Script - Google Analytics Tracking Script -->
+
+
+<!-- Script - Facebook Pixel Tracking Script -->
+
+
+<!-- Script - Social Share Kit Script -->
+
+
+<!-- Script - Google Adsense -->
+  <script data-ad-client="ca-pub-7372939085773564" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<!-- Schema - Breadcrumbs -->
+  <div class="hidden" hidden>
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/" title="Return home">
+        <span itemprop="name">Home</span>
+      </a><meta itemprop="position" content="1" />
+    </li>
+                <li  itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/@reference/" title="Visit ">
+                      <span itemprop="name">Home</span>
+                      <meta itemprop="position" content="2" />
+                    </a>
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/@reference/starter/blog-author/" title="Visit ">
+                      <span itemprop="name"></span>
+                      <meta itemprop="position" content="4" />
+                    </a>
+                </li></ol>
+  </div>
+
+
+<!-- Schema - Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "name": "Ultimate Jekyll",
+    "description": "Default description.",
+    "logo": "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png",
+    "url": "https://template.itwcreativeworks.com",
+    "sameAs": ["https://www.linkedin.com/company/","https://www.youtube.com/channel/","https://twitter.com/","https://www.instagram.com//","https://.tumblr.com/","https://www.facebook.com//",""
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressCountry": "United States"
+    }
+  }
+  </script>
+
+
+<!-- Schema - Sitelinks -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://template.itwcreativeworks.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://template.itwcreativeworks.com/search/cse?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+
+<!-- App - Foot Content -->
+  <!-- App Foot Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</body>
+</html>

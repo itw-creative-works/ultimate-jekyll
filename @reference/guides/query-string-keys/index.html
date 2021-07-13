@@ -1,0 +1,33 @@
+<h1 id="query-string-keys">Query String Keys</h1>
+<h2 id="ref_source">ref_source</h2>
+<ul>
+  <li>Referring source URL</li>
+  <li>Save to local storage and send via checkouts</li>
+</ul>
+
+<h2 id="auth_email">auth_email</h2>
+<h2 id="auth_premium">auth_premium</h2>
+
+<h2 id="aff">aff</h2>
+<ul>
+  <li>Affiliate ID/email/etc. Immediately saved to local storage.</li>
+</ul>
+
+<h2 id="auth_redirect">auth_redirect</h2>
+<ul>
+  <li>URL to visit after a successful authentication, this is also sent whenever user visits a page with required auth</li>
+</ul>
+
+<h2 id="redirect">redirect</h2>
+<ul>
+  <li>Send the user to this URL immediately upon arriving at the page.</li>
+</ul>
+
+<p>NOTIFICATION STRUCTURE
+key = sequential UUID</p>
+<ul>
+  <li>token = browser token thing</li>
+  <li>userId = firebase userId</li>
+  <li>date/timestamp = date acquired</li>
+  <li>date/timestampUNIX = same as above but timestampUNIX</li>
+</ul>

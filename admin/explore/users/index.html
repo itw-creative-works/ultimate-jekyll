@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><!-- Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/" >
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" >
+
+<!-- Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=5">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<link rel="canonical" href="https://template.itwcreativeworks.com/admin/explore/users/"><!-- Manifest.json -->
+<link rel="manifest" href="https://template.itwcreativeworks.com/manifest.json">
+
+<!-- Title --><title>Explore Users</title>
+<meta name="twitter:title" content="Explore Users" />
+<meta property="og:title" content="Explore Users" />
+
+<!-- Description --><meta name="description" content="Explore users with this Firestore query tool.">
+<meta name="twitter:description" content="Explore users with this Firestore query tool." />
+<meta property="og:description" content="Explore users with this Firestore query tool." />
+
+<!-- Image --><meta name="twitter:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+<meta property="og:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png" />
+
+<!-- OG: Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:widgets:theme" content="light">
+
+<!-- OG: Facebook / Open Graph -->
+<meta property="og:url" content="https://template.itwcreativeworks.com/admin/explore/users/" />
+<meta property="og:type" content="article" />
+
+<!-- Main Feed -->
+<link href="https://template.itwcreativeworks.com/feed.xml" type="application/atom+xml" rel="alternate" title="Ultimate Jekyll Feed">
+
+
+<!-- Configuration -->
+<script type="text/javascript">
+  
+
+  var Configuration = {
+    page: {
+      code: '',
+      type: 'general',
+      breadcrumb: '',
+      settings:  { libraries: { cookieconsent: { enabled: false }, tawk: { enabled: false }, sentry: { enabled: false } }, auth: { state: 'required', sends: { required: '/admin/signin/', prohibited: '/admin/dashboard/' } } } 
+    },
+    global: {
+      version: '1.0.0',
+      url: 'https://template.itwcreativeworks.com',
+      cacheBreaker: '1626194253',
+      settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'ultimate-jekyll.firebaseapp.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: '' } }, cookieconsent: { enabled: true, config: {} }, tawk: { enabled: true, config: { chatId: '5df1636b43be710e1d21af38', widgetId: '', prechatColor: '' } }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website' } } } } ,
+      brand: {
+        name: 'Ultimate Jekyll'
+      },
+      contact: {
+        emailSupport: 'support@example.com',
+        emailBusiness: 'hello@example.com'
+      }
+    }
+  };
+</script>
+
+<!-- Redirect --><!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png?cb=1626194253">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png?cb=1626194253">
+<link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico?cb=1626194253">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml?cb=1626194253">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS - Defaults-->
+<style type="text/css" media="screen">
+  
+  
+  /*! defaults.css v1.0.0 | MIT License | ITW Creative Works */
+@font-face {
+  font-display: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+  
+
+  .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
+.cc-link,.cc-revoke:hover{text-decoration:underline}.cc-revoke,.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window.cc-static{position:static}.cc-window.cc-floating{padding:2em;max-width:24em;-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-revoke{padding:.5em}.cc-header{font-size:18px;font-weight:700}.cc-btn,.cc-close,.cc-link,.cc-revoke{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-highlight .cc-btn:first-child{background-color:transparent;border-color:transparent}.cc-highlight .cc-btn:first-child:focus,.cc-highlight .cc-btn:first-child:hover{background-color:transparent;text-decoration:underline}.cc-close{display:block;position:absolute;top:.5em;right:.5em;font-size:1.6em;opacity:.9;line-height:.75}.cc-close:focus,.cc-close:hover{opacity:1}
+.cc-revoke.cc-top{top:0;left:3em;border-bottom-left-radius:.5em;border-bottom-right-radius:.5em}.cc-revoke.cc-bottom{bottom:0;left:3em;border-top-left-radius:.5em;border-top-right-radius:.5em}.cc-revoke.cc-left{left:3em;right:unset}.cc-revoke.cc-right{right:3em;left:unset}.cc-top{top:1em}.cc-left{left:1em}.cc-right{right:1em}.cc-bottom{bottom:1em}.cc-floating>.cc-link{margin-bottom:1em}.cc-floating .cc-message{display:block;margin-bottom:1em}.cc-window.cc-floating .cc-compliance{-ms-flex:1 0 auto;flex:1 0 auto}.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner.cc-top{left:0;right:0;top:0}.cc-banner.cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:justify;align-content:space-between}.cc-floating .cc-compliance>.cc-btn{-ms-flex:1;flex:1}.cc-btn+.cc-btn{margin-left:.5em}
+@media print{.cc-revoke,.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window.cc-top{top:0}.cc-window.cc-bottom{bottom:0}.cc-window.cc-banner,.cc-window.cc-floating,.cc-window.cc-left,.cc-window.cc-right{left:0;right:0}.cc-window.cc-banner{-ms-flex-direction:column;flex-direction:column}.cc-window.cc-banner .cc-compliance{-ms-flex:1 1 auto;flex:1 1 auto}.cc-window.cc-floating{max-width:none}.cc-window .cc-message{margin-bottom:1em}.cc-window.cc-banner{-ms-flex-align:unset;align-items:unset}.cc-window.cc-banner .cc-message{margin-right:0}}
+.cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
+.cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}
+
+</style>
+
+<!-- CSS - Social Share Kit Style -->
+
+
+<!-- App - Head Content (pre-bundle) -->
+  <!-- App Head Content (pre-bundle) -->
+
+
+<!-- CSS - Bundle-->
+ <link rel="stylesheet" href="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/dashkit/css/libs.bundle.css"> <link rel="stylesheet" href="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/dashkit/css/theme.bundle.css" id="stylesheetLight"> <!-- <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/fonts/feather/feather.css" id="stylesheetLight"> --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.css"> <style media="screen"> .CodeMirror { border-radius: 5px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); height: auto; min-height: 90px; } </style> 
+
+
+<!-- HTML5 Shiv -->
+  <!--[if lt IE 9]>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+<!-- Initialize Manager -->
+<script type="text/javascript">
+  // Performance
+  try {
+    window.performance.mark('manager_start');
+  } catch (e) {}
+
+  function Manager$() {
+    this.properties = {};
+  };
+
+  Manager$.prototype.ready = function(fn, options) {
+    options = options || {};
+
+    setTimeout(function () {
+      Manager.auth().ready(fn, options);
+    }, options.interval || 100);
+  }
+
+  Manager$.prototype.auth = function() {
+    return {
+      ready: function (fn, options) {
+        options = options || {};
+
+        setTimeout(function () {
+          Manager.auth().ready(fn, options);
+        }, options.interval || 100);
+
+      }
+    }
+  }
+
+  // Initialize globals
+  var Manager = new Manager$();
+  // var firebase;
+  var Libraries = {
+    // app: undefined,
+    // lazysizes: undefined,
+    // cookieconsent: undefined,
+  };
+
+</script>
+
+<!-- Master - Styles -->
+<style media="screen">
+  /* Alert box */
+  .master-alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    bottom:0;
+    left:0;
+    position:fixed;
+    z-index:9999;
+    width: 100%;
+  }
+
+  .master-alert a {
+    color: white;
+    text-decoration: underline;
+  }
+  .master-alert a:hover {
+    color: black;
+  }
+
+  .master-alert-close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .master-alert-close:hover {
+    color: black;
+  }
+
+  .master-alert-outdated {
+    display: none;
+  }
+
+  /* Chat box opener */
+  #prechat-btn {
+    position: fixed;
+    background: #237AFC;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+    transition: background 0.5s;
+    z-index: 11;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px;
+  }
+
+  #prechat-btn svg {
+    padding-top: 25%;
+    color: #fff;
+    width: 50%;
+    opacity: 1.0;
+    pointer-events: none;
+  }
+  #prechat-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    #prechat-btn {
+      bottom: 15px;
+    }
+  }
+</style>
+
+<!-- Style - IE 8 and Below Only -->
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1626194253">
+<![endif]-->
+
+
+<!-- App - Head Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</head>
+
+  <body class=" ">
+    
+
+    <!-- CONTENT START -->
+    <div class="main-content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        <div class="row">
+  <div class="col-12">
+
+    <!-- Header -->
+    <div class="header mt-md-5">
+      <div class="header-body">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <!-- Pretitle -->
+            <h6 class="header-pretitle">
+              Explore
+            </h6>
+
+            <!-- Title -->
+            <h1 class="header-title">
+              Explore users
+            </h1>
+
+          </div>
+          <div class="col-auto">
+
+            <!-- Button -->
+            <a href="#" class="btn btn-primary lift">
+              New user (disabled)
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center">
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="card" data-toggle="lists" data-options='{"valueNames": ["orders-order", "orders-product", "orders-date", "orders-total", "orders-status", "orders-method"]}'>
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <!-- Search -->
+            <form class="row align-items-center" onsubmit="return false;" id="search-form">
+              <div class="col-auto pr-0">
+                <span class="fe fe-search text-muted"></span>
+              </div>
+              <div class="col">
+                <input type="search" class="form-control form-control-flush search" placeholder="Search" id="search-input" readonly>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-auto">
+
+            <!-- Button -->
+
+            <!-- <div class="dropdown">
+              <button class="btn btn-sm btn-white dropdown-toggle" type="button" id="bulkActionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bulk action
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bulkActionDropdown">
+                <a class="dropdown-item" href="#!">Action</a>
+                <a class="dropdown-item" href="#!">Another action</a>
+                <a class="dropdown-item" href="#!">Something else here</a>
+              </div>
+            </div> -->
+            <button href="#" onclick="return false;" class="btn btn-primary lift" id="search-btn" disabled>Search</button>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <div class="table-responsive">
+        <table class="table table-sm table-nowrap card-table" id="search-table">
+          <thead>
+            <tr>
+              <th>
+                <div class="custom-control custom-checkbox table-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectAll">
+                  <label class="custom-control-label" for="ordersSelectAll">
+                    &nbsp;
+                  </label>
+                </div>
+              </th>
+              <th>
+                <a href="#" class="text-muted sort" data-sort="orders-order">
+                  UID
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-muted sort" data-sort="orders-product">
+                  Email
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-muted sort" data-sort="orders-date">
+                  Admin
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-muted sort" data-sort="orders-total">
+                  Plan
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-muted sort" data-sort="orders-status">
+                  Created
+                </a>
+              </th>
+              <th colspan="2">
+                <a href="#" class="text-muted sort" data-sort="orders-method">
+                  Edit
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="list" id="search-result">
+            <!--
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox table-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectOne">
+                  <label class="custom-control-label" for="ordersSelectOne">
+                    &nbsp;
+                  </label>
+                </div>
+              </td>
+              <td class="orders-order">
+                #6520
+              </td>
+              <td class="orders-product">
+                5' x 3' Wall Poster
+              </td>
+              <td class="orders-date">
+                <time datetime="2018-07-30">07/30/18</time>
+              </td>
+              <td class="orders-total">
+                $55.25
+              </td>
+              <td class="orders-status">
+                <div class="badge badge-soft-success">
+                  Shipped
+                </div>
+              </td>
+              <td class="orders-method">
+                Mastercard
+              </td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fe fe-more-vertical"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a href="#!" class="dropdown-item">
+                      Action
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                      Another action
+                    </a>
+                    <a href="#!" class="dropdown-item">
+                      Something else here
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-12">
+    <div id="response" hidden>
+      <div class="my-3">
+        <!-- <div class="alert alert-info" role="alert" hidden>
+          <h4 class="alert-heading">Waiting...</h4>
+          <p class="mb-0">Hold up</p>
+        </div> -->
+        <div id="search-preloader" class="">
+          <div id="" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+              
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-success" role="alert" hidden>
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, the request was <strong>successful</strong>. ;)</p>
+          <hr>
+          <p class="mb-0"></p>
+          <pre><code id="success-response-code" class="text-white">waiting...</code></pre>
+        </div>
+        <div class="alert alert-danger" role="alert" hidden>
+          <h4 class="alert-heading">Aw snap!</h4>
+          <p class="mb-0">Something went wrong, please examine the error below:</p>
+          <hr>
+          <pre><code id="failed-response-code" class="text-white">waiting...</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="editSearchRecord" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-lighter">
+      <form id="record-editing-form" onsubmit="return false;" class="my-4">
+        <div class="modal-body">
+
+          <!-- Header -->
+          <div class="row">
+            <div class="col">
+
+              <!-- Prettitle -->
+              <h6 class="text-uppercase text-muted mb-3">
+                <a href="#!" class="text-reset">Edit user</a>
+              </h6>
+
+              <!-- Title -->
+              <h2 class="mb-2" id="search-record-edit-heading">
+                Editing
+              </h2>
+
+            </div>
+            <div class="col-auto">
+
+              <!-- Close -->
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <!-- Divider -->
+          <hr class="my-4">
+
+          <div class="col-12 pr-0 pl-0">
+            <textarea id="record-editing-input" name="record-editing-input"></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    var navBlocked = false;
+    var allowLeave = true;
+    var CurrentEditId = 0;
+
+    Manager.ready(function() {
+      window.dom = Manager.dom();
+      window.util = Manager.utilities();
+      window.htmlEditor = CodeMirror.fromTextArea(document.getElementById("record-editing-input"), {
+        lineNumbers: true,
+        mode: 'application/ld+json',
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        viewportMargin: Infinity
+        // theme: 'default',
+      });
+
+      dom.select('#search-btn, #search-input').removeAttribute('disabled').removeAttribute('readonly')
+
+      dom.select('body').on('click', function (event) {
+        if (event.target.matches('#search-btn')) {
+          performSearch();
+        } else if (event.target.matches('.search-record-btn')) {
+          window.CurrentEditId = event.target.dataset.record - 1;
+          var user = window.Table[window.CurrentEditId];
+          Manager.dom().select('#search-record-edit-heading').setInnerHTML('Editing ' + util.get(user, 'auth.uid', '?'))
+          $('#editSearchRecord').modal('show');
+          window.htmlEditor.getDoc().setValue(JSON5.stringify(util.get(user, '', {}), null, 2));
+          setTimeout(function () {
+            window.htmlEditor.refresh();
+          }, 200);
+        }
+      })
+      dom.select('#search-form').on('submit', function (event) {
+        performSearch();
+      })
+      dom.select('#record-editing-form').on('submit', function (event) {
+        saveEdits();
+      })
+    },
+    {
+      waitFor: function () {
+        return typeof window.CodeMirror !== 'undefined';
+      }
+    });
+
+    function saveEdits() {
+      var body = JSON5.parse(window.htmlEditor.getDoc().getValue());
+      var uid = window.util.get(body, 'auth.uid', '');
+      if (uid) {
+        firebase.firestore().doc('users/' + uid)
+        .set(body,
+          {
+            merge: true
+          })
+          .then(function () {
+            $('#editSearchRecord').modal('hide');
+            window.Table[window.CurrentEditId] = body;
+            table_clear({reset: false});
+            table_build();
+          })
+
+      } else {
+
+      }
+    }
+
+    function performSearch() {
+      display('waiting');
+      table_clear({reset: true});
+      firebase.auth().currentUser.getIdToken(true)
+      .then(function(token) {
+        window.token = token;
+        runQuery()
+        .then(function (r) {
+          table_build();
+          display('success', r)
+        })
+        .catch(function (e) {
+          display('failed', e)
+        })
+        // runQuery();
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+    }
+
+    function runQuery(field) {
+      var searchText = dom.select('#search-input').getValue();
+      var serverDev = 'http://localhost:5001/' + Manager.properties.options.libraries.firebase_app.config.projectId + '/us-central1/bm_query';
+      var serverProd = 'https://us-central1-' + Manager.properties.options.libraries.firebase_app.config.projectId + '.cloudfunctions.net/bm_query';
+
+      return new Promise(function(resolve, reject) {
+        if (!searchText) {
+          return reject(new Error('Please enter a query to search.'))
+        } else {
+          fetch(serverProd, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              queries: [
+                {
+                  collection: 'users',
+                  orderBy: [
+                    { field: 'activity.created.timestampUNIX', order: 'desc' },
+                    // { field: 'auth.uid', order: 'asc' },
+                  ],
+                  filter: [
+                    { field: 'auth.email || auth.uid', matches: '/' + searchText + '/i' },
+                  ],
+                },
+              ],
+              authenticationToken: window.token
+            }),
+          })
+          .then(function (res) {
+            if (res.status >= 200 && res.status < 300) {
+              res.json()
+              .then(function (data) {
+                console.log('Success', data);
+                table_add(data);
+                return resolve();
+              })
+            } else {
+              return res.text()
+              .then(function (data) {
+                throw new Error(data || res.statusText || 'Unknown error.')
+              })
+            }
+          })
+          .catch(function (e) {
+            return reject(e);
+          })
+        }
+      });
+    }
+
+    function table_add(data) {
+      window.Table = window.Table || [];
+
+      for (var i = 0; i < data.length; i++) {
+        window.Table.push(data[i].data);
+      }
+    }
+
+    function table_build() {
+
+
+      window.Table = window.Table || [];
+      window.TableId = (window.TableId || 0);
+      var util = Manager.utilities();
+      var buildString = '';
+      var table = Manager.dom().select('#search-result').get(0);
+
+      window.Table = window.Table.filter(function (el, index, self) {
+        return index === window.Table.findIndex(function (el2) {
+          return util.get(el, 'auth.uid') === util.get(el2, 'auth.uid')
+        })
+      });
+
+      // console.log('window.Table', window.Table);
+
+      if (window.Table.length == 0) {
+        display('failed', new Error('No records found that match your query.'))
+        return;
+      }
+
+      for (var i = 0; i < window.Table.length; i++) {
+        var item = window.Table[i];
+        var tid = 'search-id-' + window.TableId;
+        window.TableId++;
+        var util = Manager.utilities();
+        var admin = util.get(item, 'roles.admin', false);
+        var plan = util.get(item, 'plan.id', 'basic');
+        var timestamp = util.get(item, 'activity.created.timestamp', '?');
+        buildString +=
+        `
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox table-checkbox">
+                <input type="checkbox" class="custom-control-input" name="${tid}" id="${tid}">
+                <label class="custom-control-label" for="${tid}">
+                  &nbsp;
+                </label>
+              </div>
+            </td>
+            <td class="">
+              <a href="#" onclick="return false"; class="search-record-btn" data-record="${window.TableId}">${util.get(item, 'auth.uid', '?')}</a>
+            </td>
+            <td class="orders-product">
+              <a href="#" onclick="return false"; class="search-record-btn" data-record="${window.TableId}">${util.get(item, 'auth.email', '?')}</a>
+            </td>
+            <td class="orders-status">
+              <div class="badge badge-soft-${admin ? 'success' : 'danger'}">
+                ${admin}
+              </div>
+            </td>
+            <td class="orders-status">
+              <div class="badge badge-soft-${plan === 'basic' ? 'secondary' : 'primary'}">
+                ${plan}
+              </div>
+            </td>
+            <td class="orders-date">
+              <time datetime="${timestamp}">${timestamp.split('T')[0]}</time>
+            </td>
+
+            <td class="">
+              <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block search-record-btn" data-record="${window.TableId}">
+                Edit
+              </a>
+
+            </td>
+          </tr>
+        `;
+      }
+
+      // Manager.dom().select('#search-result').get(0).appendChild(buildString);
+      table.innerHTML = buildString;
+
+
+
+    }
+
+    function display(type, message) {
+      dom.select('#response #search-preloader').hide()
+      dom.select('#search-btn').removeAttribute('disabled').removeClass('disabled');
+      dom.select('#response').show()
+      if (type == 'failed') {
+        dom.select('#response .alert-success').hide()
+        dom.select('#response .alert-danger').show()
+        dom.select('#response #search-preloader').hide()
+        dom.select('#failed-response-code').setInnerHTML(message)
+      } else if (type == 'success') {
+        // dom.select('#response .alert-success').show()
+        dom.select('#response .alert-danger').hide()
+        dom.select('#response #search-preloader').hide()
+        dom.select('#success-response-code').setInnerHTML(message)
+      } else if (type == 'waiting') {
+        dom.select('#response .alert-danger').hide()
+        dom.select('#response .alert-success').hide()
+        dom.select('#response #search-preloader').show()
+        dom.select('#search-btn').setAttribute('disabled', true).addClass('disabled');
+      } else {
+        dom.select('#response').hide()
+      }
+    }
+
+    function table_clear(options) {
+      options = options || {};
+      if (options.reset == true) {
+        window.Table = [];
+      }
+      window.TableId = 0;
+
+      var table = Manager.dom().select('#search-result').get(0);
+      table.innerHTML = '';
+    }
+
+
+    function blockNavigation() {
+      if (navBlocked === true) {
+        return;
+      }
+      navBlocked = true;
+      try {
+        window.onbeforeunload = function(event) {
+          if (allowLeave) {
+            event.preventDefault();
+          } else {
+            event.returnValue = "Write something clever here..";
+          }
+        };
+      } catch (e) {
+        console.error('Error creating post', e);
+      }
+    }
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- CONTENT END -->
+    <!-- Master - Alert Box -->
+<div class="master-alert master-alert-outdated">
+  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome/" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+
+<!-- Master - Chat Opener -->
+<a href="#" onclick="return false;" id="prechat-btn" style="display: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="#ffffff" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"/>
+  </svg>
+</a>
+
+<!-- Performance -->
+<script type="text/javascript">
+  try {
+    window.performance.mark('manager_preBundle');
+  } catch (e) {}
+</script>
+
+<!-- App - Foot Content (pre-bundle) -->
+  <!-- App Foot Content (pre-bundle) -->
+
+
+<!-- Script - Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/json5@2.1.1/dist/index.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/matchbrackets.min.js" charset="utf-8"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/closebrackets.min.js" charset="utf-8"></script> <script type="text/javascript" src="/assets/js/master.js?cb=1626194253" async defer></script> 
+
+
+<!-- Script - Google Analytics Tracking Script -->
+
+
+<!-- Script - Facebook Pixel Tracking Script -->
+
+
+<!-- Script - Social Share Kit Script -->
+
+
+<!-- Script - Google Adsense -->
+  <script data-ad-client="ca-pub-7372939085773564" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<!-- Schema - Breadcrumbs -->
+  <div class="hidden" hidden>
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/" title="Return home">
+        <span itemprop="name">Home</span>
+      </a><meta itemprop="position" content="1" />
+    </li>
+                <li  itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/admin/" title="Visit ">
+                      <span itemprop="name"></span>
+                      <meta itemprop="position" content="2" />
+                    </a>
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    
+                    <a itemtype="http://schema.org/Thing" itemprop="item" href="https://template.itwcreativeworks.com/admin/explore/users/" title="Visit ">
+                      <span itemprop="name">Explore Users</span>
+                      <meta itemprop="position" content="4" />
+                    </a>
+                </li></ol>
+  </div>
+
+
+<!-- Schema - Brand -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "name": "Ultimate Jekyll",
+    "description": "Default description.",
+    "logo": "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-black-1024x1024.png",
+    "url": "https://template.itwcreativeworks.com",
+    "sameAs": ["https://www.linkedin.com/company/","https://www.youtube.com/channel/","https://twitter.com/","https://www.instagram.com//","https://.tumblr.com/","https://www.facebook.com//",""
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressCountry": "United States"
+    }
+  }
+  </script>
+
+
+<!-- Schema - Sitelinks -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://template.itwcreativeworks.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://template.itwcreativeworks.com/search/cse?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+
+<!-- App - Foot Content -->
+
+
+<!-- Page - Injected head -->
+
+
+</body>
+</html>

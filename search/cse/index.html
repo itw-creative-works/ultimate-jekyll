@@ -1,0 +1,15 @@
+<html lang="en">
+  <head>
+    <!-- <meta http-equiv="refresh" content="0; url="> -->
+  </head>
+
+  <body>
+    Redirecting...
+    <script type="text/javascript">
+      function getQueryStringValue (key) {
+        return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+      }
+      window.location.href = "https://cse.google.com/cse?cx=&ie=UTF-8&q=" + getQueryStringValue("q");
+    </script>
+  </body>
+</html>
