@@ -38,8 +38,8 @@
 <meta name="twitter:description" content="This is a sample excerpt for post number 3">
 <meta property="og:description" content="This is a sample excerpt for post number 3">
 
-<!-- Image --><meta name="twitter:image" content="https://template.itwcreativeworks.com/assets/images/blog/posts/post-1705287438/example-post-3.jpg">
-<meta property="og:image" content="https://template.itwcreativeworks.com/assets/images/blog/posts/post-1705287438/example-post-3.jpg">
+<!-- Image --><meta name="twitter:image" content="https://template.itwcreativeworks.com/assets/images/blog/posts/post-1706320045/example-post-3.jpg">
+<meta property="og:image" content="https://template.itwcreativeworks.com/assets/images/blog/posts/post-1706320045/example-post-3.jpg">
 
 <!-- OG: Twitter -->
 <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      cacheBreaker: '1705287445',
+      cacheBreaker: '1706320052',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -109,13 +109,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1705287445">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1705287445">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1705287445">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1706320052">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1706320052">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1706320052">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1705287445">
+<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1706320052">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1705287445">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1706320052">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -298,13 +298,22 @@ footer, header, hgroup, menu, nav, section {
   /* Alert box */
   .master-alert {
     padding: 20px;
-    background-color: #f44336;
     color: white;
-    bottom:0;
-    left:0;
-    position:fixed;
-    z-index:9999;
+    left: 0;
+    z-index: 9999;
     width: 100%;
+  }
+
+  .master-alert-top {
+    top: 0;
+  }
+
+  .master-alert-bottom {
+    bottom: 0;
+  }
+
+  .master-alert-fixed {
+    position: fixed;
   }
 
   .master-alert a {
@@ -331,7 +340,15 @@ footer, header, hgroup, menu, nav, section {
   }
 
   .master-alert-outdated {
-    display: none;
+    background-color: #f44336;
+  }
+
+  .master-alert-suspended {
+    background-color: #f44336;
+  }
+
+  .master-alert-sale {
+    background-color: #237afc;
   }
 
   /* Chat box opener */
@@ -379,10 +396,44 @@ footer, header, hgroup, menu, nav, section {
   }
 </style>
 
-<!-- Style - IE 8 and Below Only -->
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1705287445">
+<!-- Style - IE 9 and Below Only -->
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1706320052">
 <![endif]-->
+
+<!-- Style - Scripts are Disabled -->
+<noscript>
+  <style media="screen">
+    .master-alert-outdated {
+      display: block !important;
+    }
+  </style>
+</noscript>
+
+<!-- Alerts -->
+<!-- Master - Outdated Alert Box -->
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-outdated animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Outdated browser"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-suspended animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Payment method issue"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  There is a problem with your payment method. To coninue using Ultimate Jekyll, please <a href="https://template.itwcreativeworks.com/account#billing" target="_blank">update your payment method</a>.
+</div>
+<div
+  class="master-alert master-alert-top master-alert-block master-alert-sale animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Flash sale"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  <strong>FLASH SALE!</strong>
+  Save <strong>15%</strong> at checkout—today only!
+</div>
 
 <!-- App - Head Content -->
 
@@ -452,14 +503,14 @@ footer, header, hgroup, menu, nav, section {
 
         <div>
 <picture>
-<!--[if IE 9]><video style="display: none"><![endif]--><source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-320px.webp" media="(max-width: 320px)" type="image/webp" />
-				<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-640px.webp" media="(max-width: 640px)" type="image/webp" />
-				<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-1024px.webp" media="(max-width: 1024px)" type="image/webp" />
-				<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3.webp" type="image/webp" /><source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-320px.jpg" media="(max-width: 320px)" />
-			<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-640px.jpg" media="(max-width: 640px)" />
-			<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3-1024px.jpg" media="(max-width: 1024px)" />
-			<source data-srcset="/assets/images/blog/posts/post-1705287438/example-post-3.jpg" media="(min-width: 1025px)" /><!--[if IE 9]></video><![endif]-->
-  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/assets/images/blog/posts/post-1705287438/example-post-3.jpg" class="lazyload img-fluid rounded-lg" alt="Example post number 3" style="" width="" height="" />
+<!--[if IE 9]><video style="display: none"><![endif]--><source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-320px.webp" media="(max-width: 320px)" type="image/webp" />
+				<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-640px.webp" media="(max-width: 640px)" type="image/webp" />
+				<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-1024px.webp" media="(max-width: 1024px)" type="image/webp" />
+				<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3.webp" type="image/webp" /><source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-320px.jpg" media="(max-width: 320px)" />
+			<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-640px.jpg" media="(max-width: 640px)" />
+			<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3-1024px.jpg" media="(max-width: 1024px)" />
+			<source data-srcset="/assets/images/blog/posts/post-1706320045/example-post-3.jpg" media="(min-width: 1025px)" /><!--[if IE 9]></video><![endif]-->
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/assets/images/blog/posts/post-1706320045/example-post-3.jpg" class="lazyload img-fluid rounded-lg" alt="Example post number 3" style="" width="" height="" />
 
 </picture>
 </div>
@@ -471,7 +522,7 @@ footer, header, hgroup, menu, nav, section {
         <hr />
 
         <h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1705287438.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1706320045.</p>
 
 
       </article>
@@ -557,13 +608,7 @@ footer, header, hgroup, menu, nav, section {
 
     <!-- Foot -->
 
-<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Alert Box -->
-<div class="master-alert master-alert-outdated">
-  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
-</div>
-
-<!-- Master - Chat Opener -->
+<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Chat Opener -->
 <a id="prechat-btn" class="animation-fade-in" href="#" onclick="return false;" style="display: none;">
   <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 700 700" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs/>
@@ -576,7 +621,7 @@ footer, header, hgroup, menu, nav, section {
   </svg>
 </a>
 
-<!-- Master - Exit Popip -->
+<!-- Master - Exit Popup -->
 <div id="modal-exit-popup" class="modal fade" tabindex="-1" hidden>
   <div class="modal-dialog">
     <div class="modal-content">
@@ -613,7 +658,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Script - Bundle --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> 
 
-  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1705287445" async></script>
+  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1706320052" async></script>
 
 
 <!-- TODO: FIX THIS -->
@@ -1202,7 +1247,7 @@ window.SocialShareKit = SocialShareKit;
       "description": "This is a sample excerpt for post number 3 ",
       "headline": "Example post number 3",
       "datePublished": "2024-01-03T00:00:00+00:00",
-      "dateModified": "2024-01-15T02:57:25+00:00",
+      "dateModified": "2024-01-27T01:47:32+00:00",
       "author": {
         "@id": "https://template.itwcreativeworks.com/team/alex#Person"
       },
@@ -1213,7 +1258,7 @@ window.SocialShareKit = SocialShareKit;
         "@id": "https://template.itwcreativeworks.com/blog/example-post-3"
       },
       "image": [
-        "https://template.itwcreativeworks.com/assets/images/blog/posts/post-1705287438/example-post-3.jpg"
+        "https://template.itwcreativeworks.com/assets/images/blog/posts/post-1706320045/example-post-3.jpg"
       ],
       "inLanguage": "en-US"
     }

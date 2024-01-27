@@ -76,7 +76,7 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      cacheBreaker: '1705287445',
+      cacheBreaker: '1706320052',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -110,13 +110,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1705287445">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1705287445">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1705287445">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1706320052">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1706320052">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1706320052">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1705287445">
+<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1706320052">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1705287445">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1706320052">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -229,7 +229,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- CSS - Bundle-->
-  <link rel="stylesheet" type="text/css" href="https://template.itwcreativeworks.com/assets/css/main.css?cb=1705287445">
+  <link rel="stylesheet" type="text/css" href="https://template.itwcreativeworks.com/assets/css/main.css?cb=1706320052">
 
 
 <!-- HTML5 Shiv -->
@@ -288,13 +288,22 @@ footer, header, hgroup, menu, nav, section {
   /* Alert box */
   .master-alert {
     padding: 20px;
-    background-color: #f44336;
     color: white;
-    bottom:0;
-    left:0;
-    position:fixed;
-    z-index:9999;
+    left: 0;
+    z-index: 9999;
     width: 100%;
+  }
+
+  .master-alert-top {
+    top: 0;
+  }
+
+  .master-alert-bottom {
+    bottom: 0;
+  }
+
+  .master-alert-fixed {
+    position: fixed;
   }
 
   .master-alert a {
@@ -321,7 +330,15 @@ footer, header, hgroup, menu, nav, section {
   }
 
   .master-alert-outdated {
-    display: none;
+    background-color: #f44336;
+  }
+
+  .master-alert-suspended {
+    background-color: #f44336;
+  }
+
+  .master-alert-sale {
+    background-color: #237afc;
   }
 
   /* Chat box opener */
@@ -369,10 +386,44 @@ footer, header, hgroup, menu, nav, section {
   }
 </style>
 
-<!-- Style - IE 8 and Below Only -->
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1705287445">
+<!-- Style - IE 9 and Below Only -->
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1706320052">
 <![endif]-->
+
+<!-- Style - Scripts are Disabled -->
+<noscript>
+  <style media="screen">
+    .master-alert-outdated {
+      display: block !important;
+    }
+  </style>
+</noscript>
+
+<!-- Alerts -->
+<!-- Master - Outdated Alert Box -->
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-outdated animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Outdated browser"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
+</div>
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-suspended animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Payment method issue"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  There is a problem with your payment method. To coninue using Ultimate Jekyll, please <a href="https://template.itwcreativeworks.com/account#billing" target="_blank">update your payment method</a>.
+</div>
+<div
+  class="master-alert master-alert-top master-alert-block master-alert-sale animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Flash sale"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  <strong>FLASH SALE!</strong>
+  Save <strong>15%</strong> at checkout—today only!
+</div>
 
 <!-- App - Head Content -->
   <!-- App Head Content -->
@@ -410,14 +461,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/account</li>
+        <li>/authentication/account</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/account</li>
+        <li>/account</li>
         <li>
           <ul>
             <li></li>
@@ -466,13 +517,6 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-required</li>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul><ul>
         <li>/authentication/required</li>
         <li>
           <ul>
@@ -480,7 +524,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-success</li>
+        <li>/authentication-required</li>
         <li>
           <ul>
             <li></li>
@@ -494,7 +538,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-token</li>
+        <li>/authentication-success</li>
         <li>
           <ul>
             <li></li>
@@ -502,6 +546,13 @@ footer, header, hgroup, menu, nav, section {
         </li>
       </ul><ul>
         <li>/authentication/token</li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul><ul>
+        <li>/authentication-token</li>
         <li>
           <ul>
             <li></li>
@@ -606,14 +657,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/posts/create</li>
+        <li>/admin/notifications/create</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/notifications/create</li>
+        <li>/admin/posts/create</li>
         <li>
           <ul>
             <li></li>
@@ -704,14 +755,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/forgot</li>
+        <li>/authentication/forgot</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/forgot</li>
+        <li>/forgot</li>
         <li>
           <ul>
             <li></li>
@@ -760,14 +811,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/posts</li>
+        <li>/admin/notifications</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/notifications</li>
+        <li>/admin/posts</li>
         <li>
           <ul>
             <li></li>
@@ -837,14 +888,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/oauth2</li>
+        <li>/authentication/oauth</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/oauth</li>
+        <li>/oauth2</li>
         <li>
           <ul>
             <li></li>
@@ -956,13 +1007,6 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signin</li>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul><ul>
         <li>/authentication/signin</li>
         <li>
           <ul>
@@ -970,7 +1014,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signout</li>
+        <li>/signin</li>
         <li>
           <ul>
             <li></li>
@@ -984,7 +1028,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signup</li>
+        <li>/signout</li>
         <li>
           <ul>
             <li></li>
@@ -992,6 +1036,13 @@ footer, header, hgroup, menu, nav, section {
         </li>
       </ul><ul>
         <li>/authentication/signup</li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul><ul>
+        <li>/signup</li>
         <li>
           <ul>
             <li></li>
@@ -1131,13 +1182,7 @@ footer, header, hgroup, menu, nav, section {
 
     <!-- Foot -->
 
-<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Alert Box -->
-<div class="master-alert master-alert-outdated">
-  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
-</div>
-
-<!-- Master - Chat Opener -->
+<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Chat Opener -->
 <a id="prechat-btn" class="animation-fade-in" href="#" onclick="return false;" style="display: none;">
   <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 700 700" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs/>
@@ -1150,7 +1195,7 @@ footer, header, hgroup, menu, nav, section {
   </svg>
 </a>
 
-<!-- Master - Exit Popip -->
+<!-- Master - Exit Popup -->
 <div id="modal-exit-popup" class="modal fade" tabindex="-1" hidden>
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1186,7 +1231,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- Script - Bundle -->
-  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1705287445" async></script>
+  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1706320052" async></script>
 
 
 <!-- TODO: FIX THIS -->
