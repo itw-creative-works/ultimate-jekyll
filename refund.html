@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  >
+<html lang="en" class="h-100" >
   <head>
     <!-- Head -->
 
@@ -23,20 +23,21 @@
 <meta name="generator" content="Ultimate Jekyll">
 
 <!-- Canonical -->
-<link rel="canonical" href="https://template.itwcreativeworks.com/app">
+<link rel="canonical" href="https://template.itwcreativeworks.com/refund">
 
-<!-- Robots -->
+<!-- Robots --><meta name="robots" content="noindex">
+
 
 <!-- Keywords --><!-- Manifest.json -->
 <link rel="manifest" href="https://template.itwcreativeworks.com/manifest.json">
 
-<!-- Title --><title>Ultimate Jekyll - App Launcher</title>
-<meta name="twitter:title" content="Ultimate Jekyll - App Launcher">
-<meta property="og:title" content="Ultimate Jekyll - App Launcher">
+<!-- Title --><title>Default title</title>
+<meta name="twitter:title" content="Default title">
+<meta property="og:title" content="Default title">
 
-<!-- Description --><meta name="description" content="Ultimate Jekyll app launcher">
-<meta name="twitter:description" content="Ultimate Jekyll app launcher">
-<meta property="og:description" content="Ultimate Jekyll app launcher">
+<!-- Description --><meta name="description" content="Default description">
+<meta name="twitter:description" content="Default description">
+<meta property="og:description" content="Default description">
 
 <!-- Image --><meta name="twitter:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-square-black-1024x1024.png">
 <meta property="og:image" content="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/socials/itw-creative-works-brandmark-square-black-1024x1024.png">
@@ -47,15 +48,15 @@
 <meta name="twitter:widgets:theme" content="light">
 
 <!-- OG: Facebook / Open Graph -->
-<meta property="og:url" content="https://template.itwcreativeworks.com/app"><meta property="og:type" content="website">
+<meta property="og:url" content="https://template.itwcreativeworks.com/refund"><meta property="og:type" content="website">
 
 <!-- Main Feed -->
 <link href="https://template.itwcreativeworks.com/feeds/posts.xml" type="application/atom+xml" rel="alternate" title="Ultimate Jekyll Feed">
 
 <!-- Language Tags -->
-<link rel="alternate" href="https://template.itwcreativeworks.com/app" hreflang="x-default">
-<link rel="alternate" href="https://template.itwcreativeworks.com/app" hreflang="en">
-<!-- <link rel="alternate" href="https://template.itwcreativeworks.com/es//app" hreflang="es"> -->
+<link rel="alternate" href="https://template.itwcreativeworks.com/refund" hreflang="x-default">
+<link rel="alternate" href="https://template.itwcreativeworks.com/refund" hreflang="en">
+<!-- <link rel="alternate" href="https://template.itwcreativeworks.com/es//refund" hreflang="es"> -->
 
 <!-- Performance Metrics -->
 
@@ -69,7 +70,7 @@
       code: '',
       type: 'general',
       breadcrumb: '',
-      settings:  { libraries: { cookieconsent: { enabled: true }, chatsy: { enabled: true }, sentry: { enabled: true } }, } 
+      settings:  { libraries: { cookieconsent: { enabled: false }, chatsy: { enabled: false }, sentry: { enabled: false } }, } 
     },
     global: {
       app: 'itw-creative-works',
@@ -227,8 +228,8 @@ footer, header, hgroup, menu, nav, section {
   <!-- App Head Content (pre-bundle) -->
 
 
-<!-- CSS - Bundle--> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
-
+<!-- CSS - Bundle-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
 
 
 <!-- HTML5 Shiv -->
@@ -444,54 +445,85 @@ footer, header, hgroup, menu, nav, section {
 
 </head>
 
-  <body class=" "  >
+  <body class="h-100 "  >
 
     <!-- Header -->
     
 
     <!-- Content -->
     
-<div class="container" style="height: 100vh;">
-	<div class="row h-100">
-		<div class="col-12 h-100 d-table">
-			<div class="d-table-cell align-middle">
-				<div class="py-5 text-center">
-          <a class="d-flex justify-content-center" href="https://template.itwcreativeworks.com" target="_blank">
-            <img class="zi-2" id="main-logo" src="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg?cb=1706574152" alt="Ultimate Jekyll" style="width: 8rem;" />
-          </a>
-					<p class="lead">Welcome to the <strong>Ultimate Jekyll</strong> app launcher!</p>
-					<a id="launch-button" class="btn btn-outline-primary mb-1 me-1" href="itw-creative-works://dashboard">Launch Ultimate Jekyll</a>
-					<a id="download-button" class="btn btn-primary mb-1" href="https://template.itwcreativeworks.com/download">Download Ultimate Jekyll</a>
-        </div>
-			</div>
-		</div>
-	</div>
+
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div class="d-flex justify-content-between">
+      <h3 class="mb-0">Ultimate Jekyll</h3>
+      <nav class="nav nav-masthead">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="https://template.itwcreativeworks.com">Return home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3 text-center">
+    <div class="d-inline-flex justify-content-between align-items-center">
+      <h1>Redirecting...</h1>
+      <div class="spinner-border spinner-border-md text-primary ms-3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <p class="lead">Taking you to the page you requested...</p>
+    <p class="lead">
+      <noscript>
+        <a href="https://itwcreativeworks.com/portal/account/payment/manage" class="btn btn-lg btn-primary fw-bold">Take me there</a>
+      </noscript>
+    </p>
+  </main>
+
+  <footer class="mt-auto">
+  </footer>
 </div>
 
-<script>
-	var split = window.location.href.split('?');
-	var launchButton = document.getElementById('launch-button');
-	var downloadButton = document.getElementById('download-button');
-	var newUrl;
+<script type="text/javascript">
+  Manager.ready(function () {
+    var host = new URL('https://template.itwcreativeworks.com')
+    var url = new URL(window.location.href);
+    var redirect = {
+      url: 'https://itwcreativeworks.com/portal/account/payment/manage',
+      querystring: '' || true,
+      modifier: "" || function (url) { return url },
+    };
+    var isDevelopment = Manager.properties.meta.environment === 'development';
 
-	if (split[1]) {
-		split.shift();
-		newUrl = 'itw-creative-works://dashboard?' + split.join('?');
+    console.log('Redirect options', redirect);
 
-		var b = !1;
-		launchButton.setAttribute('href', newUrl);
+    // Set
+    if (redirect.url) {
+      redirect.url = new URL(redirect.url.startsWith('http') ? redirect.url : host.toString() + redirect.url.replace(/^\//, ''))
+    } else {
+      redirect.url = new URL(host);
+    }
 
-		window.addEventListener('blur', function() {
-			b = !0;
-		}), window.addEventListener('focus', function() {
-			b && window.close()
-		}), window.location.href = newUrl, setTimeout(function() {
-			window.close()
-		}, 5e3)
-	}
+    // If redirect.querystring is true, loop through all querystring parameters and add them to the redirect url
+    if (redirect.querystring !== false && redirect.querystring !== 'false') {
+      for (var pair of url.searchParams.entries()) {
+        redirect.url.searchParams.set(pair[0], pair[1]);
+      }
+    }
+
+    // Set final URL
+    var finalURL = redirect.modifier(redirect.url).toString();
+
+    // Log
+    console.log('Redirecting to: ' + finalURL);
+
+    // Perform redirect
+    setTimeout(function () {
+      window.location.href = finalURL;
+    }, isDevelopment ? 3000 : 1);
+  })
 </script>
-
-
 
 
     <!-- Footer -->
@@ -547,8 +579,7 @@ footer, header, hgroup, menu, nav, section {
   <!-- App Foot Content (pre-bundle) -->
 
 
-<!-- Script - Bundle --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> 
-
+<!-- Script - Bundle -->
   <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1706574152" async></script>
 
 
@@ -560,6 +591,8 @@ footer, header, hgroup, menu, nav, section {
 <!-- Script - Slapform -->
 
 <!-- Script - Bundle -->
+
+
 
 <!-- Script - Google Analytics Tracking Script -->
   <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-0PZKHE3GNB" async></script>
@@ -631,8 +664,8 @@ footer, header, hgroup, menu, nav, section {
               "@type": "ListItem",
               "position": 1,
               "item": {
-                "@id": "https://template.itwcreativeworks.com/app",
-                "name": "app"
+                "@id": "https://template.itwcreativeworks.com/refund",
+                "name": "refund"
               }
             }]
     }
