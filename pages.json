@@ -115,18 +115,18 @@
         "type": ""
       },
     {
-        "url": "https://template.itwcreativeworks.com/checkout/confirmation",
-        "title": "Thank you!",
-        "desc": "Thanks for checking out!",
-        "breadcrumb": "Thank you",
-        "category": "",
-        "type": ""
-      },
-    {
         "url": "https://template.itwcreativeworks.com/submission/confirmation",
         "title": "Submission Confirmation",
         "desc": "Thank you for taking the time to submit your request. We will get back to you as soon a possible.",
         "breadcrumb": "Submission",
+        "category": "",
+        "type": ""
+      },
+    {
+        "url": "https://template.itwcreativeworks.com/checkout/confirmation",
+        "title": "Thank you!",
+        "desc": "Thanks for checking out!",
+        "breadcrumb": "Thank you",
         "category": "",
         "type": ""
       },
