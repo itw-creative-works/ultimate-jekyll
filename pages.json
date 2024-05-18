@@ -243,18 +243,18 @@
         "type": ""
       },
     {
-        "url": "https://template.itwcreativeworks.com/admin/users",
-        "title": "Explore Users",
-        "desc": "Explore users with this Firestore query tool.",
-        "breadcrumb": "Explore Users",
-        "category": "",
-        "type": ""
-      },
-    {
         "url": "https://template.itwcreativeworks.com/admin/posts",
         "title": "Posts",
         "desc": "View posts",
         "breadcrumb": "Posts",
+        "category": "",
+        "type": ""
+      },
+    {
+        "url": "https://template.itwcreativeworks.com/admin/users",
+        "title": "Explore Users",
+        "desc": "Explore users with this Firestore query tool.",
+        "breadcrumb": "Explore Users",
         "category": "",
         "type": ""
       },
