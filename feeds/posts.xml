@@ -1,198 +1,308 @@
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <generator uri="https://jekyllrb.com" version="3.7.4">Jekyll</generator>
-  <link href="https://template.itwcreativeworks.com/feeds/posts.xml" rel="self" type="application/atom+xml" />
-  <link href="https://template.itwcreativeworks.com" rel="alternate" type="text/html" />
-  <updated>2024-05-18T21:15:16+00:00</updated>
-  <id>https://template.itwcreativeworks.com</id>
-  <title type="html">Ultimate Jekyll</title>
-  <subtitle>
-    Default description.
-  </subtitle>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://template.itwcreativeworks.com/feeds/posts.xml" rel="self" type="application/rss+xml" />
+    <title>
+      <![CDATA[
+        Ultimate Jekyll Blog
+      ]]>
+    </title>
+    <description>
+      <![CDATA[
+        Default description.
+      ]]>
+    </description>
+    <link>
+      https://template.itwcreativeworks.com/blog
+    </link>
+    <generator>
+      Jekyll 4.3.2
+    </generator>
+    <lastBuildDate>
+      Wed, 22 May 2024 06:32:56 GMT
+    </lastBuildDate>
 
-  
+    
 
-  <entry>
-      <title type="html">Example post number 7</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-7" rel="alternate" type="text/html" title="Example post number 7" />
-      <published>2024-01-07T00:00:00+00:00</published>
-      <updated>2024-01-07T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-7
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066912/example-post-7.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066912/example-post-7.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-7">
-        <h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1716066912.</p>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 7
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-7
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-7
+        </guid>
+        <pubDate>
+          Sun, 07 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 7
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-7">Title inside post 7</h2>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1716359572.</p>
 
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 7
-        
-      </summary>
-    </entry>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 6
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-6
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-6
+        </guid>
+        <pubDate>
+          Sat, 06 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 6
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-6">Title inside post 6</h2>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1716359571.</p>
 
-  <entry>
-      <title type="html">Example post number 6</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-6" rel="alternate" type="text/html" title="Example post number 6" />
-      <published>2024-01-06T00:00:00+00:00</published>
-      <updated>2024-01-06T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-6
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066911/example-post-6.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066911/example-post-6.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-6">
-        <h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1716066911.</p>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 5
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-5
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-5
+        </guid>
+        <pubDate>
+          Fri, 05 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 5
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-5">Title inside post 5</h2>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1716359570.</p>
 
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 6
-        
-      </summary>
-    </entry>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 4
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-4
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-4
+        </guid>
+        <pubDate>
+          Thu, 04 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 4
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-4">Title inside post 4</h2>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1716359569.</p>
 
-  <entry>
-      <title type="html">Example post number 5</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-5" rel="alternate" type="text/html" title="Example post number 5" />
-      <published>2024-01-05T00:00:00+00:00</published>
-      <updated>2024-01-05T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-5
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066910/example-post-5.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066910/example-post-5.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-5">
-        <h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1716066910.</p>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 3
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-3
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-3
+        </guid>
+        <pubDate>
+          Wed, 03 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 3
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-3">Title inside post 3</h2>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1716359568.</p>
 
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 5
-        
-      </summary>
-    </entry>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 2
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-2
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-2
+        </guid>
+        <pubDate>
+          Tue, 02 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 2
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-2">Title inside post 2</h2>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1716359567.</p>
 
-  <entry>
-      <title type="html">Example post number 4</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-4" rel="alternate" type="text/html" title="Example post number 4" />
-      <published>2024-01-04T00:00:00+00:00</published>
-      <updated>2024-01-04T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-4
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066909/example-post-4.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066909/example-post-4.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-4">
-        <h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1716066909.</p>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    <item>
+        <title>
+          <![CDATA[
+            Example post number 1
+          ]]>
+        </title>
+        <link>
+          https://template.itwcreativeworks.com/blog/example-post-1
+        </link>
+        <guid isPermaLink="true">
+          https://template.itwcreativeworks.com/blog/example-post-1
+        </guid>
+        <pubDate>
+          Mon, 01 Jan 2024 00:00:00 GMT
+        </pubDate>
+        <description>
+          <![CDATA[
+            
+              This is a sample excerpt for post number 1
+            
+          ]]>
+        </description>
+        <content:encoded>
+          <![CDATA[
+            <h2 id="title-inside-post-1">Title inside post 1</h2>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1716359566.</p>
 
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 4
-        
-      </summary>
-    </entry>
-
-  <entry>
-      <title type="html">Example post number 3</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-3" rel="alternate" type="text/html" title="Example post number 3" />
-      <published>2024-01-03T00:00:00+00:00</published>
-      <updated>2024-01-03T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-3
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066908/example-post-3.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066908/example-post-3.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-3">
-        <h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1716066908.</p>
-
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 3
-        
-      </summary>
-    </entry>
-
-  <entry>
-      <title type="html">Example post number 2</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-2" rel="alternate" type="text/html" title="Example post number 2" />
-      <published>2024-01-02T00:00:00+00:00</published>
-      <updated>2024-01-02T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-2
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066907/example-post-2.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066907/example-post-2.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-2">
-        <h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1716066907.</p>
-
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 2
-        
-      </summary>
-    </entry>
-
-  <entry>
-      <title type="html">Example post number 1</title>
-      <link href="https://template.itwcreativeworks.com/blog/example-post-1" rel="alternate" type="text/html" title="Example post number 1" />
-      <published>2024-01-01T00:00:00+00:00</published>
-      <updated>2024-01-01T00:00:00+00:00</updated>
-      <id>
-        https://template.itwcreativeworks.com/blog/example-post-1
-      </id>
-      <icon>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066906/example-post-1.jpg</icon>
-      <logo>https://template.itwcreativeworks.com/assets/images/blog/posts/post-1716066906/example-post-1.jpg</logo>
-      <content type="html" xml:base="https://template.itwcreativeworks.com/blog/example-post-1">
-        <h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1716066906.</p>
-
-      </content>
-      <author>
-        <name>Ultimate Jekyll</name>
-      </author>
-      <category term="" />
-      <summary type="html">
-        
-          This is a sample excerpt for post number 1
-        
-      </summary>
-    </entry>
-
-  
-
-</feed>
+          ]]>
+        </content:encoded>
+        <dc:creator>
+          <![CDATA[
+            Ultimate Jekyll
+          ]]>
+        </dc:creator>
+        <category>
+          <![CDATA[
+            
+          ]]>
+        </category>
+      </item>
+    
+  </channel>
+</rss>
