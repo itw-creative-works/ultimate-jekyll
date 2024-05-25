@@ -1,0 +1,166 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Ultimate Jekyll Blog",
+  "home_page_url": "https://template.itwcreativeworks.com/blog",
+  "feed_url": "https://template.itwcreativeworks.com/feeds/posts.json",
+  "description": "Default description.",
+  "generator": "Jekyll 4.3.2",
+  "language": "en",
+  "favicon": "",
+  "items": [
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-7",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-7",
+      "title": "Example post number 7",
+      "content_text": "Title inside post 7This is a wonderful paragrah inside a post! This is post #7 with ID 1716595781.",
+      "content_html": "<h2 id='title-inside-post-7'>Title inside post 7</h2><p>This is a wonderful paragrah inside a post! This is post #7 with ID 1716595781.</p>",
+      "date_published": "2024-01-07T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 7"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-6",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-6",
+      "title": "Example post number 6",
+      "content_text": "Title inside post 6This is a wonderful paragrah inside a post! This is post #6 with ID 1716595780.",
+      "content_html": "<h2 id='title-inside-post-6'>Title inside post 6</h2><p>This is a wonderful paragrah inside a post! This is post #6 with ID 1716595780.</p>",
+      "date_published": "2024-01-06T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 6"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-5",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-5",
+      "title": "Example post number 5",
+      "content_text": "Title inside post 5This is a wonderful paragrah inside a post! This is post #5 with ID 1716595779.",
+      "content_html": "<h2 id='title-inside-post-5'>Title inside post 5</h2><p>This is a wonderful paragrah inside a post! This is post #5 with ID 1716595779.</p>",
+      "date_published": "2024-01-05T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 5"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-4",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-4",
+      "title": "Example post number 4",
+      "content_text": "Title inside post 4This is a wonderful paragrah inside a post! This is post #4 with ID 1716595778.",
+      "content_html": "<h2 id='title-inside-post-4'>Title inside post 4</h2><p>This is a wonderful paragrah inside a post! This is post #4 with ID 1716595778.</p>",
+      "date_published": "2024-01-04T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 4"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-3",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-3",
+      "title": "Example post number 3",
+      "content_text": "Title inside post 3This is a wonderful paragrah inside a post! This is post #3 with ID 1716595777.",
+      "content_html": "<h2 id='title-inside-post-3'>Title inside post 3</h2><p>This is a wonderful paragrah inside a post! This is post #3 with ID 1716595777.</p>",
+      "date_published": "2024-01-03T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 3"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-2",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-2",
+      "title": "Example post number 2",
+      "content_text": "Title inside post 2This is a wonderful paragrah inside a post! This is post #2 with ID 1716595776.",
+      "content_html": "<h2 id='title-inside-post-2'>Title inside post 2</h2><p>This is a wonderful paragrah inside a post! This is post #2 with ID 1716595776.</p>",
+      "date_published": "2024-01-02T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 2"",
+      "tags": [""]
+    },
+    
+    {
+      "id": "https://template.itwcreativeworks.com/blog/example-post-1",
+      "url": "https://template.itwcreativeworks.com/blog/example-post-1",
+      "title": "Example post number 1",
+      "content_text": "Title inside post 1This is a wonderful paragrah inside a post! This is post #1 with ID 1716595775.",
+      "content_html": "<h2 id='title-inside-post-1'>Title inside post 1</h2><p>This is a wonderful paragrah inside a post! This is post #1 with ID 1716595775.</p>",
+      "date_published": "2024-01-01T00:00:00.000Z",
+      "image": "",
+      "authors": [
+        {
+          "name": "Ultimate Jekyll"
+        }
+      ],
+      "attachments": [
+        {
+          "url": ""
+        }
+      ],
+      "summary": ""This is a sample excerpt for post number 1"",
+      "tags": [""]
+    }
+    
+  ]
+}
