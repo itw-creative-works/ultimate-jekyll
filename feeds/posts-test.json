@@ -8,17 +8,16 @@
   "language": "en",
   "favicon": "",
   "items": [
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-7",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-7",
         "url": "https://template.itwcreativeworks.com/blog/example-post-7",
         "title": "Example Post 7",
         "date_published": "2024-01-07T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 7 This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 7 This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -310,8 +309,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-7">Title inside post 7</h2>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -604,7 +615,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -897,7 +908,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -905,10 +916,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -1201,7 +1212,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>
 
 <p>Before ads</p>
 
@@ -1209,7 +1220,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717148998.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1717152492.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -1222,20 +1233,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 7",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-6",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-6",
         "url": "https://template.itwcreativeworks.com/blog/example-post-6",
         "title": "Example Post 6",
         "date_published": "2024-01-06T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 6 This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 6 This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -1527,8 +1537,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-6">Title inside post 6</h2>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -1821,7 +1843,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -2114,7 +2136,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -2122,10 +2144,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -2418,7 +2440,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>
 
 <p>Before ads</p>
 
@@ -2426,7 +2448,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717148997.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1717152491.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -2439,20 +2461,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 6",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-5",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-5",
         "url": "https://template.itwcreativeworks.com/blog/example-post-5",
         "title": "Example Post 5",
         "date_published": "2024-01-05T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 5 This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 5 This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -2744,8 +2765,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-5">Title inside post 5</h2>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -3038,7 +3071,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -3331,7 +3364,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -3339,10 +3372,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -3635,7 +3668,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>
 
 <p>Before ads</p>
 
@@ -3643,7 +3676,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717148996.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1717152490.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -3656,20 +3689,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 5",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-4",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-4",
         "url": "https://template.itwcreativeworks.com/blog/example-post-4",
         "title": "Example Post 4",
         "date_published": "2024-01-04T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 4 This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 4 This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -3961,8 +3993,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-4">Title inside post 4</h2>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -4255,7 +4299,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -4548,7 +4592,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -4556,10 +4600,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -4852,7 +4896,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>
 
 <p>Before ads</p>
 
@@ -4860,7 +4904,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717148995.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1717152489.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -4873,20 +4917,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 4",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-3",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-3",
         "url": "https://template.itwcreativeworks.com/blog/example-post-3",
         "title": "Example Post 3",
         "date_published": "2024-01-03T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 3 This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 3 This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -5178,8 +5221,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-3">Title inside post 3</h2>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -5472,7 +5527,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -5765,7 +5820,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -5773,10 +5828,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -6069,7 +6124,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>
 
 <p>Before ads</p>
 
@@ -6077,7 +6132,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717148994.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1717152488.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -6090,20 +6145,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 3",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-2",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-2",
         "url": "https://template.itwcreativeworks.com/blog/example-post-2",
         "title": "Example Post 2",
         "date_published": "2024-01-02T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 2 This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 2 This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -6395,8 +6449,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-2">Title inside post 2</h2>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -6689,7 +6755,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -6982,7 +7048,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -6990,10 +7056,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -7286,7 +7352,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>
 
 <p>Before ads</p>
 
@@ -7294,7 +7360,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717148993.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1717152487.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -7307,20 +7373,19 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 2",
-        "tags": [""]
+        "tags": ["marketing","business"]
       },
     
-      {
-        "id": "https://template.itwcreativeworks.com/blog/example-post-1",
+      {"id": "https://template.itwcreativeworks.com/blog/example-post-1",
         "url": "https://template.itwcreativeworks.com/blog/example-post-1",
         "title": "Example Post 1",
         "date_published": "2024-01-01T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 1 This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 1 This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -7612,8 +7677,20 @@
 
 <p>After ads</p>
 ",
+        "test_1_2": "<h2 id="title-inside-post-1">Title inside post 1</h2>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
+
+<p>Before ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>
+
+<!-- Adunit - Adsense In-article Ad --><p>After ads</p>
+",
+        "test_1_3": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+
+
         "test_2": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -7906,7 +7983,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -8199,7 +8276,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -8207,10 +8284,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -8503,7 +8580,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>
 
 <p>Before ads</p>
 
@@ -8511,7 +8588,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717148992.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1717152486.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -8524,7 +8601,7 @@
           }
         ],
         "summary": "This is a sample excerpt for post number 1",
-        "tags": [""]
+        "tags": ["marketing","business"]
       }
     
   ]
