@@ -76,8 +76,8 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      buildTime: '1720946877',
-      cacheBreaker: '1720946877',
+      buildTime: '1721103422',
+      cacheBreaker: '1721103422',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.01, replaysOnErrorSampleRate: 0.01, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -111,13 +111,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1720946877">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1720946877">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1720946877">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1721103422">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1721103422">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1721103422">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1720946877">
+<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1721103422">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1720946877">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1721103422">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -422,7 +422,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- CSS - Bundle-->
-  <link rel="stylesheet" type="text/css" href="https://template.itwcreativeworks.com/assets/css/main.css?cb=1720946877">
+  <link rel="stylesheet" type="text/css" href="https://template.itwcreativeworks.com/assets/css/main.css?cb=1721103422">
 
 
 <!-- HTML5 Shiv -->
@@ -587,7 +587,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 9 and Below Only -->
 <!--[if lte IE 9]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1720946877">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1721103422">
 <![endif]-->
 
 <!-- Style - Scripts are Disabled -->
@@ -702,12 +702,19 @@ footer, header, hgroup, menu, nav, section {
       var command = message.command || '';
       var payload = message.payload || {};
 
+      // Log
+      console.log('Message', command, message, event.source);
+
+      // Handle the message
       if (command === 'uj-vert-unit:set-dimensions') {
+        // Get the iframe
         var $iframe = select('#uj-vert-' + payload.id).get(0);
 
-        console.log('Message', command, message, event.source);
-
+        // Set the dimensions
         $iframe.style.height = payload.height + 'px';
+      } else if (command === 'uj-vert-unit:click') {
+        // Navigate to the URL
+        window.location.href = payload.url;
       }
     }
 
@@ -746,8 +753,23 @@ footer, header, hgroup, menu, nav, section {
     window.addEventListener('message', messageHandler, false);
 
     // Load the adblocker detector
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
     // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-    Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+
+    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
+    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -847,12 +869,19 @@ footer, header, hgroup, menu, nav, section {
       var command = message.command || '';
       var payload = message.payload || {};
 
+      // Log
+      console.log('Message', command, message, event.source);
+
+      // Handle the message
       if (command === 'uj-vert-unit:set-dimensions') {
+        // Get the iframe
         var $iframe = select('#uj-vert-' + payload.id).get(0);
 
-        console.log('Message', command, message, event.source);
-
+        // Set the dimensions
         $iframe.style.height = payload.height + 'px';
+      } else if (command === 'uj-vert-unit:click') {
+        // Navigate to the URL
+        window.location.href = payload.url;
       }
     }
 
@@ -891,8 +920,23 @@ footer, header, hgroup, menu, nav, section {
     window.addEventListener('message', messageHandler, false);
 
     // Load the adblocker detector
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
     // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-    Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+
+    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
+    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -992,12 +1036,19 @@ footer, header, hgroup, menu, nav, section {
       var command = message.command || '';
       var payload = message.payload || {};
 
+      // Log
+      console.log('Message', command, message, event.source);
+
+      // Handle the message
       if (command === 'uj-vert-unit:set-dimensions') {
+        // Get the iframe
         var $iframe = select('#uj-vert-' + payload.id).get(0);
 
-        console.log('Message', command, message, event.source);
-
+        // Set the dimensions
         $iframe.style.height = payload.height + 'px';
+      } else if (command === 'uj-vert-unit:click') {
+        // Navigate to the URL
+        window.location.href = payload.url;
       }
     }
 
@@ -1036,8 +1087,23 @@ footer, header, hgroup, menu, nav, section {
     window.addEventListener('message', messageHandler, false);
 
     // Load the adblocker detector
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
     // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-    Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+
+    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
+    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1137,12 +1203,19 @@ footer, header, hgroup, menu, nav, section {
       var command = message.command || '';
       var payload = message.payload || {};
 
+      // Log
+      console.log('Message', command, message, event.source);
+
+      // Handle the message
       if (command === 'uj-vert-unit:set-dimensions') {
+        // Get the iframe
         var $iframe = select('#uj-vert-' + payload.id).get(0);
 
-        console.log('Message', command, message, event.source);
-
+        // Set the dimensions
         $iframe.style.height = payload.height + 'px';
+      } else if (command === 'uj-vert-unit:click') {
+        // Navigate to the URL
+        window.location.href = payload.url;
       }
     }
 
@@ -1181,8 +1254,23 @@ footer, header, hgroup, menu, nav, section {
     window.addEventListener('message', messageHandler, false);
 
     // Load the adblocker detector
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
     // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-    Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+
+    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
+    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
+    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1315,7 +1403,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- Script - Bundle -->
-  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1720946877" async></script>
+  <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/main.js?cb=1721103422" async></script>
 
 
 <!-- TODO: FIX THIS -->
