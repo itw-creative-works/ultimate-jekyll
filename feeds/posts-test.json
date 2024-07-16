@@ -13,11 +13,11 @@
         "title": "Example Post 7",
         "date_published": "2024-01-07T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 7 This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 7 This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -54,9 +54,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -120,24 +138,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -220,9 +222,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -286,24 +306,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -354,7 +358,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -362,11 +366,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2> <p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -403,9 +407,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -469,24 +491,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -569,9 +575,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -635,24 +659,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -703,7 +711,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -740,9 +748,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -806,24 +832,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -906,9 +916,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -972,24 +1000,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1040,7 +1052,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -1048,10 +1060,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -1088,9 +1100,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -1154,24 +1184,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1254,9 +1268,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -1320,24 +1352,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1388,7 +1404,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-7">Title inside post 7</h2>
-<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>
+<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>
 
 <p>Before ads</p>
 
@@ -1396,7 +1412,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103419.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-7\">Title inside post 7</h2>\n<p>This is a wonderful paragrah inside a post! This is post #7 with ID 1721103699.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -1417,11 +1433,11 @@
         "title": "Example Post 6",
         "date_published": "2024-01-06T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 6 This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 6 This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -1458,9 +1474,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -1524,24 +1558,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1624,9 +1642,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -1690,24 +1726,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1758,7 +1778,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -1766,11 +1786,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2> <p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -1807,9 +1827,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -1873,24 +1911,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -1973,9 +1995,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2039,24 +2079,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -2107,7 +2131,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -2144,9 +2168,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2210,24 +2252,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -2310,9 +2336,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2376,24 +2420,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -2444,7 +2472,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -2452,10 +2480,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -2492,9 +2520,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2558,24 +2604,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -2658,9 +2688,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2724,24 +2772,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -2792,7 +2824,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-6">Title inside post 6</h2>
-<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>
+<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>
 
 <p>Before ads</p>
 
@@ -2800,7 +2832,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103418.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-6\">Title inside post 6</h2>\n<p>This is a wonderful paragrah inside a post! This is post #6 with ID 1721103698.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -2821,11 +2853,11 @@
         "title": "Example Post 5",
         "date_published": "2024-01-05T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 5 This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 5 This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -2862,9 +2894,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -2928,24 +2978,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3028,9 +3062,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3094,24 +3146,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3162,7 +3198,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -3170,11 +3206,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2> <p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -3211,9 +3247,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3277,24 +3331,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3377,9 +3415,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3443,24 +3499,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3511,7 +3551,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -3548,9 +3588,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3614,24 +3672,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3714,9 +3756,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3780,24 +3840,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -3848,7 +3892,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -3856,10 +3900,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -3896,9 +3940,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -3962,24 +4024,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4062,9 +4108,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -4128,24 +4192,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4196,7 +4244,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-5">Title inside post 5</h2>
-<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>
+<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>
 
 <p>Before ads</p>
 
@@ -4204,7 +4252,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103417.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-5\">Title inside post 5</h2>\n<p>This is a wonderful paragrah inside a post! This is post #5 with ID 1721103697.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -4225,11 +4273,11 @@
         "title": "Example Post 4",
         "date_published": "2024-01-04T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 4 This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 4 This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -4266,9 +4314,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -4332,24 +4398,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4432,9 +4482,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -4498,24 +4566,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4566,7 +4618,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -4574,11 +4626,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2> <p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -4615,9 +4667,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -4681,24 +4751,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4781,9 +4835,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -4847,24 +4919,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -4915,7 +4971,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -4952,9 +5008,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5018,24 +5092,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5118,9 +5176,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5184,24 +5260,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5252,7 +5312,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -5260,10 +5320,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -5300,9 +5360,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5366,24 +5444,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5466,9 +5528,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5532,24 +5612,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5600,7 +5664,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-4">Title inside post 4</h2>
-<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>
+<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>
 
 <p>Before ads</p>
 
@@ -5608,7 +5672,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103416.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-4\">Title inside post 4</h2>\n<p>This is a wonderful paragrah inside a post! This is post #4 with ID 1721103696.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -5629,11 +5693,11 @@
         "title": "Example Post 3",
         "date_published": "2024-01-03T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 3 This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 3 This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -5670,9 +5734,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5736,24 +5818,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5836,9 +5902,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -5902,24 +5986,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -5970,7 +6038,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -5978,11 +6046,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2> <p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -6019,9 +6087,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6085,24 +6171,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -6185,9 +6255,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6251,24 +6339,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -6319,7 +6391,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -6356,9 +6428,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6422,24 +6512,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -6522,9 +6596,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6588,24 +6680,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -6656,7 +6732,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -6664,10 +6740,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -6704,9 +6780,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6770,24 +6864,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -6870,9 +6948,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -6936,24 +7032,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7004,7 +7084,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-3">Title inside post 3</h2>
-<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>
+<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>
 
 <p>Before ads</p>
 
@@ -7012,7 +7092,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103415.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-3\">Title inside post 3</h2>\n<p>This is a wonderful paragrah inside a post! This is post #3 with ID 1721103695.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -7033,11 +7113,11 @@
         "title": "Example Post 2",
         "date_published": "2024-01-02T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 2 This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 2 This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -7074,9 +7154,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7140,24 +7238,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7240,9 +7322,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7306,24 +7406,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7374,7 +7458,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -7382,11 +7466,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2> <p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -7423,9 +7507,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7489,24 +7591,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7589,9 +7675,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7655,24 +7759,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7723,7 +7811,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -7760,9 +7848,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7826,24 +7932,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -7926,9 +8016,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -7992,24 +8100,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8060,7 +8152,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -8068,10 +8160,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -8108,9 +8200,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -8174,24 +8284,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8274,9 +8368,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -8340,24 +8452,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8408,7 +8504,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-2">Title inside post 2</h2>
-<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>
+<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>
 
 <p>Before ads</p>
 
@@ -8416,7 +8512,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103414.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-2\">Title inside post 2</h2>\n<p>This is a wonderful paragrah inside a post! This is post #2 with ID 1721103694.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
@@ -8437,11 +8533,11 @@
         "title": "Example Post 1",
         "date_published": "2024-01-01T00:00:00.000Z",
         "image": "",
-        "content_text": "Title inside post 1 This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.  Before ads                                     Between ads                                     After ads ",
-        "content_html": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
+        "content_text": "Title inside post 1 This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.  Before ads                                     Between ads                                     After ads ",
+        "content_html": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --><p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --><p>After ads</p> ",
 
         "test_1": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -8478,9 +8574,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -8544,24 +8658,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8644,9 +8742,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -8710,24 +8826,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8778,7 +8878,7 @@
 <p>After ads</p>
 ",
         "test_1_2": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -8786,11 +8886,11 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_1_3": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
+        "test_1_3": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2> <p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>  <p>Before ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>Between ads</p>  <!-- Adunit - Adsense In-article Ad --> <p>After ads</p> ",
 
 
         "test_2": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -8827,9 +8927,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -8893,24 +9011,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -8993,9 +9095,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -9059,24 +9179,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -9127,7 +9231,7 @@
 <p>After ads</p>
 ",
         "test_3": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -9164,9 +9268,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -9230,24 +9352,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -9330,9 +9436,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -9396,24 +9520,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -9464,7 +9572,7 @@
 <p>After ads</p>
 ",
         "test_4": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -9472,10 +9580,10 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_5": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_5": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "test_6": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -9512,9 +9620,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -9578,24 +9704,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -9678,9 +9788,27 @@
 
     var slotId = new Date().getTime();
 
+    // Selectors
     var vertSlotsSelector = '.uj-vert-unit';
     var vertSlotsSelectorLoaded = '.uj-vert-unit ins[data-ad-status]';
     var vertSlotsSelectorUnfilled = '.uj-vert-unit ins[data-ad-status="unfilled"]';
+
+    // Set the anti-vert detector script
+    /*
+      /bottomads.js
+      /content-ads.js
+      /core-ads.js
+      /insertads.js
+      /jsads.js
+      /left_ads.js
+      /nativeads.js
+      /openads.js
+      /popupads.js
+      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
+    */
+    // var scriptUrl = '/assets/js/taboola_ads.js';
+    // var scriptUrl = 'assets/js/pagead.js';
+    var scriptUrl = '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js&cb=' + Manager.properties.global.cacheBreaker;
 
     // Check if being handled already
     if (window._ujVertCheckerStarted) {
@@ -9744,24 +9872,8 @@
 
     window.addEventListener('message', messageHandler, false);
 
-    // Load the adblocker detector
-    /*
-      /bottomads.js
-      /content-ads.js
-      /core-ads.js
-      /insertads.js
-      /jsads.js
-      /left_ads.js
-      /nativeads.js
-      /openads.js
-      /popupads.js
-      /ads/ad-script.js?ad_network=123&tracking_id=abc#banner_ad
-    */
-    // Manager.dom().loadScript({src: '/assets/js/taboola_ads.js'})
-
-    // Manager.dom().loadScript({src: '/assets/js/pagead.js'})
-    // Manager.dom().loadScript({src: '/assets/js/ads.popunder.js'})
-    Manager.dom().loadScript({src: '/assets/js/popupads.js?t1=/ads/native.js&t2=/nativeads.js&t3=/content-ads.js'})
+    // Load the antivert checker
+    Manager.dom().loadScript({src: scriptUrl})
     .then(function (e) {
       console.log('Loaded antivert checker', e);
     })
@@ -9812,7 +9924,7 @@
 <p>After ads</p>
 ",
         "test_7": "<h2 id="title-inside-post-1">Title inside post 1</h2>
-<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>
+<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>
 
 <p>Before ads</p>
 
@@ -9820,7 +9932,7 @@
 
 <!-- Adunit - Adsense In-article Ad --><p>After ads</p>
 ",
-        "test_8": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103413.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
+        "test_8": "<h2 id=\"title-inside-post-1\">Title inside post 1</h2>\n<p>This is a wonderful paragrah inside a post! This is post #1 with ID 1721103693.</p>\n\n<p>Before ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>Between ads</p>\n\n<!-- Adunit - Adsense In-article Ad --><p>After ads</p>\n",
 
         "authors": [
           {
