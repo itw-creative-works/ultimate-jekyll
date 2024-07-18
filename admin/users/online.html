@@ -76,8 +76,8 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      buildTime: '1721267341',
-      cacheBreaker: '1721267341',
+      buildTime: '1721290624',
+      cacheBreaker: '1721290624',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.01, replaysOnErrorSampleRate: 0.01, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -111,13 +111,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1721267341">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1721267341">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1721267341">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1721290624">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1721290624">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1721290624">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1721267341">
+<link rel="shortcut icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1721290624">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1721267341">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1721290624">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -196,6 +196,13 @@ footer, header, hgroup, menu, nav, section {
   }
 }
 
+.animation-hover-up {
+  -webkit-transition: all .3s cubic-bezier(.2,.3,0,1);
+  -moz-transition: all .3s cubic-bezier(.2,.3,0,1);
+  -ms-transition: all .3s cubic-bezier(.2,.3,0,1);
+  -o-transition: all .3s cubic-bezier(.2,.3,0,1);
+  transition: all .3s cubic-bezier(.2,.3,0,1);
+}
 .animation-hover-up:hover {
   -moz-transform: translate(0,-8px);
   -o-transform: translate(0,-8px);
@@ -203,12 +210,20 @@ footer, header, hgroup, menu, nav, section {
   -webkit-transform: translate(0,-8px);
   transform: translateY(-8px);
 }
-.animation-hover-up {
+
+.animation-hover-zoom {
   -webkit-transition: all .3s cubic-bezier(.2,.3,0,1);
   -moz-transition: all .3s cubic-bezier(.2,.3,0,1);
   -ms-transition: all .3s cubic-bezier(.2,.3,0,1);
   -o-transition: all .3s cubic-bezier(.2,.3,0,1);
   transition: all .3s cubic-bezier(.2,.3,0,1);
+}
+.animation-hover-zoom:hover {
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* @keyframes opacity {
@@ -403,6 +418,79 @@ footer, header, hgroup, menu, nav, section {
 	animation: wiggle 1.5s ease-in-out infinite;
 }
 
+@keyframes up-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animation-up-down {
+  animation: up-down 3s ease-in-out infinite;
+}
+
+/* Filters */
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
+.filter-black {
+  filter: brightness(0) invert(1) hue-rotate(180deg);
+}
+
+/* Buttons */
+/* .btn-gradient {
+  animation: shimmer 3s ease-out infinite alternate !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
+  background-size: 300% 300% !important;
+  text-transform: none !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255/ 1!important) !important;
+  --tw-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-duration: .1s;
+  animation-duration: .1s;
+} */
+
+.btn-gradient {
+  animation: shimmer 3s ease-out infinite alternate !important;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
+  background-size: 300% 300% !important;
+  text-transform: none !important;
+  color: rgba(255, 255, 255, 1) !important;
+  /* Replacing Tailwind CSS custom properties with a specific box-shadow value */
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transition-duration: 3s !important;
+  animation-duration: 3s !important;
+}
+.btn-gradient:hover {
+  opacity: 0.70;
+}
+
+.text-gradient {
+  background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
   
 
   .cc-window{opacity:1;transition:opacity 1s ease}.cc-window.cc-invisible{opacity:0}.cc-animate.cc-revoke{transition:transform 1s ease}.cc-animate.cc-revoke.cc-top{transform:translateY(-2em)}.cc-animate.cc-revoke.cc-bottom{transform:translateY(2em)}.cc-animate.cc-revoke.cc-active.cc-bottom,.cc-animate.cc-revoke.cc-active.cc-top,.cc-revoke:hover{transform:translateY(0)}.cc-grower{max-height:0;overflow:hidden;transition:max-height 1s}
@@ -592,7 +680,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 9 and Below Only -->
 <!--[if lte IE 9]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1721267341">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1721290624">
 <![endif]-->
 
 <!-- Style - Scripts are Disabled -->
@@ -1562,7 +1650,7 @@ footer, header, hgroup, menu, nav, section {
 <!-- JS Global Compulsory  --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery/dist/jquery.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Implementing Plugins --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables/media/js/jquery.dataTables.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net.extensions/select/select.min.js"></script> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script> --> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script> -->
 <!-- JS Front --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/js/theme.min.js"></script>
-<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1721267341"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1721267341" async defer></script><style media="screen">
+<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1721290624"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1721290624" async defer></script><style media="screen">
   body[data-theme="dark"] #main-logo {
     filter: brightness(0) invert(1);
   }
