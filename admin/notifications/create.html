@@ -79,8 +79,8 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      buildTime: '1738109772',
-      cacheBreaker: '1738109772',
+      buildTime: '1738119069',
+      cacheBreaker: '1738119069',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.01, replaysOnErrorSampleRate: 0.01, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -114,13 +114,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1738109772">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1738109772">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1738109772">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1738119069">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1738119069">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1738119069">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" type="image/x-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1738109772">
+<link rel="shortcut icon" type="image/x-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1738119069">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1738109772">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1738119069">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -701,7 +701,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 9 and Below Only -->
 <!--[if lte IE 9]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1738109772">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1738119069">
 <![endif]-->
 
 <!-- Style - Scripts are Disabled -->
@@ -986,413 +986,1289 @@ footer, header, hgroup, menu, nav, section {
 
         <div class="row">
           <div class="col-12">
-            <div class="row loaded-false">
-  <div class="col-lg-8 offset-lg-2">
-    <div class="d-flex justify-content-center">
-      <div class="spinner-border text-primary" role="status">
-
+            <div class="row">
+  <div class="col-12">
+    <!-- Total Users Card -->
+    <div class="row">
+      <div class="col-sm-6 mx-auto col-lg-3 mb-3 mb-lg-5">
+        <div class="card card-hover-shadow h-100">
+          <div class="card-body">
+            <h6 class="card-subtitle d-flex justify-content-between">
+              <span>Total Users</span>
+              <div class="dropdown">
+                <button type="button" class="btn btn-sm btn-soft-primary _dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item notification-refresh-now" href="https://template.itwcreativeworks.com/admin/notifications/create">
+                      <i class="bi-arrow-clockwise"></i> Refresh now
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin/notifications/create?autoRefresh=true">
+                      <i class="bi-arrow-repeat"></i> Enable Auto-Refresh
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </h6>
+            <div class="row align-items-center gx-2 mb-1">
+              <div class="col-6">
+                <h2 class="card-title text-inherit notification-user-count-total">0</h2>
+              </div>
+            </div>
+            <div class="text-body fs-6 ms-1">
+              <span>
+                Loaded <strong class="notification-user-count-progress">0/0</strong>
+              </span>
+              <span id="auto-refresh-countdown" hidden>
+                (<i class="bi-clock"></i> <span id="auto-refresh-countdown-time">30s</span>)
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Spinner While Loading -->
+    <div class="dashboard-state-listener" data-state="initializing">
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status"></div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="dashboard-state-listener" data-state="initialized" hidden>
+      <form class="mb-4" onsubmit="return false;" id="notification-form">
+        <h3 class="header-title mb-3">Notification Details</h3>
+        <!-- Icon URL -->
+        <div class="mb-4">
+          <div class="row">
+              <div class="col-12 col-md-10 _col-sm-12">
+                  <label for="icon" class="_form-label text-dark">
+                    Icon URL <span class="text-danger">*</span>
+                  </label>
+                  <small class="d-block _form-text text-muted">
+                      The icon URL of the notification
+                  </small>
+                  <input type="url" class="form-control" name="icon" id="icon" value="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-1024x1024.png" placeholder="" aria-label="" required>
+              </div>
+              <div class="col-12 col-md-2 _col-sm-12">
+                  <img class="img-fluid img-thumbnail" id="preview-icon" src="" alt="" style="max-height: 200px;">
+                  <span id="preview-icon-error" class="text-danger" hidden>Error loading image...</span>
+              </div>
+          </div>
+        </div>
+        <!-- Title -->
+        <div class="mb-4">
+          <label for="title" class="_form-label text-dark">
+            Title <span class="text-danger">*</span>
+          </label>
+          <input type="text" class="form-control" name="title" id="title" placeholder="Notification Title" aria-label="Notification Title" required>
+        </div>
+        <!-- Body -->
+        <div class="mb-4">
+          <label for="body" class="text-dark">
+            Body <span class="text-danger">*</span>
+          </label>
+          <textarea id="body" name="body" class="form-control" rows="3" placeholder="Notification Body" required></textarea>
+        </div>
+        <!-- Click Action -->
+        <div class="mb-4">
+          <label for="clickAction" class="_form-label text-dark">
+            Click Action URL <span class="text-danger">*</span>
+          </label>
+          <input type="url" class="form-control" name="clickAction" id="clickAction" value="https://template.itwcreativeworks.com" required>
+        </div>
+        <!-- Auto-Submit -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col">
+              <label for="autoSubmitDate-timestamp" class="text-dark">Auto-submit Date</label>
+              <small class="d-block text-muted">
+                The promotion will start <strong>on</strong> this date
+                <!-- Button to call setInitialDateAndTime -->
+              </small>
+              <div class="input-group">
+                <input type="date" class="form-control" name="autoSubmitDate.timestamp" id="autoSubmitDate-timestamp" placeholder="" aria-label="Start Date">
+                <button type="button" class="btn btn-sm btn-soft-primary btn-set-initial-date-and-time py-0 px-1">
+                  Tomorrow @ 10:00 AM
+                </button>
+              </div>
+            </div>
+            <div class="col">
+              <label for="autoSubmitTime-timestamp" class="text-dark">Auto-submit Time</label>
+              <small class="d-block text-muted">
+                At this time
+              </small>
+              <div class="input-group">
+                <input type="time" class="form-control" name="autoSubmitTime.timestamp" id="autoSubmitTime-timestamp" placeholder="" aria-label="Start Time">
+              </div>
+            </div>
+            <div class="text-primary mt-1">
+              <strong>DO NOT submit</strong> this form manually if you set an auto-submit date. The form will automatically submit itself at the specified time.
+
+              <span id="autoSubmitCountdown"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Warning -->
+        <div class="alert alert-warning" role="alert">
+          <h4 class="alert-heading">⚠️ Sending to Notification Network</h4>
+          <span>
+            You are about to send this notification to
+            <strong class="notification-user-count-included">
+              <span class="spinner-border spinner-border-sm text-primary" role="status"></span>
+            </strong>
+            users. Please confirm before submitting.
+          </span>
+        </div>
+        <!-- Submit Button -->
+        <div class="d-flex align-items-center">
+          <button type="submit" class="btn btn-primary w-100">
+            <span class="dashboard-status-listener" data-status="loading" hidden>
+              <div class="spinner-border spinner-border-sm text-light" role="status"></div>
+            </span>
+            Submit <i class="bi-chevron-right"></i>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
 
-<!-- Form -->
-<div class="loaded-true" hidden>
-  <form class="mb-4" onsubmit="return false;" id="notification-form">
-    <div class="row mb-3">
-      <div class="col-12">
-        <div class="row">
-          <div class="col-12">
-            <h3 class="header-title mb-3">
-              Notification details
-            </h3>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <!-- Form -->
-            <div class="mb-4">
-              <div class="row">
-                <div class="col-10">
-                  <label for="icon" class="_form-label text-dark">Icon URL</label>
-                  <small class="d-block _form-text text-muted">
-                    The icon URL of the notification
-                  </small>
-                  <input type="url" class="form-control" name="icon" id="icon" placeholder="" aria-label="" required>
-                </div>
-                <div class="col-2">
-                  <img class="img-fluid img-thumbnail" id="preview-icon" src="" alt="" style="">
-                  <span id="preview-icon-error" class="text-danger" hidden>Error loading image...</span>
-                </div>
-              </div>
-            </div>
-            <!-- End Form -->
-          </div>
-
-          <div class="col-sm-12">
-            <!-- Form -->
-            <div class="mb-4">
-              <label for="title" class="_form-label text-dark">Title</label>
-              <small class="d-block _form-text text-muted">
-                The title of the notification: <code class="ml-1">My Notfication Title</code>
-              </small>
-              <div class="input-group">
-                <input type="text" class="form-control" name="title" id="title" placeholder="My Notfication Title" aria-label="My Notfication Title" spellcheck="true" required autofocus>
-                <span class="input-group-text">0</span>
-              </div>
-
-            </div>
-            <!-- End Form -->
-          </div>
-
-        </div>
-        <!-- End Row -->
-
-
-        <div class="row">
-          <div class="col-sm-12">
-            <!-- Form -->
-            <div class="mb-4">
-              <label for="body" class="text-dark">Body</label>
-
-              <div class="d-flex justify-content-between">
-                <small class="text-muted">
-                The body of the notification
-                </small>
-                <small class="text-muted word-and-character-count" data-count-source="#body">(0 characters, 1 words)</small>
-              </div>
-
-              <textarea id="body" name="body" class="form-control" placeholder="My notification content" rows="3" spellcheck="true" required></textarea>
-            </div>
-            <!-- End Form -->
-          </div>
-
-          <div class="col-sm-12">
-            <!-- Form -->
-            <div class="mb-4">
-              <label for="click_action" class="_form-label text-dark">Click action</label>
-              <small class="d-block _form-text text-muted">
-                The URL to go to when clicked
-              </small>
-              <input type="url" class="form-control" name="click_action" id="click_action" placeholder="https://template.itwcreativeworks.com/link" aria-label="https://template.itwcreativeworks.com/link" required>
-            </div>
-            <!-- End Form -->
-          </div>
-
-          <div class="col-sm-12">
-            <!-- Form -->
-            <div class="mb-4">
-              <label for="processingAddy" class="_form-label text-dark">Processing Address</label>
-              <small class="d-block _form-text text-muted">
-                What address to process the post at? (Local or Production)
-              </small>
-
-              <!-- Select -->
-              <div class="tom-select-custom">
-                <select class="js-select form-select" id="processingAddy" name="processingAddy">
-                  <option id="processingAddy_none" value="">Select an address</option>
-                  <option id="processingAddy_dev" value="">Development</option>
-                  <option id="processingAddy_prod" value="">Production</option>
-                </select>
-              </div>
-              <!-- End Select -->
-            </div>
-            <!-- End Form -->
-
-          </div>
-        </div>
-
+<div class="toast-container position-fixed p-3 top-0 end-0" style="z-index: 1003; _min-width: 50vw;">
+  <div id="auto-refresh-toast" class="toast bg-primary text-white">
+    <div class="d-flex">
+      <div class="toast-body">
+        <h4 class="text-white">Auto Refresh!</h4>
+        <span>
+          Auto-refresh is enabled and will refresh the page every 30 minutes.
+        </span>
       </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-
-    <hr class="">
-
-    <div class="col-12">
-
-      <div id="response" hidden>
-        <div class="my-3">
-          <div class="alert alert-info" role="alert" hidden>
-            <h4 class="alert-heading">Waiting...</h4>
-            <p class="mb-0">Hold up</p>
-            <!-- <hr>
-            <p class="mb-0">Be sure to check it out on the main blog page (<a href="https://template.itwcreativeworks.com/blog">https://template.itwcreativeworks.com/blog</a>) to see if it looks good!</p>
-            <p class="mb-0">Refreshing in <span id="refresh-timer">3</span> seconds.</p> -->
-          </div>
-          <div class="alert alert-success" role="alert" hidden>
-            <h4 class="alert-heading">Well done!</h4>
-            <p>Aww yeah, you successfully sent that awesome notification and <strong>tons</strong> of people will see your message.;)</p>
-            <hr>
-            <pre><code id="" class="server-response text-white">waiting...
-            </code></pre>
-          </div>
-          <div class="alert alert-danger" role="alert" hidden>
-            <h4 class="alert-heading">Aw snap!</h4>
-            <p class="mb-0">Something went wrong, please examine the error below:</p>
-            <hr>
-            <pre><code id="" class="server-response text-white">waiting...
-            </code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12">
-      <button class="btn btn-primary btn-lg w-100" id="post-submit-btn" type="submit">Send!</button>
-    </div>
-
-  </form>
+  </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738119069"></script>
+<script src="https://cdn.jsdelivr.net/npm/node-powertools@latest/dist/index.min.js?cb=1738119069"></script>
+
+<!-- Default elements -->
+<div id="dashboard-template-display-success" data-template='
+  <div class="toast-container position-fixed p-3 top-0 start-50 translate-middle-x" style="z-index: 1003; _min-width: 50vw;">
+    <div class="dashboard-status-listener toast bg-success text-white" data-status="success">
+      <div class="d-flex">
+        <div class="toast-body">
+          <h4 class="text-white">Success!</h4>
+          <span class="dashboard-status-listener-message" data-status="success">
+            Unknown success
+          </span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+'>
+</div>
+
+<div id="dashboard-template-display-error" data-template='
+  <div class="toast-container position-fixed p-3 top-0 start-50 translate-middle-x" style="z-index: 1003; _min-width: 50vw;">
+    <div class="dashboard-status-listener toast bg-danger text-white" data-status="error">
+      <div class="d-flex">
+        <div class="toast-body">
+          <h4 class="text-white">Error!</h4>
+          <span class="dashboard-status-listener-message" data-status="error">
+            Unknown error
+          </span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+'>
+</div>
+
+<div id="dashboard-template-display-ready" data-template='
+  <div class="toast-container position-fixed p-3 top-0 start-50 translate-middle-x" style="z-index: 1003; _min-width: 50vw;">
+    <div class="dashboard-status-listener toast bg-primary text-white" data-status="ready">
+      <div class="d-flex">
+        <div class="toast-body">
+          <h4 class="text-white">Alert!</h4>
+          <span class="dashboard-status-listener-message" data-status="ready">
+            Unknown ready
+          </span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+'>
+</div>
+
+<div id="dashboard-template-unsaved-popup" data-template='
+  <div class="dashboard-display-unsaved-popup" hidden>
+    <div class="position-fixed start-50 bottom-0 translate-middle-x w-100 zi-99 mb-3" style="max-width: 40rem;" >
+      <div class="card card-sm bg-dark border-dark mx-2">
+        <div class="card-body">
+          <div class="row justify-content-center justify-content-sm-between">
+            <div class="col d-flex align-items-center text-white">
+              You have unsaved changes!
+            </div>
+
+            <div class="col-auto">
+              <div class="d-flex gap-3">
+                <button type="submit" class="btn btn-primary">
+                  <span class="dashboard-display-loader" hidden>
+                    <div class="spinner-border spinner-border-sm text-light" role="status"></div>
+                  </span>
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+'>
+</div>
+
+<!-- <div id="dashboard-template-display-fatal" data-template='
+  <div class="dashboard-template-display-fatal" hidden>
+    <div class="d-flex justify-content-center align-items-center bg-dark h-100">
+      <div class="text-center">
+        <div class="mb-3">
+          <i class="fa-solid fa-exclamation-triangle fa-3x text-danger"></i>
+        </div>
+        <div class="dashboard-template-display-fatal-message">
+          There was a fatal error. Please reload the page.
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-primary" onclick="window.location.reload();">Reload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+'>
+</div> -->
 
 <script type="text/javascript">
-  // fields
-  var fields = {
-    title: "Ultimate Jekyll",
-    click_action: "https://template.itwcreativeworks.com",
-    body: "",
-    icon: "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-1024x1024.png"
-  }
+  (function() {
+    var DashboardManager = {
+
+    }
+    var select;
+    var utilities;
+    var get;
+    var set;
+    var storage;
+
+    window.onbeforeunload = function (event) {
+      var result = undefined;
+
+      Object.keys(DashboardManager).forEach(function (id) {
+        var dashboard = DashboardManager[id];
+
+        if (!dashboard.allowLeave) {
+          result = '';
+        }
+      });
+
+      return result;
+    }
+
+    function Dashboard() {
+      var self = this;
+
+      self.id = null;
+      self.element = {};
+      self.options = {};
+      self.allowLeave = true;
+
+      self._handler = {
+        transformData: function (data) {return data},
+        onSubmit: function () {},
+        onChange: function () {},
+        onStatus: function () {},
+      }
+      self._triggeredInitialOnChangeEvent = false;
+      self._$manualChangeTriggerElement = null;
+      self._elements = ['input', 'textarea', 'select'];
+      self._events = ['change', 'keydown', 'cut', 'paste']
+      // self._inputAndSubmit = 'input, textarea, select, button[type="submit"]';
+      self._inputAndSubmit = 'input, textarea, select, button, a';
+      self._autoFocused = false;
+
+      // Set global libraries
+      select = Manager.dom().select;
+      utilities = Manager.utilities();
+      get = utilities.get;
+      set = utilities.set;
+      storage = Manager.storage();
+
+      self.status = 'initializing';
+
+      return self;
+    }
+
+    Dashboard.prototype.register = function (id, options) {
+      var self = this;
+      var query = Manager.properties.page.queryString;
+
+      self.id = id;
+
+      // Set default options
+      options = options || {};
+
+      options.unsaved = options.unsaved || {};
+      options.unsaved.parent = options.unsaved.parent || '.dashboard-display-unsaved-popup';
+
+      options.createDefaultElements = typeof options.createDefaultElements === 'undefined' ? true : options.createDefaultElements;
+      options.preventUnsavedNavigation = typeof options.preventUnsavedNavigation === 'undefined' ? true : options.preventUnsavedNavigation;
+      options.showUnsavedPopup = typeof options.showUnsavedPopup === 'undefined' ? true : options.showUnsavedPopup;
+      options.checkboxReturnType = typeof options.checkboxReturnType === 'undefined' ? 'object' : options.checkboxReturnType;
+      options.allowMultipleSubmits = typeof options.allowMultipleSubmits === 'undefined' ? true : options.allowMultipleSubmits;
+      options.initialStatus = options.initialStatus || 'ready';
+
+      // Convert options
+      options.convert = options.convert || {};
+      options.convert.boolean = typeof options.convert.boolean === 'undefined' ? true : options.convert.boolean;
+
+      // Set element
+      self.element.id = select(self.id);
+
+      // Create default elements
+      if (options.createDefaultElements) {
+        function create(id) {
+          self.element.id.get(0).insertAdjacentHTML('beforeend', document.getElementById(id).getAttribute('data-template'));
+        }
+        create('dashboard-template-display-success');
+        create('dashboard-template-display-error');
+        create('dashboard-template-display-ready');
+        create('dashboard-template-unsaved-popup');
+        // create('dashboard-template-display-fatal');
+      }
+
+      // Setup the rest of the elements
+      self.element.unsaved = {
+        parent: select(options.unsaved.parent),
+      };
+
+      DashboardManager[self.id] = {
+        allowLeave: self.allowLeave,
+      };
+
+      // Change handler
+      self._setEventListeners();
+
+      // Submit handler
+      self.element.id.get(0).addEventListener('submit', function (event) {
+        // Log
+        console.log('[Dashboard]', self.id, 'submit event', event);
+
+        // Change status
+        self.display('loading');
+
+        // Fire submit handler
+        self._handler.onSubmit(event, self.getFormData());
+      });
+
+      // Set templates
+      options.template = options.template || {};
+      select('.dashboard-template').each(function ($el) {
+        var id = $el.getAttribute('data-template-id');
+        var body = $el.getAttribute('data-template-body');
+
+        if (id && body) {
+          options.template[id] = body;
+        }
+      })
+
+      // Set options
+      self.options = options;
+
+      // Add query strings to form
+      var qsData = {};
+      query.forEach(function (value, key) {
+        set(qsData, key, value);
+      });
+      self.setFormData(qsData);
+
+      // Set status
+      self.display('initializing');
+
+      // Trigger initial event manually
+      if (!self._triggeredInitialOnChangeEvent) {
+        // Set initial on change handler
+        // This is so we can set the initial status
+        self._initialOnChangeHandler = function () {
+          self.setAllowLeave(true);
+          self.display(options.initialStatus);
+
+          // If submit is true, submit the form
+          if (query.get('submit') === 'true') {
+            console.log('[Dashboard] auto submit is enabled', self.id);
+            self.submit();
+          }
+        }
+
+        if (self._$manualChangeTriggerElement) {
+          self.triggerOnChange();
+        }
+
+        self._triggeredInitialOnChangeEvent = true;
+      }
+
+      // Return
+      return self;
+    };
+
+    Dashboard.prototype.triggerOnChange = function ($el) {
+      var self = this;
+      var $usableElement = $el || self._$manualChangeTriggerElement;
+
+      $usableElement.dispatchEvent(new Event('change'));
+    }
+
+
+    Dashboard.prototype.setAllowLeave = function (state) {
+      var self = this;
+
+      self.allowLeave = state;
+
+      DashboardManager[self.id].allowLeave = state;
+
+      return self;
+    }
+
+    Dashboard.prototype.display = function (status, message) {
+      var self = this;
+
+      var _error;
+
+      // status: initializing | ready | loading | success | error
+      if (status instanceof Error) {
+        _error = status;
+        status = 'error';
+      }
+      var state = status === 'initializing' ? 'initializing' : 'initialized';
+      var elements = self.element.id.get(0).querySelectorAll(self._inputAndSubmit);
+
+      if (status === 'error') {
+        message = _error.message || 'Unknown error';
+      } else if (status === 'success') {
+        message = message || 'Successfully submitted';
+      } else {
+        message = message || '';
+      }
+
+      // Set status
+      self.status = status;
+
+      console.log('[Dashboard] display', self.id, 'status=', status, 'state=', state, 'message=', message);
+
+      // Enable or disable all inputs and submit buttons
+      elements
+      .forEach(function (el) {
+        var $el = select(el);
+        var isPending = ['initializing', 'loading'].includes(status);
+        var isDisabledClass = el.classList.contains('disabled');
+        var isDisabledAttribute = el.hasAttribute('disabled');
+
+        // Determine if we should disable the element
+        if (isPending && (!isDisabledClass || !isDisabledAttribute)) {
+          $el.addClass('disabled').setAttribute('disabled', true);
+        } else if (!isPending && (isDisabledClass || isDisabledAttribute)){
+          $el.removeClass('disabled').removeAttribute('disabled');
+        }
+
+        // If the element has autofocus, select the entire text
+        if (status === 'ready' && !self._autoFocused && el.hasAttribute('autofocus')) {
+          self._autoFocused = true;
+          el.select();
+        }
+
+        // var isDisabledClass = el.classList.contains('disabled');
+        // var isDisabledAttribute = el.hasAttribute('disabled');
+        // if (isPending && (!isDisabledClass || !isDisabledAttribute)) {
+        //   $el.addClass('disabled').setAttribute('disabled', true);
+        // } else if (!isPending && (isDisabledClass || isDisabledAttribute)) {
+        //   $el.removeClass('disabled').removeAttribute('disabled');
+        // }
+
+        // Disable form if allowMultipleSubmits is false
+        if (status === 'success' && !self.options.allowMultipleSubmits) {
+          $el.addClass('disabled').setAttribute('disabled', true);
+        }
+      });
+
+      // Set dynamic state
+      var $statusAll = select('.dashboard-status-listener');
+      var $statusMessage = select('.dashboard-status-listener-message[data-status="' + status + '"]');
+
+      var $stateAll = select('.dashboard-state-listener');
+      var $stateMessage = select('.dashboard-state-listener-message[data-state="' + state + '"]');
+
+      $statusAll
+      .each(function ($el) {
+        var s = $el.getAttribute('data-status');
+
+        // If we are in the correct status
+        if (s === status) {
+
+          // Show the element
+          $el.removeAttribute('hidden');
+
+          // If no message, quit because we don't want to show empty feedback
+          if (!message) { return }
+
+          // Set the status message
+          $statusMessage
+          .each(function ($el) {
+            // $el.innerHTML = message;
+            $el.innerText = message;
+          })
+
+          // Attempt to show a toast
+          try {
+            var toast = new bootstrap.Toast($el, {autohide: false})
+            toast.show();
+          } catch (e) {
+            // console.warn('[Dashboard] Unable to create error toast', e);
+          }
+        } else {
+          // Hide the element
+          $el.setAttribute('hidden', true);
+        }
+      })
+
+      // Set dynamic state
+      $stateAll
+      .each(function ($el) {
+        var s = $el.getAttribute('data-state');
+
+        if (s === state) {
+          $el.removeAttribute('hidden');
+
+          $stateMessage
+          .each(function ($el) {
+            // $el.innerHTML = message;
+            $el.innerText = message;
+          })
+        } else {
+          $el.setAttribute('hidden', true);
+        }
+      })
+
+      // Remove unsaved changes popup
+      if (['success', 'error'].includes(status)) {
+        self.element.unsaved.parent.setAttribute('hidden', true);
+      }
+
+      // Set allow leave
+      if (['success'].includes(status)) {
+        if (self.options.preventUnsavedNavigation) {
+          self.setAllowLeave(true);
+        }
+      }
+
+      // Run onStatus
+      self._handler.onStatus(status, message);
+
+      // Set initial on change handler to null so it doesn't run again
+      // If the dev manually calls .display() then it wont set automatically call the initial on change handler with the options.initialStatus
+      // If the dev does not call .display() then it will automatically call the initial on change handler with the options.initialStatus
+      self._initialOnChangeHandler = null;
+
+      // Return
+      return self;
+    };
+
+    Dashboard.prototype.getTemplate = function (id) {
+      var self = this;
+
+      return self.options.template[id];
+    };
+
+    Dashboard.prototype.resolveTemplate = function (id, data, options) {
+      var self = this;
+      var template = self.getTemplate(id);
+
+      // Set options
+      options = options || {};
+      options.escape = typeof options.escape === 'undefined' ? true : options.escape;
+      options.escapeIgnore = options.escapeIgnore || [];
+
+      function resolve(template, data, prefix) {
+        for (var key in data) {
+          if (data.hasOwnProperty(key)) {
+            var fullKey = prefix ? prefix + '.' + key : key;
+            var regex = new RegExp('{\\s*' + fullKey + '\\s*}', 'g');
+
+            if (typeof data[key] === 'object') {
+              template = resolve(template, data[key], fullKey);
+            } else {
+              var shouldEscape = options.escape && !options.escapeIgnore.includes(fullKey);
+              var value = shouldEscape ? utilities.escapeHTML(data[key]) : data[key];
+              template = template.replace(regex, value);
+            }
+          }
+        }
+        return template;
+      }
+
+      return resolve(template, data, '');
+    };
+
+    Dashboard.prototype.registerInput = function ($el) {
+      var self = this;
+
+      self._events.forEach(function (event) {
+        $el.addEventListener(event, function (event) {
+          self._changeHandler(event);
+        });
+      });
+    };
+
+    Dashboard.prototype.getFormData = function (transform) {
+      var self = this;
+      var data = {};
+      var $form = self.element.id.get(0);
+
+      // Loop through all inputs and set the value
+      $form.querySelectorAll(self._inputAndSubmit)
+      .forEach(function (el) {
+        var $el = select(el);
+        var name = $el.getAttribute('name');
+        var value = select('#' + $form.id + ' [name="' + name + '"]').getValue({returnType: self.options.checkboxReturnType});
+
+        // Skip if button
+        if (el.tagName === 'BUTTON') {
+          return;
+        } else if (!name) {
+          console.warn('[Dashboard] field name is blank', self.id, name, value, $el);
+          return;
+        }
+
+        // Handle convert
+        if (self.options.convert.boolean) {
+          if (value === 'true') {
+            value = true;
+          } else if (value === 'false') {
+            value = false;
+          }
+        }
+
+        // Set the data
+        set(data, name, value);
+      });
+
+      // Return regular
+      if (transform === false) {
+        return data;
+      }
+
+      // Return transformed data
+      return self._handler.transformData(data);
+    };
+
+    Dashboard.prototype.setFormData = function (settings) {
+      var self = this;
+      var data = self.getFormData(false); // Don't transform data
+      var $form = self.element.id.get(0);
+
+      // Loop through all inputs and set the value
+      $form.querySelectorAll(self._inputAndSubmit)
+      .forEach(function (el) {
+        var $el = select(el);
+        var name = $el.getAttribute('name');
+        var value = get(settings, name);
+
+        // If no name or value, skip
+        if (!name || typeof value === 'undefined') {
+          return;
+        }
+
+        // Set value
+        $el.setValue(value);
+
+        // Update the data object
+        set(data, name, value);
+      });
+
+      // Return transformed data
+      return self._handler.transformData(data);
+    };
+
+    // Submit
+    Dashboard.prototype.submit = function () {
+      var self = this;
+      var $form = self.element.id.get(0);
+
+      $form.querySelector('button[type="submit"]').click();
+    };
+
+    Dashboard.prototype.transformData = function (fn) {
+      var self = this;
+
+      self._handler.transformData = fn;
+
+      return self;
+    };
+
+    Dashboard.prototype.onChange = function (fn) {
+      var self = this;
+
+      self._handler.onChange = fn;
+
+      return self;
+    };
+
+    Dashboard.prototype.onSubmit = function (fn) {
+      var self = this;
+
+      self._handler.onSubmit = fn;
+
+      return self;
+    };
+
+    Dashboard.prototype.onStatus = function (fn) {
+      var self = this;
+
+      self._handler.onStatus = fn;
+
+      return self;
+    };
+
+    Dashboard.prototype._setEventListeners = function () {
+      var self = this;
+
+      var $form = self.element.id.get(0);
+
+      self._elements.forEach(function (event) {
+        $form.querySelectorAll(event)
+        .forEach(function ($el) {
+          self._$manualChangeTriggerElement = $el;
+
+          self._events.forEach(function (event) {
+            $el.addEventListener(event, function (event) {
+              self._changeHandler(event);
+            });
+          });
+        });
+      })
+    }
+
+    Dashboard.prototype._changeHandler = function (event) {
+      var self = this;
+
+      // Delay the change event so that the form can update
+      setTimeout(function () {
+        // Prevent enter key from triggering change event so that it doesn't submit the form
+        if (event.key === 'Enter') {
+          return;
+        }
+
+        // Log
+        console.log('[Dashboard]', self.id, 'change event', event);
+
+        // Show unsaved popup if enabled
+        if (self.options.showUnsavedPopup) {
+          self.element.unsaved.parent.removeAttribute('hidden');
+        }
+
+        // Set allow leave to false only if its a trusted event
+        if (
+          self.options.preventUnsavedNavigation
+          && event.isTrusted
+        ) {
+          self.setAllowLeave(false);
+        }
+
+        // Trigger initial handler to set the initial status
+        if (self._initialOnChangeHandler) {
+          self._initialOnChangeHandler();
+        } else {
+          // Set status to ready so if there's an error it will go away when they start typing again
+          self.display('ready');
+        }
+
+        // Run on change with form data
+        self._handler.onChange(event, self.getFormData());
+      }, 1);
+    }
+
+    // Export to global
+    window.Dashboard = Dashboard;
+
+    // Log
+    console.log('Dashboard loaded');
+  }());
 </script>
 
+
+<!--
+  Make a dashboard suite
+  - include an error toast
+  - a success toast
+  - a popup toast to save changes
+  - ability to set a allowLeave whihc will prevent navigation
+ -->
+
+
 <script type="text/javascript">
-  var navBlocked = false;
-  var allowLeave = true;
-  var stackedit;
-  var turndownService;
-  var dom;
-  var lastPreviewIcon = '';
+  Manager.auth().ready(function() {
+    var select = Manager.dom().select;
+    var get = Manager.utilities().get;
+    var set = Manager.utilities().set;
+    var storage = Manager.storage();
+    var autoSubmit = null;
 
-  var buildFile = {};
+    var dashboard = new Dashboard();
 
-  Manager.ready(function() {
-    var previewIconErrorEl = document.getElementById('preview-icon-error')
-    var previewIconEl = document.getElementById('preview-icon')
+    var queryString = Manager.properties.page.queryString;
 
-    fetch('https://template.itwcreativeworks.com/@output/build/build.json', {
-      method: 'GET',
-    })
-    .then(function (res) {
-      if (res.ok) {
-        res.json()
-        .then(function (data) {
-          console.log('Success', data);
-          buildFile = data;
-          dom = Manager.dom();
-          blockNavigation();
-          setupForm();
-          countChars();
-          countCharactersAndWords();
-          getPreviewIcon();
-          dom.select('body').on('click', function (event) {
-            if (event.target.matches('#stackedit-edit')) {
-            }
-          });
+    var sessions = {};
+    var sessionsCategories = [
+      'notifications.total',
+      // 'sessions',
+      // 'gatherings',
+    ]
+    var initialOnChangeTriggered = false;
+    var appsInserted = {};
+    var reach = {
+      // Total available reach
+      available: {
+        total: 0,
+        tags: {},
+      },
+      // Reach that will be sent
+      filtered: {
+        total: 0,
+        tags: {},
+      },
+      // Statistics of the campaign
+      results: {
+        total: 0,
+        tags: {},
+      },
+    };
 
-          dom.select('body').on('keyup', function (event) {
-            countChars();
-            countCharactersAndWords();
-            getPreviewIcon();
-            allowLeave = false;
-          });
+    var timeouts = {
+      stats: null,
+      autoSubmit: null,
+    }
 
-          window.previewError = function (e) {
-            previewIconEl.setAttribute('hidden', true)
-            previewIconErrorEl.removeAttribute('hidden')
+    var qsAutoSubmit = parseInt(queryString.get('autoSubmit') || '0');
+    var qsAutoRefresh = queryString.get('autoRefresh') === 'true';
+    var qsDevelopment = queryString.get('development') === 'true';
 
-          }
+    var $autoRefreshCountdown = document.getElementById('auto-refresh-countdown');
+    var $autoRefreshCountdownTime = document.getElementById('auto-refresh-countdown-time');
 
-          previewIconEl.setAttribute('onerror', 'window.previewError()')
+    // Fetch the sessions
+    dashboard.register('#notification-form', {
+      showUnsavedPopup: false,
+      allowMultipleSubmits: false,
+    });
 
-          function getPreviewIcon() {
-            var newPreviewIcon = dom.select('#icon').getValue();
-            if (lastPreviewIcon !== newPreviewIcon) {
-              // console.log('NEW', newPreviewIcon);
-              lastPreviewIcon = newPreviewIcon;
-              dom.select(previewIconEl)
-                .removeAttribute('hidden')
-                .setAttribute('src', newPreviewIcon)
-                // .setAttribute('onerror', previewError.toString())
-                // .setAttribute('onerror', function onerror(e) {
-                //   console.log('----e', e);
-                // })
-                // .setAttribute('onerror', (function(e) {
-                //   console.log('----E', e);
-                // }()));
-              previewIconErrorEl.setAttribute('hidden', true)
-            }
-          }
+    dashboard.transformData(function (data) {
+      // Get the current date
+      var now = new Date();
 
-          function setupForm() {
-            dom.select('#title').setValue(fields.title);
-            // dom.select('#click_action').setValue(fields.click_action.replace(/\/(.*?)\//,'').replace(/\//,''));
-            dom.select('#click_action').setValue(fields.click_action);
-            dom.select('#icon').setValue(fields.icon);
-            dom.select('#body').setValue("");
+      // Log
+      console.log('transformData():', data);
 
-            // special
-            var serverDev = 'http://localhost:5001/' + Manager.properties.options.libraries.firebase_app.config.projectId + '/us-central1/bm_api';
-            var serverProd = 'https://us-central1-' + Manager.properties.options.libraries.firebase_app.config.projectId + '.cloudfunctions.net/bm_api';
-            var env = buildFile.environment;
-            dom.select('#processingAddy_dev').setInnerHTML(serverDev).setAttribute('value', serverDev);
-            dom.select('#processingAddy_prod').setInnerHTML(serverProd).setAttribute('value', serverProd);
-            dom.select('#processingAddy').setValue(env === 'development' ? serverDev : serverProd);
+      // Set ID
+      data.id = now.getTime();
 
-          }
+      // If auto submit date and time is set, set autoSubmitTrigger as  date object of it
+      clearInterval(timeouts.autoSubmit);
+      autoSubmit = null;
+      if (data.autoSubmitDate.timestamp && data.autoSubmitTime.timestamp) {
+        var autoSubmitDate = new Date(data.autoSubmitDate.timestamp + 'T' + data.autoSubmitTime.timestamp);
+        var isFutureDate = autoSubmitDate > now;
+        autoSubmit = autoSubmitDate;
 
-          dom.select('#notification-form').on('submit', function (event) {
-            blockNavigation();
-            display('loading');
-            // var endpoint = 'https://template.itwcreativeworks.com/admin/post/create.json';
-            var endpoint = dom.select('#processingAddy').getValue();
+        // If it is currently a future date
+        if (isFutureDate) {
+          timeouts.autoSubmit = setInterval(function () {
+            var remaining = getTimeRemaining(autoSubmitDate);
+            var $el = document.getElementById('autoSubmitCountdown');
 
-            var token = '';
-            firebase.auth().currentUser.getIdToken(true)
-            .then(function(token) {
-              token = token;
+            // Log and update the countdown
+            $el.innerHTML = `(<i class="bi-clock"></i> ${remaining.hours}h ${remaining.minutes}m ${remaining.seconds}s)`;
 
-              var data = {};
-              var finalData = {};
-              dom.select('#notification-form input, #notification-form select, #notification-form textarea').each(function (el, i) {
-                var curField = dom.select(el);
-                data[curField.getAttribute('name')] = curField.getValue();
-              });
-              finalData.authenticationToken = token;
-              finalData.command = 'admin:send-notification';
-              finalData.payload = {};
-              finalData.payload.title = data.title;
-              finalData.payload.icon = data.icon;
-              finalData.payload.click_action = data.click_action;
-              finalData.payload.body = data.body;
+            // Check if the time is up
+            if (remaining.difference <= 0) {
+              clearInterval(timeouts.autoSubmit);
 
-              console.log('#notification-form', endpoint, finalData);
-
-              fetch(endpoint, {
-                method: 'POST',
-                body: JSON.stringify(finalData),
+              // Fetch updated sessions before submitting
+              fetchSessions(false)
+              .finally(function () {
+                dashboard.submit();
               })
-              .then(function (res) {
-                if (res.status >= 200 && res.status < 300) {
-                  res.json()
-                  .then(function (data) {
-                    console.log('Success', data);
-                    display('success', JSON.stringify(data));
-
-                    allowLeave = true;
-                  })
-                } else {
-                  return res.text()
-                  .then(function (data) {
-                    throw new Error(data || res.statusText || 'Unknown error.')
-                  })
-                }
-              })
-              .catch(function (e) {
-                console.error(e);
-                display(e);
-              })
-
-            })
-            .catch(function(e) {
-              display(new Error('Failed to get firebase token: ' + e));
-            })
-          });
-
-          function displayWaiting() {
-            dom.select('#response .alert-danger').hide()
-            dom.select('#response .alert-success').hide()
-
-            dom.select('#response .alert-info').show()
-            dom.select('#response').show()
-            dom.select('#post-submit-btn').setAttribute('disabled', true);
-          }
-
-          function display(type, message) {
-            type = type || 'ready';
-            dom.select('#response .alert-info').hide()
-            dom.select('#response .alert-danger').hide()
-            dom.select('#response .alert-success').hide()
-            dom.select('#post-submit-btn').removeAttribute('disabled');
-
-            if (type === 'ready') {
-
-            } else if (type === 'loading') {
-              dom.select('#response').show()
-              dom.select('#response .alert-info').show()
-              dom.select('#post-submit-btn').setAttribute('disabled', true);
-            } else if (type instanceof Error) {
-              dom.select('#response').show()
-              dom.select('#response .alert-danger').show()
-              dom.select('.server-response').setInnerHTML(type)
-            } else if (type === 'success') {
-              dom.select('#response').show()
-              dom.select('#response .alert-success').show()
-              dom.select('.server-response').setInnerHTML(message)
             }
-          }
+          }, 1000);
+        }
+      }
 
-          dom.select('.loaded-false').hide();
-          dom.select('.loaded-true').show();
+      // delete fields
+      delete data.autoSubmitDate;
+      delete data.autoSubmitTime;
+
+      // Set created timestamp
+      data.created = {
+        timestamp: now.toISOString(),
+        timestampUNIX: Math.round(now.getTime() / 1000),
+      }
+
+      // Set the user count
+      return data;
+    });
+
+    // On change
+    dashboard.onChange(function (event, data) {
+      console.log('onChange():', event, data);
+
+      // Switch the form section
+      var $target = event.target;
+
+      // Set the icon preview
+      select('#preview-icon').setAttribute('src', data.icon);
+
+      // Update the user count
+      clearTimeout(timeouts.stats);
+      timeouts.stats = setTimeout(function () {
+        var count = 0;
+        var total = Object.keys(sessions);
+        var platforms = {};
+        var apps = {};
+        var $appParent = document.getElementById('app-blacklist-parent');
+
+        // Reset
+        Object.keys(reach).forEach(function (key) {
+          reach[key].total = 0;
+          reach[key].tags = {};
         })
-      } else {
-        return res.text()
-        .then(function (data) {
-          throw new Error(data || res.statusText || 'Unknown error.')
+
+        // Set reach
+        reach.available.total = sessions.total || 0;
+        reach.filtered.total = sessions.total || 0;
+
+        select('.notification-user-count-included').setInnerHTML(reach.filtered.total + '/' +  reach.available.total);
+      }, 333);
+    });
+
+    // Submit handler
+    dashboard.onSubmit(function (event, data) {
+      console.log('onSubmit():', event, data);
+
+      // NEW CHECKS
+      // Check for required fields
+      if (!data.icon) {
+        return dashboard.display(new Error('Icon is required'));
+      } else if (!data.title) {
+        return dashboard.display(new Error('Title is required'));
+      } else if (!data.body) {
+        return dashboard.display(new Error('Body is required'));
+      } else if (!data.clickAction) {
+        return dashboard.display(new Error('Click Action URL is required'));
+      }
+
+      // Fix types
+      var functionsUrl = getFunctionsUrl();
+      var newUrl = new URL('https://promo-server.itwcreativeworks.com/redirect/notification');
+
+      // Add promotion query parameter
+      newUrl.searchParams.set('id', data.id);
+      newUrl.searchParams.set('type', 'notification');
+      newUrl.searchParams.set('url', data.clickAction);
+
+      data.clickAction = newUrl.toString();
+
+      // Add reach stats
+      // This has to be done here to ensure the data is added AFTER it is retrieved in fetchSessions()
+      // DO NOT PUT IT IN transformData()
+      data.reach = reach;
+
+      // Log
+      console.log('Final Data:', functionsUrl, data);
+
+      // Publish the notification
+      return WonderfulFetch(functionsUrl, {
+        method: 'POST',
+        timeout: 60000,
+        response: 'json',
+        tries: 1,
+        authorization: 'firebase',
+        body: {
+          command: 'admin:send-notification',
+          payload: data,
+        },
+      })
+      .then(function (response) {
+        console.log('Response:', response);
+
+        // Display success
+        dashboard.display('success', 'Notification sent successfully!');
+      })
+      .catch(function (e) {
+        dashboard.display(e);
+      })
+
+      // Save in firebase/promo/timestamp
+      // Manager.properties.global.functionsUrl
+      // firebase.firestore().doc('promo/' + data.id)
+      //   .set(data)
+      //   .then(function () {
+      //     dashboard.display('success', 'Promotion created successfully!')
+      //   })
+      //   .catch(function (e) {
+      //     dashboard.display(e);
+      //   })
+    })
+
+    // Click handler
+    document.addEventListener('click', function (event) {
+      var $target = event.target;
+
+      // If the element is a vert, set the URL
+      if ($target.matches('.btn-set-initial-date-and-time')) {
+        setInitialDateAndTime();
+      }
+    })
+
+    // Check if DEV
+    if (Manager.isDevelopment()) {
+      dashboard.setFormData({
+        title: 'Test Notification',
+        body: 'This is a test notification',
+      });
+    }
+
+    // Fetch the sessions
+    fetchSessions(true);
+
+    // Set ready
+    dashboard.display('ready');
+
+    // Functions
+    function fetchSessions(triggerOnChange) {
+      var sessionsRetrieved = 0;
+
+      // Get sessions
+      function _get(path, index) {
+        return WonderfulFetch(Manager.properties.global.functionsUrl + '/bm_api', {
+          method: 'POST',
+          timeout: 60000,
+          response: 'json',
+          tries: 2,
+          authorization: 'firebase',
+          body: {
+            command: 'admin:firestore-read',
+            payload: {
+              path: 'meta/stats',
+            },
+          },
+        })
+        .then(function (response) {
+          console.log('Raw Response:', response);
+          return _handleResponse(path, response, true);
+        })
+        .catch(function (e) {
+          dashboard.display(e);
+          console.error('Error:', e);
+
+          sessions = {};
+          var response = {}
+          var fakeId = 0;
+
+          // Loop through and add fake data
+          Object.keys(storage.get('notification.user-count.platform', {}))
+          .forEach(function (platform) {
+            var count = storage.get('notification.user-count.platform.' + platform, 0);
+
+            // Loop through and add fake data
+            for (var i = 0; i < count; i++) {
+              fakeId++;
+              response[fakeId] = {
+                'platform': platform,
+                'app': '',
+              }
+            }
+          })
+
+          // Do the same for app instead of platform
+          Object.keys(storage.get('notification.user-count.app', {}))
+          .forEach(function (app) {
+            var count = storage.get('notification.user-count.app.' + app, 0);
+
+            // Loop through and add fake data
+            for (var i = 0; i < count; i++) {
+              fakeId++;
+              response[fakeId] = {
+                'platform': '',
+                'app': app,
+              }
+            }
+          })
+
+          return _handleResponse(path, response, false);
         })
       }
 
-    })
-    .catch(function (e) {
-      console.error(e);
-    })
+      function _handleResponse(path, response, shouldSave) {
+        var startTime = Manager.properties.page.startTime.toISOString().split('.')[0];
+        var date = startTime.split('T')[0];
+        var time = startTime.split('T')[1];
+        var pathResolved = 'notification.user-count.history.' + date + '.' + time + '.' + path;
+        var user = firebase.auth().currentUser || {};
+        var currentHistory = null;
 
-  });
+        // Set the sessions
+        sessions.total = get(response, path, 0);
 
-  function countChars() {
-    var charCountFields = ['title', 'body'];
-    for (var i = 0; i < charCountFields.length; i++) {
-      var cur = dom.select('*[name="' + charCountFields[i] + '"]').get(0);
-      dom.select(cur.parentNode.childNodes).each(function (element, i) {
-        if (element.matches('.input-group-text')) {
-          // dom.select(element.querySelectorAll('.input-group-append .input-group-text')).setInnerHTML(dom.select(cur).getValue().length);
-          dom.select(element).setInnerHTML(dom.select(cur).getValue().length);
+        // Calculate the total
+        var total = sessions.total
+        sessionsRetrieved++;
+
+        // Update the progress
+        select('.notification-user-count-progress').setInnerHTML(sessionsRetrieved + '/' + sessionsCategories.length);
+        select('.notification-user-count-total').setInnerHTML(total);
+
+        // Trigger on change
+        // Dont need to do it on calls other than when the page first loads
+        if (triggerOnChange) {
+          dashboard.triggerOnChange();
         }
+
+        // Store data
+        if (shouldSave) {
+          // Store the data
+          storage.set(pathResolved, total);
+
+          // Get the current history
+          currentHistory = storage.get('notification.user-count.history', {});
+
+          // Send email
+          if (path === 'notifications.total') {
+            var title = `Notification Total Log: ${date} @ ${time}`;
+
+            WonderfulFetch(`https://us-central1-itw-creative-works.cloudfunctions.net/sendEmail`, {
+              method: 'post',
+              response: 'json',
+              log: true,
+              authorization: 'firebase',
+              body: {
+                app: 'itw-creative-works',
+                to: {
+                  email: user.email,
+                },
+                categories: [`admin/promo-server-log`],
+                subject: title,
+                template: 'd-b7f8da3c98ad49a2ad1e187f3a67b546',
+                group: 8275,
+                copy: false,
+                ensureUnique: false,
+                data: {
+                  email: {
+                    preview: title,
+                  },
+                  body: {
+                    title: title,
+                    message: `
+                    <strong>Total:</strong> ${total}
+
+                    <br>
+                    <strong>History:</strong> <br>
+                    <pre>
+                      <code>
+                        ${JSON.stringify(currentHistory, null, 2)}
+                      </code>
+                    </pre>
+                    `
+                  }
+                },
+              },
+            })
+          }
+        }
+
+        // Log the data
+        console.log('Retrieved Sessions:', startTime, path, total, sessions);
+        console.log('Stored History:', startTime, currentHistory);
+
+        // Return the total
+        return total;
+      }
+
+      // Set the total
+      select('.notification-user-count-progress').setInnerHTML(0 + '/' + sessionsCategories.length);
+      select('.notification-user-count-total').setInnerHTML(0);
+
+      // Set promises
+      var promises = [];
+
+      // Loop through and get the sessions
+      sessionsCategories.forEach(function (category, index) {
+        promises.push(_get(category, index));
       })
+
+      // Return the promises
+      return Promise.all(promises);
     }
-  }
 
-  function countCharactersAndWords() {
-    dom.select('.word-and-character-count').each(function (el, i) {
-      var source = dom.select(el.dataset.countSource);
-      var el = dom.select(el);
-      var value = source.getValue() || ''
-      var chars = value.length;
-      var words = value.split(' ').length;
+    function setInitialDateAndTime() {
+      // Build the date to be 10 AM tomorrow
+      var date = new Date();
+      date.setDate(date.getDate() + 1);
+      date.setHours(10 - (date.getTimezoneOffset() / 60));
+      date.setMinutes(0);
+      date.setSeconds(0);
 
-      el.setInnerHTML('(' + chars + ' characters, ' + words + ' words' + ')')
-    })
-  }
+      // Get the date and time
+      var [date, time] = date.toISOString().split('T');
+      var formattedTime = time.split('.')[0].slice(0, 5);
 
-  function blockNavigation() {
-    if (navBlocked === true) {
-      return;
+      // Set the initial date and time
+      dashboard.setFormData({
+        autoSubmitDate: {
+          timestamp: date,
+        },
+        autoSubmitTime: {
+          timestamp: formattedTime,
+        },
+      })
+
+      // Trigger on change
+      dashboard.triggerOnChange(document.querySelector('#autoSubmitDate-timestamp'));
     }
-    navBlocked = true;
-    try {
-      window.onbeforeunload = function(event) {
-        if (allowLeave) {
-          event.preventDefault();
-        } else {
-          event.returnValue = "Write something clever here..";
-        }
+
+    function getTimeRemaining(start) {
+      var now = new Date();
+      var diff = start - now;
+      var hours = Math.floor(diff / 1000 / 60 / 60);
+      var minutes = Math.floor(diff / 1000 / 60) - (hours * 60);
+      var seconds = Math.floor(diff / 1000) - (hours * 60 * 60) - (minutes * 60);
+      return {
+        difference: diff,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
       };
-    } catch (e) {
-      console.error('Error creating post', e);
     }
-  }
 
+    function getFunctionsUrl() {
+      if (qsDevelopment) {
+        return 'http://localhost:5001/promo-server-api/us-central1/bm_api';
+      }
 
-
+      return Manager.properties.global.functionsUrl + '/bm_api';
+    }
+  });
 </script>
 
           </div>
@@ -1648,7 +2524,7 @@ footer, header, hgroup, menu, nav, section {
 <!-- JS Global Compulsory  --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery/dist/jquery.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Implementing Plugins --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables/media/js/jquery.dataTables.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net.extensions/select/select.min.js"></script> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script> --> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script> -->
 <!-- JS Front --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/js/theme.min.js"></script>
-<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738109772"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1738109772" async defer></script><style media="screen">
+<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738119069"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1738119069" async defer></script><style media="screen">
   body[data-theme="dark"] #main-logo {
     filter: brightness(0) invert(1);
   }
