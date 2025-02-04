@@ -1,7 +1,6 @@
 ; // This fixes the frontmatter formatting
 
-// self.addEventListener('install', function(event) {
-// });
+// Service Worker Manager
 var window = self;
 var SWManager = {
   config: {},
@@ -38,23 +37,19 @@ try {
   SWManager.cache.name = SWManager.app + '-' + SWManager.cache.breaker;
 
   // Log
-  log('Setup succeeded:', self.location.pathname, SWManager.cache.name, SWManager)
+  log('Setup succeeded:', self.location.pathname, SWManager.version, SWManager.cache.name, SWManager)
 } catch (e) {
   console.error('Setup failed:', e)
 }
 
 // Force service worker to use the latest version
-try {
-  self.addEventListener('install', function(event) {
-    event.waitUntil(self.skipWaiting());
-  });
+self.addEventListener('install', (event) => {
+  event.waitUntil(self.skipWaiting());
+});
 
-  self.addEventListener('activate', function(event) {
-    event.waitUntil(self.clients.claim());
-  });
-} catch (e) {
-  console.error('Failed to force service worker to use the latest version.', e);
-}
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
 
 // Messaging/Notifications resoruces
 // https://firebase.google.com/docs/cloud-messaging/js/receive
@@ -214,7 +209,7 @@ try {
 
 // Send messages: https://stackoverflow.com/questions/35725594/how-do-i-pass-data-like-a-user-id-to-a-web-worker-for-fetching-additional-push
 // more messaging: http://craig-russell.co.uk/2016/01/29/service-worker-messaging.html#.XSKpRZNKiL8
-self.addEventListener('message', function(event) {
+self.addEventListener('message', (event) => {
   var data;
   var response = {status: 'success', command: '', data: {}};
   try {
@@ -242,10 +237,10 @@ self.addEventListener('message', function(event) {
       event.ports[0].postMessage(response);
     } else if (data.command === 'unregister') {
       self.registration.unregister()
-      .then(function() {
+      .then(() => {
         event.ports[0].postMessage(response);
       })
-      .catch(function() {
+      .catch(() => {
         response.status = 'fail';
         event.ports[0].postMessage(response);
       });
@@ -260,15 +255,15 @@ self.addEventListener('message', function(event) {
         '/assets/js/main.js',
       ];
       var pagesToCache = arrayUnique(data.args.pages.concat(defaultPages));
-      caches.open(SWManager.cache.name).then(function (cache){
+      caches.open(SWManager.cache.name).then(cache => {
         return cache.addAll(
           pagesToCache
         )
-        .then(function() {
+        .then(() => {
           log('Cached resources.');
           event.ports[0].postMessage(response);
         })
-        .catch(function() {
+        .catch(() => {
           response.status = 'fail';
           event.ports[0].postMessage(response);
           log('Failed to cache resources.')
