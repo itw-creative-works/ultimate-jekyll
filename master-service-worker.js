@@ -51,6 +51,28 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(self.clients.claim());
 });
 
+// Handle clicks on notifications
+// Open the URL of the notification
+// ⚠️⚠️⚠️ THIS MUST BE PLACED BEFORE THE FIREBASE IMPORTS HANDLER ⚠️⚠️⚠️
+// https://stackoverflow.com/questions/78270541/cant-catch-fcm-notificationclick-event-in-service-worker-using-firebase-messa
+self.addEventListener('notificationclick', (event) => {
+  // Get the URL of the notification
+  const notification = event.notification;
+  const action = event.action;
+  const data = notification.data || {};
+
+  // Log
+  log('Event: notificationclick ', event, notification, action, data);
+
+  // Close the notification
+  // notification.close();
+
+  // Handle the click
+  event.waitUntil(
+    clients.openWindow(data.click_action)
+  );
+});
+
 // Messaging/Notifications resoruces
 // https://firebase.google.com/docs/cloud-messaging/js/receive
 // https://github.com/firebase/quickstart-js/tree/master/messaging
@@ -88,26 +110,6 @@ try {
   //   // Show notification
   //   self.registration.showNotification(title, options);
   // });
-
-  // Handle clicks on notifications
-  // Open the URL of the notification
-  self.addEventListener('notificationclick', (event) => {
-    // Get the URL of the notification
-    const notification = event.notification;
-    const action = event.action;
-    const data = notification.data || {};
-
-    // Log
-    log('Event: notificationclick ', event, notification, action, data);
-
-    // Close the notification
-    // notification.close();
-
-    // Handle the click
-    event.waitUntil(
-      clients.openWindow(data.click_action)
-    );
-  });
 
   // Log
   log('Firebase initialized successfully');
