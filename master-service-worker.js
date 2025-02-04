@@ -285,7 +285,7 @@ function log() {
   var args = Array.prototype.slice.call(arguments);
 
   // Add prefix
-  args.unshift('[service-worker]:');
+  args.unshift(`[${new Date().toISOString()}] service-worker:`);
 
   // Log
   console.log.apply(console, args);
