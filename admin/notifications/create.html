@@ -79,8 +79,8 @@
       app: 'itw-creative-works',
       version: '1.0.0',
       url: 'https://template.itwcreativeworks.com',
-      buildTime: '1738654241',
-      cacheBreaker: '1738654241',
+      buildTime: '1738655615',
+      cacheBreaker: '1738655615',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyDzy5BG9-i9RmymyFx6mfwSgaRioyfa0Cc', authDomain: 'template.itwcreativeworks.com', databaseURL: 'https://ultimate-jekyll.firebaseio.com', projectId: 'ultimate-jekyll', storageBucket: 'ultimate-jekyll.appspot.com', messagingSenderId: '837186164890', appId: '1:837186164890:web:f1f59569d661078c', measurementId: 'G-FR3X7X4KYN', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LeVGTsoAAAAADvAyVkTLYXq5dP36GaBryN2s87H', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#237afc', text: '#fff', }, button: { background: '#fff', text: '#237afc', }, }, }, }, chatsy: { enabled: true, config: { accountId: 'pLnXvh03xRQOHWAurn5EBnobC5H3', chatId: 't4IJJsOMNc4hiH', settings: { openChatButton: { background: '#237afc', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.01, replaysOnErrorSampleRate: 0.01, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'Ultimate Jekyll',
@@ -114,13 +114,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1738654241">
-<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1738654241">
-<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1738654241">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://template.itwcreativeworks.com/assets/images/favicon/apple-touch-icon.png?cb=1738655615">
+<link rel="icon" type="image/png" sizes="32x32" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-32x32.png?cb=1738655615">
+<link rel="icon" type="image/png" sizes="16x16" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon-16x16.png?cb=1738655615">
 <link rel="mask-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" type="image/x-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1738654241">
+<link rel="shortcut icon" type="image/x-icon" href="https://template.itwcreativeworks.com/assets/images/favicon/favicon.ico?cb=1738655615">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1738654241">
+<meta name="msapplication-config" content="https://template.itwcreativeworks.com/assets/images/favicon/browserconfig.xml?cb=1738655615">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -701,7 +701,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 9 and Below Only -->
 <!--[if lte IE 9]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1738654241">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1738655615">
 <![endif]-->
 
 <!-- Style - Scripts are Disabled -->
@@ -1052,7 +1052,7 @@ footer, header, hgroup, menu, nav, section {
                   <small class="d-block _form-text text-muted">
                       The icon URL of the notification
                   </small>
-                  <input type="url" class="form-control" name="icon" id="icon" value="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-1024x1024.png" placeholder="" aria-label="" required>
+                  <input type="url" class="form-control" name="notification.icon" id="icon" value="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-1024x1024.png" placeholder="" aria-label="" required>
               </div>
               <div class="col-12 col-md-2 _col-sm-12">
                   <img class="img-fluid img-thumbnail" id="preview-icon" src="" alt="" style="max-height: 200px;">
@@ -1065,21 +1065,21 @@ footer, header, hgroup, menu, nav, section {
           <label for="title" class="_form-label text-dark">
             Title <span class="text-danger">*</span>
           </label>
-          <input type="text" class="form-control" name="title" id="title" placeholder="Notification Title" aria-label="Notification Title" required>
+          <input type="text" class="form-control" name="notification.title" id="title" placeholder="Notification Title" aria-label="Notification Title" required>
         </div>
         <!-- Body -->
         <div class="mb-4">
           <label for="body" class="text-dark">
             Body <span class="text-danger">*</span>
           </label>
-          <textarea id="body" name="body" class="form-control" rows="3" placeholder="Notification Body" required></textarea>
+          <textarea id="body" name="notification.body" class="form-control" rows="3" placeholder="Notification Body" required></textarea>
         </div>
         <!-- Click Action -->
         <div class="mb-4">
           <label for="clickAction" class="_form-label text-dark">
             Click Action URL <span class="text-danger">*</span>
           </label>
-          <input type="url" class="form-control" name="clickAction" id="clickAction" value="https://template.itwcreativeworks.com" required>
+          <input type="url" class="form-control" name="notification.clickAction" id="clickAction" value="https://template.itwcreativeworks.com" required>
         </div>
         <!-- Auto-Submit -->
         <div class="mb-4">
@@ -1152,8 +1152,8 @@ footer, header, hgroup, menu, nav, section {
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738654241"></script>
-<script src="https://cdn.jsdelivr.net/npm/node-powertools@latest/dist/index.min.js?cb=1738654241"></script>
+<script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738655615"></script>
+<script src="https://cdn.jsdelivr.net/npm/node-powertools@latest/dist/index.min.js?cb=1738655615"></script>
 
 <!-- Default elements -->
 <div id="dashboard-template-display-success" data-template='
@@ -1937,7 +1937,7 @@ footer, header, hgroup, menu, nav, section {
       var $target = event.target;
 
       // Set the icon preview
-      select('#preview-icon').setAttribute('src', data.icon);
+      select('#preview-icon').setAttribute('src', data.notification.icon);
 
       // Update the user count
       clearTimeout(timeouts.stats);
@@ -1968,13 +1968,13 @@ footer, header, hgroup, menu, nav, section {
 
       // NEW CHECKS
       // Check for required fields
-      if (!data.icon) {
+      if (!data.notification.icon) {
         return dashboard.display(new Error('Icon is required'));
-      } else if (!data.title) {
+      } else if (!data.notification.title) {
         return dashboard.display(new Error('Title is required'));
-      } else if (!data.body) {
+      } else if (!data.notification.body) {
         return dashboard.display(new Error('Body is required'));
-      } else if (!data.clickAction) {
+      } else if (!data.notification.clickAction) {
         return dashboard.display(new Error('Click Action URL is required'));
       }
 
@@ -1984,9 +1984,9 @@ footer, header, hgroup, menu, nav, section {
       // Add promotion query parameter
       newUrl.searchParams.set('id', data.id);
       newUrl.searchParams.set('type', 'notification');
-      newUrl.searchParams.set('url', data.clickAction);
+      newUrl.searchParams.set('url', data.notification.clickAction);
 
-      data.clickAction = newUrl.toString();
+      data.notification.clickAction = newUrl.toString();
 
       // Add reach stats
       // This has to be done here to ensure the data is added AFTER it is retrieved in fetchSessions()
@@ -2043,8 +2043,10 @@ footer, header, hgroup, menu, nav, section {
     // Check if DEV
     if (Manager.isDevelopment()) {
       dashboard.setFormData({
-        title: 'Test Notification',
-        body: 'This is a test notification',
+        notification: {
+          title: 'Test Notification',
+          body: 'This is a test notification',
+        }
       });
     }
 
@@ -2526,7 +2528,7 @@ footer, header, hgroup, menu, nav, section {
 <!-- JS Global Compulsory  --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery/dist/jquery.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Implementing Plugins --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables/media/js/jquery.dataTables.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net.extensions/select/select.min.js"></script> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script> --> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script> -->
 <!-- JS Front --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/js/theme.min.js"></script>
-<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738654241"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1738654241" async defer></script><style media="screen">
+<!-- ITW CW --> <script src="https://cdn.jsdelivr.net/npm/wonderful-fetch@latest/dist/index.min.js?cb=1738655615"></script> <script type="text/javascript" src="https://template.itwcreativeworks.com/assets/js/base.js?cb=1738655615" async defer></script><style media="screen">
   body[data-theme="dark"] #main-logo {
     filter: brightness(0) invert(1);
   }
