@@ -38,9 +38,12 @@ try {
   console.error('master-service-worker.js failed setup.', e)
 }
 
-// Load Firebase
+
+// Messaging/Notifications resoruces
 // https://firebase.google.com/docs/cloud-messaging/js/receive
 // https://github.com/firebase/quickstart-js/tree/master/messaging
+
+// Load Firebase
 try {
   // Import Firebase libraries
   importScripts(
