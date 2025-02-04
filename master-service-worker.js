@@ -26,18 +26,35 @@ var SWManager = {
 
 // Setup
 try {
+  // Parse config file
   SWManager.config = JSON.parse(new URL(self.location).searchParams.get('config'));
+
+  // Set up SWManager
   SWManager.version = SWManager.config.v;
   SWManager.environment = SWManager.config.env;
   SWManager.brand.name = SWManager.config.name;
   SWManager.app = SWManager.config.id || (SWManager.brand.name.toLowerCase().replace(' ', '-') || 'default');
   SWManager.cache.breaker = SWManager.config.cb;
   SWManager.cache.name = SWManager.app + '-' + SWManager.cache.breaker;
-  log('Setup: ', self.location.pathname, SWManager.cache.name, SWManager)
+
+  // Log
+  log('Setup succeeded:', self.location.pathname, SWManager.cache.name, SWManager)
 } catch (e) {
-  console.error('failed setup.', e)
+  console.error('Setup failed:', e)
 }
 
+// Force service worker to use the latest version
+try {
+  self.addEventListener('install', function(event) {
+    event.waitUntil(self.skipWaiting());
+  });
+
+  self.addEventListener('activate', function(event) {
+    event.waitUntil(self.clients.claim());
+  });
+} catch (e) {
+  console.error('Failed to force service worker to use the latest version.', e);
+}
 
 // Messaging/Notifications resoruces
 // https://firebase.google.com/docs/cloud-messaging/js/receive
@@ -98,9 +115,9 @@ try {
   });
 
   // Log
-  log('Initialized Firebase.');
+  log('Firebase initialized successfully');
 } catch (e) {
-  console.error('failed to initialize Firebase.', e);
+  console.error('Firebase failed to initialize', e);
 }
 
 // Cache
@@ -167,7 +184,7 @@ try {
   // // });
 
 } catch (e) {
-  console.error('failed to cache resources.', e);
+  console.error('Cache failed to initialize', e);
 }
 
 // Load PromoServer
@@ -192,7 +209,7 @@ try {
 //   }, SWManager.environment === 'development' ? 1 : 30000);
 //   log('initialized PromoServer.');
 // } catch (e) {
-//   console.error('failed to import promo-server.js', e);
+//   console.error('PromoServer failed to initialize', e);
 // }
 
 // Send messages: https://stackoverflow.com/questions/35725594/how-do-i-pass-data-like-a-user-id-to-a-web-worker-for-fetching-additional-push
@@ -280,22 +297,31 @@ function log() {
 }
 
 function arrayUnique(array) {
-    var a = array.concat();
-    for(var i=0; i<a.length; ++i) {
-        for(var j=i+1; j<a.length; ++j) {
-            if(a[i] === a[j])
-                a.splice(j--, 1);
-        }
-    }
+  var a = array.concat();
 
-    return a;
+  // Loop through array
+  for(var i=0; i<a.length; ++i) {
+    for(var j=i+1; j<a.length; ++j) {
+      if(a[i] === a[j]) {
+        a.splice(j--, 1);
+      }
+    }
+  }
+
+  // Return
+  return a;
 }
 
 // Load other Service Worker
 try {
+  // Import other service worker
   importScripts('assets/js/app/service-worker.js');
+
+  // Set flag
   SWManager.libraries.app = true;
-  log('Imported app/service-worker.js');
+
+  // Log
+  log('Import of app/service-worker.js succeeded');
 } catch (e) {
-  console.error('failed to import app/service-worker.js', e);
+  console.error('Import of app/service-worker.js failed', e);
 }
