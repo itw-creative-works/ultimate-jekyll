@@ -39,6 +39,8 @@ try {
 }
 
 // Load Firebase
+// https://firebase.google.com/docs/cloud-messaging/js/receive
+// https://github.com/firebase/quickstart-js/tree/master/messaging
 try {
   // Import Firebase libraries
   importScripts(
@@ -49,9 +51,50 @@ try {
   );
 
   // Initialize app
-  firebase.initializeApp(SWManager.config.firebase);
-  firebase.messaging();
+  const app = firebase.initializeApp(SWManager.config.firebase);
+
+  // Initialize messaging
+  const messaging = firebase.messaging();
+
+  // Attach firebase to SWManager
   SWManager.libraries.firebase = firebase;
+
+  // Handle messages
+  // messaging.onBackgroundMessage((payload) => {
+  //   log('[firebase-messaging-sw.js] Received background message ', payload);
+
+  //   // Customize notification here
+  //   const title = 'Background Message Title';
+  //   const options = {
+  //     body: 'Background Message body.',
+  //     icon: '/firebase-logo.png'
+  //   };
+
+  //   // Show notification
+  //   self.registration.showNotification(title, options);
+  // });
+
+  // Handle clicks on notifications
+  // Open the URL of the notification
+  self.addEventListener('notificationclick', (event) => {
+    // Get the URL of the notification
+    const notification = event.notification;
+    const action = event.action;
+    const data = notification.data || {};
+
+    // Log
+    log('master-service-worker.js notificationclick ', event, notification, action, data);
+
+    // Close the notification
+    // notification.close();
+
+    // Handle the click
+    event.waitUntil(
+      clients.openWindow(data.click_action)
+    );
+  });
+
+  // Log
   log('master-service-worker.js initialized Firebase.');
 } catch (e) {
   console.error('master-service-worker.js failed to initialize Firebase.', e);
