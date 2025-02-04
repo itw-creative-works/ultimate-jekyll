@@ -70,13 +70,13 @@ self.addEventListener('notificationclick', (event) => {
   log('Event: notificationclick payload', payload);
   log('Event: notificationclick clickAction', clickAction);
 
-  // Close the notification
-  // notification.close();
-
   // Handle the click
   event.waitUntil(
     clients.openWindow(clickAction)
   );
+
+  // Close the notification
+  notification.close();
 });
 
 // Messaging/Notifications resoruces
