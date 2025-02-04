@@ -33,9 +33,9 @@ try {
   SWManager.app = SWManager.config.id || (SWManager.brand.name.toLowerCase().replace(' ', '-') || 'default');
   SWManager.cache.breaker = SWManager.config.cb;
   SWManager.cache.name = SWManager.app + '-' + SWManager.cache.breaker;
-  log('master-service-worker.js setup: ', self.location.pathname, SWManager.cache.name, SWManager)
+  log('Setup: ', self.location.pathname, SWManager.cache.name, SWManager)
 } catch (e) {
-  console.error('master-service-worker.js failed setup.', e)
+  console.error('failed setup.', e)
 }
 
 
@@ -86,7 +86,7 @@ try {
     const data = notification.data || {};
 
     // Log
-    log('master-service-worker.js notificationclick ', event, notification, action, data);
+    log('Event: notificationclick ', event, notification, action, data);
 
     // Close the notification
     // notification.close();
@@ -98,16 +98,16 @@ try {
   });
 
   // Log
-  log('master-service-worker.js initialized Firebase.');
+  log('Initialized Firebase.');
 } catch (e) {
-  console.error('master-service-worker.js failed to initialize Firebase.', e);
+  console.error('failed to initialize Firebase.', e);
 }
 
 // Cache
 try {
   // // importScripts('libraries/serviceworker-cache-polyfill.js');
   // SWManager.libraries.cachePolyfill = true;
-  // log('master-service-worker.js cache name = ' + SWManager.cache.name);
+  // log('cache name = ' + SWManager.cache.name);
   //
   // // Refresh button breaks: https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68
   // // - https://redfin.engineering/service-workers-break-the-browsers-refresh-button-by-default-here-s-why-56f9417694
@@ -124,10 +124,10 @@ try {
   // //         '/assets/js/main.js',
   // //       ])
   // //       .then(function() {
-  // //         log('master-service-worker.js cached resources.');
+  // //         log('cached resources.');
   // //         self.skipWaiting();
   // //       })
-  // //       .catch(function() { log('master-service-worker.js failed to cache resources.') });
+  // //       .catch(function() { log('failed to cache resources.') });
   // //     })
   // //   );
   // // });
@@ -167,7 +167,7 @@ try {
   // // });
 
 } catch (e) {
-  console.error('master-service-worker.js failed to cache resources.', e);
+  console.error('failed to cache resources.', e);
 }
 
 // Load PromoServer
@@ -188,11 +188,11 @@ try {
 //     });
 
 //     SWManager.libraries.promoServer.handle();
-//     log('master-service-worker.js handling PromoServer.');
+//     log('handling PromoServer.');
 //   }, SWManager.environment === 'development' ? 1 : 30000);
-//   log('master-service-worker.js initialized PromoServer.');
+//   log('initialized PromoServer.');
 // } catch (e) {
-//   console.error('master-service-worker.js failed to import promo-server.js', e);
+//   console.error('failed to import promo-server.js', e);
 // }
 
 // Send messages: https://stackoverflow.com/questions/35725594/how-do-i-pass-data-like-a-user-id-to-a-web-worker-for-fetching-additional-push
@@ -212,13 +212,13 @@ self.addEventListener('message', function(event) {
 
     if (data.command === '') { return };
 
-    log('master-service-worker.js postMessage ', data);
+    log('Event: postMessage ', data);
 
     if (data.command === 'function') {
       data.args.function = data.args.function || function() {};
       data.args.function();
     } else if (data.command === 'debug') {
-      console.log('master-service-worker.js Debug data =', data);
+      console.log('Debug data =', data);
       event.ports[0].postMessage(response);
     } else if (data.command === 'skipWaiting') {
       self.skipWaiting();
@@ -248,13 +248,13 @@ self.addEventListener('message', function(event) {
           pagesToCache
         )
         .then(function() {
-          log('master-service-worker.js cached resources.');
+          log('Cached resources.');
           event.ports[0].postMessage(response);
         })
         .catch(function() {
           response.status = 'fail';
           event.ports[0].postMessage(response);
-          log('master-service-worker.js failed to cache resources.')
+          log('Failed to cache resources.')
         });
       })
     }
@@ -263,23 +263,20 @@ self.addEventListener('message', function(event) {
   } catch (e) {
     response.success = 'fail';
     try { event.ports[0].postMessage(response) } catch (e) {}
-    log('master-service-worker.js failed to receive message: ', data, e);
+    log('Failed to receive message: ', data, e);
   }
 
 });
 
 function log() {
-  try {
-    if (SWManager.environment === 'development') {
-      var args = Array.prototype.slice.call(arguments);
-      args.unshift('[SW DEV LOG]');
-      console.log.apply(console, args);
-    } else if (false) {
+  // Get arguments
+  var args = Array.prototype.slice.call(arguments);
 
-    }
-  } catch (e) {
+  // Add prefix
+  args.unshift('[service-worker]:');
 
-  }
+  // Log
+  console.log.apply(console, args);
 }
 
 function arrayUnique(array) {
@@ -294,12 +291,11 @@ function arrayUnique(array) {
     return a;
 }
 
-
 // Load other Service Worker
 try {
   importScripts('assets/js/app/service-worker.js');
   SWManager.libraries.app = true;
-  log('master-service-worker.js imported app/service-worker.js');
+  log('Imported app/service-worker.js');
 } catch (e) {
-  console.error('master-service-worker.js failed to import app/service-worker.js', e);
+  console.error('failed to import app/service-worker.js', e);
 }
