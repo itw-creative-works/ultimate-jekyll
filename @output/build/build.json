@@ -5,13 +5,13 @@
     "name": "ultimate-jekyll"
   },
   "npm-build": {
-    "timestamp": "2025-02-04T06:55:20.585Z"
+    "timestamp": "2025-02-04T07:14:42.761Z"
   },
   "gh-pages-push": {
     "timestamp": "%GHP_TIMESTAMP%"
   },
   "packages": {
-    "web-manager": "3.2.71"
+    "web-manager": "3.2.72"
   },
   "brand": {
     "name": "Ultimate Jekyll",
