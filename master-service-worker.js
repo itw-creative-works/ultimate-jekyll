@@ -56,20 +56,26 @@ self.addEventListener('activate', (event) => {
 // ⚠️⚠️⚠️ THIS MUST BE PLACED BEFORE THE FIREBASE IMPORTS HANDLER ⚠️⚠️⚠️
 // https://stackoverflow.com/questions/78270541/cant-catch-fcm-notificationclick-event-in-service-worker-using-firebase-messa
 self.addEventListener('notificationclick', (event) => {
-  // Get the URL of the notification
+  // Get the properties of the notification
   const notification = event.notification;
-  const action = event.action;
-  const data = notification.data || {};
+  const data = (notification.data && notification.data.FCM_MSG ? notification.data.FCM_MSG.data : null) || {};
+  const payload = (notification.data && notification.data.FCM_MSG ? notification.data.FCM_MSG.notification : null) || {};
+
+  // Get the click action
+  const clickAction = payload.click_action || data.click_action || '/';
 
   // Log
-  log('Event: notificationclick ', event, notification, action, data);
+  log('Event: notificationclick event', event);
+  log('Event: notificationclick data', data);
+  log('Event: notificationclick payload', payload);
+  log('Event: notificationclick clickAction', clickAction);
 
   // Close the notification
   // notification.close();
 
   // Handle the click
   event.waitUntil(
-    clients.openWindow(data.click_action)
+    clients.openWindow(clickAction)
   );
 });
 
