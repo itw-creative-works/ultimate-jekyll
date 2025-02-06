@@ -1,19 +1,17 @@
 {
   "name": "ultimate-jekyll",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A template that helps you jumpstart your Jekyll sites and is fueled by an intuitive incorporation of npm, gulp, and is fully SEO optimized and blazingly fast.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "bundle install && bundle update",
-    "gulp": "gulp --cwd ./ --gulpfile ./node_modules/ultimate-jekyll-manager/dist/gulp/main.js",
-    "start": "bundle exec npm run gulp",
-    "build": "UJ_BUILD_MODE=true bundle exec npm run gulp -- build"
+    "start": "npx uj setup && npm start",
   },
-  "author": "",
+  "author": {
+    "name": "ITW Creative Works",
+    "email": "hello@itwcreativeworks.com",
+    "url": "https://itwcreativeworks.com"
+  },
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^5.0.0",
     "ultimate-jekyll-manager": "^1.0.0"
   },
   "dependencies": {}
