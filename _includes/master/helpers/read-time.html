@@ -1,6 +1,0 @@
-<!-- Calculate readtime from include.content -->
-{% assign fixed_content = include.content | liquify | markdownify | strip_html | uj_strip_ads %}
-{% assign words = fixed_content | number_of_words %}
-{% assign readtime = words | divided_by: 200 | plus: 1 %}
-
-{{ readtime }}

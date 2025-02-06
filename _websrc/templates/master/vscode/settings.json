@@ -1,8 +1,0 @@
-// Workspace settings
-{
-    // The following will hide certian files from the file explorer
-    "files.exclude": {
-      // Hide any files with /master/ in the path
-      "**/master/**": true,
-    }
-}

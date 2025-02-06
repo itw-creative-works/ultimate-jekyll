@@ -1,6 +1,0 @@
-<!-- Generate a random number of comments based on the number of words in the content -->
-{% assign fixed_content = include.content | liquify | markdownify | strip_html | uj_strip_ads %}
-{% assign words = fixed_content | number_of_words %}
-{% assign comments = words | modulo: 13 %}
-
-{{ comments }}

@@ -1,7 +1,0 @@
----
-layount: null
-permalink: /ads.txt
-# NOTE: Edit this in _includes/app/misc/ads.txt
----
-google.com, {{ site.advertising.google-adsense }}, DIRECT, f08c47fec0942fa0
-{% include /app/misc/ads.txt %}
