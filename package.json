@@ -82,7 +82,7 @@
     "mocha": "8.4.0",
     "node-fetch": "2.6.12",
     "require-dir": "1.2.0",
-    "sharp": "0.23.1",
+    "sharp": "0.32.6",
     "source-map-loader": "2.0.2",
     "terser-webpack-plugin": "5.3.10",
     "through2": "4.0.2",
