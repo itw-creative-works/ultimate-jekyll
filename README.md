@@ -24,6 +24,22 @@
   <strong>Ultimate Jekyll</strong> is a template that helps you jumpstart your Jekyll sites and is fueled by an intuitive incorporation of npm, gulp, and is fully SEO optimized and blazingly fast.
 </p>
 
+## 🌟 Live Demo
+Check out the live example website to see Ultimate Jekyll in action:
+
+<p align="center">
+  <a href="https://ultimate-jekyll.itwcreativeworks.com" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Demo-Ultimate%20Jekyll-blue?style=for-the-badge" alt="View Demo">
+  </a>
+  <!-- <br> -->
+  <br>
+  <a href="https://ultimate-jekyll.itwcreativeworks.com" target="_blank">
+    <strong>🔗 ultimate-jekyll.itwcreativeworks.com</strong>
+  </a>
+</p>
+
+Explore the example site to see all the features and capabilities that Ultimate Jekyll offers out of the box.
+
 ## 🦄 Features
 * **SEO Optimized**: Ultimate Jekyll is fully SEO optimized.
 * **Blazingly Fast**: Ultimate Jekyll is blazingly fast.
