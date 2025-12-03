@@ -55,11 +55,12 @@ npm start
 ```
 
 ## 📦 How to sync with the template
-1. Simply run `npm start` in Terminal to get all the latest updates from the **Ultimate Jekyll template** and launch your website in the browser.
+1. Simply run `npx uj setup` in Terminal to get all the latest updates from the **Ultimate Jekyll template** and launch your website in the browser.
 
 ## 🌎 Publishing your website
 1. Change the `url` in `_config.yml` to your domain.
-2. Push your changes to GitHub using `npm run dist` in Terminal.
+2. Push your changes to GitHub
+3. Then just wait for GitHub Pages to make your site live!
 
 ## ⛳️ Flags
 * `--browser=false` - Disables the browser from opening when running `npm start`.
