@@ -50,7 +50,6 @@ Explore the example site to see all the features and capabilities that Ultimate 
 2. Clone the repo to your local machine.
 3. Run these command to get everything setup and sync'd!
 ```bash
-npm install
 npm start
 ```
 
