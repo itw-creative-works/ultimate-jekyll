@@ -54,7 +54,7 @@ npm start
 ```
 
 ## 📦 How to sync with the template
-1. Simply run `npx uj setup` in Terminal to get all the latest updates from the **Ultimate Jekyll template** and launch your website in the browser.
+1. Simply run `npx mgr setup` in Terminal to get all the latest updates from the **Ultimate Jekyll template** and launch your website in the browser.
 
 ## 🌎 Publishing your website
 1. Change the `url` in `_config.yml` to your domain.
